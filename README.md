@@ -6,7 +6,7 @@ A curated knowledge base for graduate students and researchers—tools, methods,
 
 Maintained by the Zhang Research Group, Department of Mechanical and Aerospace Engineering, Syracuse University.
 
-👉 Visit the Documentation Website (Update with your actual URL)
+Visit the Documentation Website (Update with your actual URL)
 
 🚀 Goal
 
@@ -20,7 +20,7 @@ Reusable templates: For AI context files, validation checklists, and error loggi
 
 The ultimate goal is to reduce the learning curve for new researchers and help the broader community adopt AI tools safely and effectively.
 
-🌐 Accessing the Guides (No Installation Required)
+🔧 Installation
 
 This knowledge base is entirely documentation-based and designed to be viewed as a searchable website. You do not need to install any software to read these guides.
 
@@ -34,8 +34,6 @@ To clone the repository for offline access, using with a local Markdown editor, 
 
 git clone [https://github.com/yourusername/ai-mechanics-resources.git](https://github.com/yourusername/ai-mechanics-resources.git)
 cd ai-mechanics-resources
-
-
 
 
 📖 Usage
@@ -66,7 +64,7 @@ Reuse templates/project_context_file.md to create AI context files for your own 
 
 Use templates/simulation_validation.md to systematically validate simulations.
 
-🧩 Structure & Metadata
+🧩 API
 
 This repository does not provide a code API, but the "API" of the knowledge base is its directory structure and the metadata inside each document. All documents follow a consistent pattern:
 
@@ -110,7 +108,6 @@ ai-mechanics-resources/
     ├── project_context_file.md      # Template for AI context files
     ├── simulation_validation.md     # Validation checklist template
     └── error_log.md                 # AI mistake logging template
-
 
 
 Note: Not all folders may be fully populated in the public version. Some sections are under active development; contributions are welcome.
