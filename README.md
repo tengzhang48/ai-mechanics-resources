@@ -1,4 +1,4 @@
-# ai-mechanics-resources
+# Ai-Mechanics-Resources
 
 *Human‑in‑the‑loop guides for AI‑assisted computational research*
 
