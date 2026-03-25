@@ -99,9 +99,9 @@ ai-mechanics-resources/
 │   └── proposals.md                    Proposal writing tips
 │
 ├── templates/                       ← Reusable templates
-│   ├── project_context_file.md         Template for AI context files
-│   ├── simulation_validation.md        Validation checklist template
-│   └── error_log.md                    AI mistake logging template
+    ├── project_context_file.md         Template for AI context files
+    ├── simulation_validation.md        Validation checklist template
+    └── error_log.md                    AI mistake logging template
 
 ```
 
