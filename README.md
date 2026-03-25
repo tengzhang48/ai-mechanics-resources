@@ -1,4 +1,4 @@
-# Ai-Mechanics-Resources
+# ai-mechanics-resources
 
 *Human‑in‑the‑loop guides for AI‑assisted computational research*
 
@@ -43,10 +43,9 @@ The repository is organized by topic. Start with the sections that match your im
 
 ### 2. Software Setup
 - Navigate to `software/` for version‑pinned installation and usage guides (e.g., `fenicsx.md`, `jax.md`).
-- Use the HPC setup guide in `hpc_resources/` for cluster‑agnostic configuration.
 
 ### 3. Theory & Methods
-- Reference documents in `theory/` (contact mechanics, constitutive models, LBM‑IBM, etc.) for derivations and implementation strategies.
+- Reference documents in `theory/` (contact mechanics, constitutive models, LBM‑IBM, MPM, etc.) for derivations and implementation strategies.
 
 ### 4. Scientific Writing
 - Consult `writing/` for paper structuring, peer review, and proposal writing.
@@ -91,18 +90,17 @@ ai-mechanics-resources/
 │   ├── contact_mechanics.md            Contact methods survey + implementation plan
 │   ├── constitutive_models.md          Hyperelasticity, viscoplasticity, log strain
 │   ├── lbm_ibm.md                      Lattice Boltzmann + Immersed Boundary
-│   ├── mpm.md                          Material Point Method essentials
+│   └── mpm.md                          Material Point Method essentials
 │
 ├── writing/                         ← Scientific communication
 │   ├── paper_writing.md                How to write papers (structure, style)
 │   ├── peer_review.md                  Transparent peer review guide
 │   └── proposals.md                    Proposal writing tips
 │
-└──  templates/                       ← Reusable templates
+└── templates/                       ← Reusable templates
     ├── project_context_file.md         Template for AI context files
     ├── simulation_validation.md        Validation checklist template
     └── error_log.md                    AI mistake logging template
-
 ```
 
 **Note:** Not all folders may be fully populated in the public version. Some sections are under active development; contributions are welcome.
