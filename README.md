@@ -67,34 +67,7 @@ This repository does not provide a code API, but the "API" of the knowledge base
 
 Directory Tree
 
-ai-mechanics-resources/
-├── README.md                        ← You are here
-├── LLMs/                            ← AI‑assisted research guides
-│   ├── Prompt_Engineering_Guide.md  # Practical prompt tips (validated)
-│   ├── Lessons_Human_AI_Research.md # Framework: Can AI do science?
-│   ├── Case_Study_CFD_Samara.md     # Deep dive: LBM-IBM thin-shell project
-│   ├── Case_Study_Contact_Scroll.md # Deep dive: bilayer scroll contact
-│   └── contributing.md              # How to contribute
-├── software/                        ← Software installation and usage
-│   ├── fenicsx.md                   # FEniCSx setup, tips, common pitfalls
-│   ├── jax.md                       # JAX for scientific computing
-│   ├── lammps.md                    # LAMMPS compilation, packages, scripting
-│   ├── abaqus.md                    # ABAQUS scripting, validation workflows
-│   ├── taichi.md                    # Taichi for GPU simulation
-│   └── paraview.md                  # Visualization and post‑processing
-├── theory/                          ← Method references and derivations
-│   ├── contact_mechanics.md         # Contact methods survey + implementation
-│   ├── constitutive_models.md       # Hyperelasticity, viscoplasticity, log strain
-│   ├── lbm_ibm.md                   # Lattice Boltzmann + Immersed Boundary
-│   └── mpm.md                       # Material Point Method essentials
-├── writing/                         ← Scientific communication
-│   ├── paper_writing.md             # How to write papers (structure, style)
-│   ├── peer_review.md               # Transparent peer review guide
-│   └── proposals.md                 # Proposal writing tips
-└── templates/                       ← Reusable templates
-    ├── project_context_file.md      # Template for AI context files
-    ├── simulation_validation.md     # Validation checklist template
-    └── error_log.md                 # AI mistake logging template
+ai-mechanics-resources/ ├── README.md ← You are here ├── LLMs/ ← AI-assisted research guides │   ├── Prompt_Engineering_Guide.md # Practical prompt tips (validated) │   ├── Lessons_Human_AI_Research.md # Framework: Can AI do science? │   ├── Case_Study_CFD_Samara.md # Deep dive: LBM-IBM thin-shell project │   ├── Case_Study_Contact_Scroll.md # Deep dive: bilayer scroll contact │   └── contributing.md # How to contribute ├── software/ ← Software installation and usage │   ├── fenicsx.md # FEniCSx setup, tips, common pitfalls │   ├── jax.md # JAX for scientific computing │   ├── lammps.md # LAMMPS compilation, packages, scripting │   ├── abaqus.md # ABAQUS scripting, validation workflows │   ├── taichi.md # Taichi for GPU simulation │   └── paraview.md # Visualization and post-processing ├── theory/ ← Method references and derivations │   ├── contact_mechanics.md # Contact methods survey + implementation │   ├── constitutive_models.md # Hyperelasticity, viscoplasticity, log strain │   ├── lbm_ibm.md # Lattice Boltzmann + Immersed Boundary │   └── mpm.md # Material Point Method essentials ├── writing/ ← Scientific communication │   ├── paper_writing.md # How to write papers (structure, style) │   ├── peer_review.md # Transparent peer review guide │   └── proposals.md # Proposal writing tips └── templates/ ← Reusable templates     ├── project_context_file.md # Template for AI context files     ├── simulation_validation.md # Validation checklist template     └── error_log.md # AI mistake logging template
 
 Note: Not all folders may be fully populated in the public version. Some sections are under active development; contributions are welcome.
 
