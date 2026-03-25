@@ -98,7 +98,7 @@ ai-mechanics-resources/
 │   ├── peer_review.md                  Transparent peer review guide
 │   └── proposals.md                    Proposal writing tips
 │
-├── templates/                       ← Reusable templates
+└──  templates/                       ← Reusable templates
     ├── project_context_file.md         Template for AI context files
     ├── simulation_validation.md        Validation checklist template
     └── error_log.md                    AI mistake logging template
