@@ -311,6 +311,14 @@ The difference is not in the AI's capability — it generated equally competent 
 
 ---
 
+---
+
+## Acknowledgements
+
+The bilayer scroll project is a collaboration with Prof. Lining Yao's Morphing Matter Lab at UCB. The large-deformation plasticity work benefited from discussions with Prof. Lallit Anand (MIT), Prof. Shawn Chester (NJIT), and Prof. Eric M. Stewart (University of Cincinnati).
+
+---
+
 *This case study documents work on the bilayer scroll simulation during 2025–2026, spanning FEniCSx, JAX, Taichi, and ABAQUS. The contact mechanics remains an active area of development.*
 
 **Version:** 1.1
