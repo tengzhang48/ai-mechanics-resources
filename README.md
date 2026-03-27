@@ -10,7 +10,7 @@ Maintained by the [Zhang Research Group](https://github.com/tengzhang48), Depart
 
 ## About
 
-The bottleneck in mechanics research is not just writing code — it's integrating the physics, mathematical formulation, algorithmic design, and implementation into a coherent whole. AI has shifted the ratio of effort, but both the thinking and the coding matter. What changed is that AI can now be a genuine collaborator in both — helping develop the plan, not just executing it.
+The bottleneck in modeling and simulation for mechanics research is not just writing code — it's integrating the physics, mathematical formulation, algorithmic design, and implementation into a coherent whole. AI has shifted the ratio of effort, but both the thinking and the coding matter. What changed is that AI can now be a genuine collaborator in both — helping develop the plan, not just executing it.
 
 Good research has always come from combining different perspectives — a colleague from another field sees what you miss, a student asks a question that exposes a gap, a reviewer challenges an assumption you took for granted. AI is one more perspective to bring in. It doesn't replace human collaborators, but it's available at any hour, has broad (if imperfect) knowledge across fields, and can generate and test alternatives faster than any individual. The question is not whether to use AI, but how to integrate it effectively.
 
