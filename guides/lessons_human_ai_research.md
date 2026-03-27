@@ -425,4 +425,4 @@ CODE:
 
 **Version:** 3.3
 **Last Updated:** March 2026
-**Projects:** CoupMPM, CoupLB (https://github.com/tengzhang48/CoupMPM)
+**Projects:** CoupMPM, CoupLB (https://github.com/tengzhang48/CoupLB)
