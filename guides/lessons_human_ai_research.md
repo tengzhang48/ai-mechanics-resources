@@ -380,7 +380,7 @@ A JAX-based computational mechanics project hit this: the AI kept tuning optimiz
 
 ## 20. AI Model Upgrades Change the Game
 
-Our early conversations (pre-Claude 3.5/4) were significantly less productive. The AI generated code with more errors, struggled with complex LAMMPS internals, and had difficulty maintaining consistency over long sessions. Later models brought qualitative improvement.
+Our early conversations were significantly less productive. The AI generated code with more errors, struggled with complex LAMMPS internals, and had difficulty maintaining consistency over long sessions. Later models (from Opus 4.5) brought qualitative improvement.
 
 **Implication for readers:** If you had a frustrating experience with AI-assisted coding a year ago, the tools are materially better now. But the lessons in this document remain relevant — the human's role as validator and direction-setter becomes more important, not less, as the AI generates more sophisticated (and more subtly wrong) code.
 
