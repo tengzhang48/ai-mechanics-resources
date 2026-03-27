@@ -6,7 +6,7 @@
 
 ## Context
 
-This document summarizes a conversation between a mechanics researcher and an AI (Claude Opus 4.6) that began with analyzing a Nature paper on automated AI research and evolved into a broader discussion about how human-AI collaboration works in practice. The conversation itself became an example of the methodology it was discussing: through iterative correction and debate, we arrived at insights that neither would have reached alone.
+This document summarizes a conversation between a mechanics researcher and an AI (Claude Opus 4.6) that began with reading a Nature paper on automated AI research and evolved into a broader discussion about how human-AI collaboration works in practice. The conversation itself became an example of the methodology it was discussing: through iterative correction and debate, we arrived at insights that neither would have reached alone.
 
 For the broader methodology — the plan-first workflow, iterative debugging, context management, multi-AI review — see the [Lessons from Human-AI Collaboration](lessons_human_ai_research.md) guide. This document focuses specifically on **how debate with AI produces deeper understanding**, and what makes some interactions more productive than others.
 
