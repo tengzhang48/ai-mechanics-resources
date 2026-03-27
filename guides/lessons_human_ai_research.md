@@ -219,6 +219,8 @@ In multi-physics coupling (LBM + DEM + IBM), three unit systems coexist: physica
 
 ## 9. MPI Correctness Requires Ownership Thinking
 
+These examples use LAMMPS terminology, but the underlying problems — double-counting at subdomain boundaries, stale data in halo regions, ownership ambiguity for shared interactions — are universal to any domain-decomposed parallel code.
+
 Parallel bugs are the hardest to catch — code runs correctly on 1 rank and fails silently on multiple ranks.
 
 **Ghost force double-counting:** If both ranks compute the same pairwise force and then reverse-communicate, the force is doubled. Fix: only the rank where the lower-tag atom is local computes each pair.
