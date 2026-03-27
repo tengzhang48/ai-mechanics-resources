@@ -291,6 +291,8 @@ This project demonstrates two contrasting patterns in AI-assisted computational 
 
 **The meta-lesson:** AI-assisted research is fastest when the problem decomposes into well-understood components with tractable numerics. It is slowest when the problem involves fundamental numerical difficulties that no implementation trick can bypass. For the contact problem, the working combination of methods was only discovered after trying and failing with several alternatives. The AI could not have predicted the correct combination in advance — it had to be found empirically through the human running simulations and evaluating competing approaches.
 
+**Why contact was harder for AI than plasticity — beyond the numerics:** For plasticity, many high-quality open-source implementations exist (FEniCSx tutorials, UMAT examples, textbook codes). AI has seen good plasticity code and can anchor to it. For contact, the best implementations are locked inside commercial codes (ABAQUS, LS-DYNA). Open-source contact codes tend to be poorly documented or limited to simple cases. AI has far fewer high-quality contact examples to learn from, which compounds the already difficult numerical challenges. Sharing working contact code with AI during development — even a simple two-body penalty example — significantly improves the quality of AI-generated extensions, because AI can anchor to tested code rather than reconstructing from sparse training data. More broadly, the scarcity of high-quality open-source contact code affects both AI's training and its ability to help implement complicated contact algorithms. This is one area where open-source contributions have an outsized impact.
+
 ```
 The progression that matters:
 
@@ -315,7 +317,7 @@ The difference is not in the AI's capability — it generated equally competent 
 
 ## Acknowledgements
 
-The bilayer scroll project is a collaboration with Prof. Lining Yao's Morphing Matter Lab at UCB. The large-deformation plasticity work benefited from discussions with Prof. Lallit Anand (MIT), Prof. Shawn Chester (NJIT), and Prof. Eric M. Stewart (University of Cincinnati).
+The bilayer scroll project is a collaboration with Prof. Lining Yao's Morphing Matter Lab. The large-deformation plasticity work benefited from discussions with Prof. Lallit Anand (MIT), Prof. Shawn Chester (NJIT), and Prof. Eric M. Stewart (University of Cincinnati).
 
 ---
 
