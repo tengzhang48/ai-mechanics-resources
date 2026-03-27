@@ -10,11 +10,11 @@ Maintained by the [Zhang Research Group](https://github.com/tengzhang48), Depart
 
 The bottleneck in mechanics research is not just writing code — it's integrating the physics, mathematical formulation, algorithmic design, and implementation into a coherent whole. AI has shifted the ratio of effort, but both the thinking and the coding matter. What changed is that AI can now be a genuine collaborator in both — helping develop the plan, not just executing it.
 
-Collaboration has always been how good research gets done. A CFD colleague might suggest blade element theory in the first conversation; a student might spot a sign error; an AI might recognize a structural connection across subfields. AI is one more perspective to integrate, and we should all be thinking about how to adapt.
+Good research has always come from combining different perspectives — a colleague from another field sees what you miss, a student asks a question that exposes a gap, a reviewer challenges an assumption you took for granted. AI is one more perspective to bring in. It doesn't replace human collaborators, but it's available at any hour, has broad (if imperfect) knowledge across fields, and can generate and test alternatives faster than any individual. The question is not whether to use AI, but how to integrate it effectively.
 
 This repository documents what I've learned from integrating AI into my research workflow over the past year across multiple mechanics simulation projects. I document failures as carefully as successes, and I hope others will contribute their own experiences.
 
-**Last updated:** March 2026. Guides reflect practice with Claude Opus 4.6, Gemini 2.5, DeepSeek, and Qwen as of early 2026. AI tools change fast; the methodology here is more stable than the specific tools.
+**Last updated:** March 2026. Guides reflect practice with Claude Opus 4.6, Gemini 3.1, DeepSeek, and Qwen as of early 2026. AI tools change fast; the methodology here is more stable than the specific tools.
 
 ---
 
@@ -35,7 +35,7 @@ Real project experiences — what happened, what worked, what didn't. Released a
 |---|---|
 | [LBM-IBM for Thin Shells in Fluid](case_studies/lbm_ibm_thin_shell.md) | Extending from solid mechanics into CFD with AI assistance. Five paradigm shifts, practitioner blind spots, multi-AI debugging. |
 | [Large-Deformation Self-Contact](case_studies/large_deformation_contact.md) | Where fast iteration cannot overcome fundamental numerical difficulty. Plasticity succeeded; contact struggled. Four frameworks, five formulations. |
-| CoupLB: LBM+IBM for LAMMPS | Building a production MPI-parallel package.|
+| CoupLB: LBM+IBM for LAMMPS | Building a production MPI-parallel package. *(available after review)* |
 | CoupMPM: MPM for LAMMPS | Complex package, scalable architecture. *(planned)* |
 
 ### Repository Structure
@@ -68,6 +68,7 @@ ai-mechanics-resources/
 ## Related Projects
 
 - [CoupMPM](https://github.com/tengzhang48/CoupMPM) — Material Point Method package for LAMMPS
+- [CoupLB](https://github.com/tengzhang48/CoupLB) — Lattice Boltzmann + Immersed Boundary Method for LAMMPS
 - [taichi_lbm_ibm](https://github.com/tengzhang48) — LBM+IBM solver for thin-shell aerodynamics
 
 ---
