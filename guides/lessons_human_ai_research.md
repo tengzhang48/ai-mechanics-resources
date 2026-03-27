@@ -419,7 +419,7 @@ CODE:
 
 **The key insight:** AI contributes to both the thinking and the coding — but the human drives the direction, imposes physical constraints, and validates results. A novice with AI generates plausible-looking but untestable code and unvalidated ideas. An expert with AI explores a larger idea space, writes validated code faster, and catches cross-field connections sooner. The expertise must come first.
 
-**The asymmetry matters:** The human provides direction, physical judgment, and validation. The AI provides broad knowledge, rapid implementation, and systematic comparison. Both contribute to the intellectual content of the plan. But only the human can tell whether the results are physically correct, and only the human can decide when an entire approach should be abandoned. When this division of labor is respected, the collaboration produces outcomes that neither human nor AI would reach alone.
+**The asymmetry matters:** The human provides direction, physical judgment, and validation. The AI provides broad knowledge, rapid implementation, and systematic comparison. Both contribute to the intellectual content of the plan. But the human remains essential for judging whether results are physically correct and for recognizing when an entire approach should be abandoned — areas where AI is improving but not yet reliable. When this division of labor is respected, the collaboration produces outcomes that neither human nor AI would reach alone.
 
 ---
 
