@@ -131,6 +131,12 @@ The distinction between "using a tool" and "developing a tool" matters. AI helpe
 
 ---
 
+## Acknowledgements
+
+This project is a collaboration with Prof. Lining Yao's Morphing Matter Lab.
+
+---
+
 *This case study documents the development of the taichi_lbm_ibm package during 2025–2026. The project remains under active development.*
 
 **Version:** 2.0
