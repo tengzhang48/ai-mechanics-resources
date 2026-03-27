@@ -4,6 +4,8 @@
 
 Maintained by the [Zhang Research Group](https://github.com/tengzhang48), Department of Mechanical and Aerospace Engineering, Syracuse University.
 
+**New here?** Read [START_HERE.md](START_HERE.md) for the five essential lessons in five minutes.
+
 ---
 
 ## About
@@ -43,6 +45,7 @@ Real project experiences — what happened, what worked, what didn't. Released a
 ```
 ai-mechanics-resources/
 ├── README.md
+├── START_HERE.md
 ├── LICENSE
 ├── contributing.md
 ├── guides/
