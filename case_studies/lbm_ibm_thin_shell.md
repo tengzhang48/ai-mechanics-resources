@@ -133,7 +133,7 @@ The distinction between "using a tool" and "developing a tool" matters. AI helpe
 
 ## Acknowledgements
 
-This project is a collaboration with Prof. Lining Yao's Morphing Matter Lab.
+This project is a collaboration with Prof. Lining Yao's Morphing Matter Lab at UCB.
 
 ---
 
