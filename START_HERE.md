@@ -1,6 +1,6 @@
 # Start Here
 
-Five lessons from a few months of using AI daily in mechanics research. Each one was learned the hard way. The full details, case studies, and examples are in the rest of this repository.
+Five lessons from a few months of using AI in mechanics research. Each one was learned the hard way. The full details, case studies, and examples are in the rest of this repository.
 
 ---
 
