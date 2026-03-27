@@ -38,7 +38,7 @@ The human asked DeepSeek to evaluate the claim "AI can only be as good as the pe
 Why this produced better results:
 
 - **No stake in the prior output.** When reviewing its own work, AI tends to defend or mildly qualify. When reviewing another AI's work, there's nothing to protect.
-- **Different training biases reveal different things.** DeepSeek optimized for balance and completeness. Claude, asked to be critical, found the response too diplomatic and identified what was missing.
+- **Different training biases reveal different things.** DeepSeek optimized for balance and completeness. Claude, asked to be critical, found the response too diplomatic and identified what was missing. DeepSeek would likely have produced sharper output too if explicitly asked to push back — the key difference in Mode 3 is not which model is "better" but that the reviewing model has no stake in the original output.
 - **The human evaluates competing perspectives.** Neither AI alone gave the complete answer. The human's judgment across both produced the actual insight.
 
 This is the same pattern as the chirality debugging in the [LBM-IBM case study](../case_studies/lbm_ibm_thin_shell.md): Claude proposed code bugs, Gemini proposed a configuration error, and only the human could design the definitive test.
