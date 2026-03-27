@@ -26,7 +26,6 @@ This repository documents what I've learned from integrating AI into my research
 |---|---|
 | [Lessons from Human-AI Collaboration](guides/lessons_human_ai_research.md) | The main document. One year of daily AI-assisted development. The plan-first workflow, iterative debugging, context management, multi-AI review with triage, when to force a change of approach. What AI contributes to scientific reasoning and where it fails. |
 | [How Debate with AI Produces Understanding](guides/lessons_from_conversation.md) | Three modes of productive human-AI debate. How to break the agreement equilibrium. Why asking AI to push back — and bringing one AI's output to another for review — produces deeper analysis than asking for answers. |
-| [AI for New Researchers](guides/ai_for_students.md) | How to build the foundations needed before using AI effectively. *(in progress)* |
 
 ### Case Studies
 
@@ -36,8 +35,23 @@ Real project experiences — what happened, what worked, what didn't. Released a
 |---|---|
 | [LBM-IBM for Thin Shells in Fluid](case_studies/lbm_ibm_thin_shell.md) | Extending from solid mechanics into CFD with AI assistance. Five paradigm shifts, practitioner blind spots, multi-AI debugging. |
 | [Large-Deformation Self-Contact](case_studies/large_deformation_contact.md) | Where fast iteration cannot overcome fundamental numerical difficulty. Plasticity succeeded; contact struggled. Four frameworks, five formulations. |
-| CoupLB: LBM+IBM for LAMMPS | Building a production MPI-parallel package. *(available after review)* |
+| CoupLB: LBM+IBM for LAMMPS | Building a production MPI-parallel package.|
 | CoupMPM: MPM for LAMMPS | Complex package, scalable architecture. *(planned)* |
+
+### Repository Structure
+
+```
+ai-mechanics-resources/
+├── README.md
+├── LICENSE
+├── contributing.md
+├── guides/
+│   ├── lessons_human_ai_research.md
+│   └── lessons_from_conversation.md
+└── case_studies/
+    ├── lbm_ibm_thin_shell.md
+    └── large_deformation_contact.md
+```
 
 ---
 
@@ -46,8 +60,6 @@ Real project experiences — what happened, what worked, what didn't. Released a
 **Starting an AI-assisted project?** Read `guides/lessons_human_ai_research.md` for the full methodology.
 
 **Want to understand limits?** Read the case studies, especially the contact one.
-
-**Advising students?** Read `guides/ai_for_students.md` when available. Key message: domain foundations first.
 
 **Want to contribute?** See [contributing.md](contributing.md). Requirement: real, tested experience only.
 
