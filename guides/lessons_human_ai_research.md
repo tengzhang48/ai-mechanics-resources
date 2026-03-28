@@ -76,7 +76,7 @@ Here are specific examples from our work where the AI contributed to scientific 
 
 ### Example 1: Cross-Field Connection in Computational Mechanics
 
-The human had developed a novel computational mechanics framework (details withheld for ongoing publication). The human already suspected that this framework could be connected to an established optimization methodology from a different subfield — that's why both documents were shared with the AI in the same session. The connection itself was human-initiated.
+The human had developed a computational mechanics framework. The human already suspected that this framework could be connected to an established optimization methodology from a different subfield — that's why both documents were shared with the AI in the same session. The connection itself was human-initiated.
 
 What the AI contributed was rapid feasibility analysis: identifying the specific technical evidence that the connection was viable. The AI recognized that the human's framework solved a longstanding boundary representation problem in the optimization methodology, and identified several specific capabilities this enables that no existing method in that subfield can handle.
 
