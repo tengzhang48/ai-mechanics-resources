@@ -42,7 +42,7 @@
 
 ## Overview
 
-This document summarizes lessons from approximately one year of daily AI-assisted development on multiple computational mechanics packages:
+This document summarizes lessons from approximately one year of AI-assisted development on multiple computational mechanics packages:
 
 - **CoupMPM** — Material Point Method package for LAMMPS (soft-matter/cell mechanics)
 - **CoupLB** — Lattice Boltzmann Method + Immersed Boundary Method for LAMMPS (fluid-structure interaction)
