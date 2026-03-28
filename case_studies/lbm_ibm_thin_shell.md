@@ -37,6 +37,8 @@ Teng came to the project with deep expertise in continuum mechanics and prior ex
 
 **What AI did not have:** The ability to run any code, physical intuition about whether results "looked right," or experience with production-scale simulations.
 
+**Starting codes:** The project built on two published frameworks: a Taichi-based samara simulation (Le et al. 2024) and a Palabos-based IBM framework (Bhowmick et al. 2025). Neither handles zero-thickness thin structures, which was the core challenge of this project. But they provided working LBM-IBM examples that helped AI get the initial solver running faster, particularly for Taichi-specific implementation patterns. As AI models improve, the reliance on reference code for standard algorithms decreases, but anchoring to working examples still reduces setup time and avoids framework-specific bugs.
+
 ---
 
 ## 2. The Paradigm Shifts
