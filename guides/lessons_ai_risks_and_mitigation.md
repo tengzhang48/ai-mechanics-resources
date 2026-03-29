@@ -316,7 +316,11 @@ prevent AI from defaulting to training bias.
 ---
 
 *Based on real errors from computational mechanics research, 2025-2026.
-All examples documented in the case studies.*
+All examples documented in the case studies. Some patterns (training data
+bias, silent substitution, debugging spirals) appear general across fields;
+others may be specific to computational mechanics. The mitigations assume
+the researcher has domain expertise — the risks are higher for those still
+developing that expertise.*
 
 **Version:** 1.0  
 **Date:** March 2026
