@@ -1,6 +1,6 @@
 # Start Here
 
-Five lessons from a few months of using AI in mechanics research. Each one was learned the hard way. The full details, case studies, and examples are in the rest of this repository.
+Six lessons from a year of using AI in mechanics research. Each one was learned the hard way. The full details, case studies, and examples are in the rest of this repository.
 
 ---
 
@@ -16,14 +16,18 @@ One AI as your primary development partner. Other AIs (different models) to revi
 
 This is the most dangerous failure mode in scientific computing. Code compiles, executes, produces plausible-looking numbers — but the numbers don't match physical reality. A 2.3× error from a unit mismatch. An integer division bug that silently zeros a term. Gradients that produce NaN only at edge cases. No AI review catches these. You need independent reference solutions — analytical results, simpler prototype codes, commercial software comparisons — for every testable claim. If you can't validate it, you can't trust it.
 
-**4. Know when to force a change of approach.**
+**4. AI defaults to mainstream methods — even when your method is different.**
+
+AI training data reflects the field's literature. If 100,000 papers use Method A and 10 papers use your Method B, AI will implement Method A unless explicitly told otherwise — and it won't mention the substitution. In our work, every AI (three different models) silently replaced our lattice model with standard finite elements. The code was physically correct, all tests passed, and the results looked reasonable. The error was only caught by comparing the code against the theory document line by line. If your research contribution involves a niche methodology, state it explicitly in every prompt, name your functions after the methodology, and design tests that distinguish your method from the standard approach.
+
+**5. Know when to force a change of approach.**
 
 When AI's fixes keep failing — three or more attempts on the same error, each introducing new problems, all variations within the same family — the problem is usually not in the details but in the approach itself. AI generates variations within a paradigm. It cannot recognize when the paradigm is wrong. That's your job. Say: "Stop. This family of approaches has failed repeatedly. Propose something fundamentally different."
 
-**5. AI lowers the implementation barrier, not the thinking barrier.**
+**6. AI lowers the implementation barrier, not the thinking barrier.**
 
 AI lets you explore more approaches, test alternatives faster, and implement ideas that would have taken months by hand. But it doesn't replace the physics understanding, the mathematical formulation, or the judgment to know whether results are correct. The researchers who benefit most from AI are those who already have strong domain foundations — AI amplifies what you bring. Invest in understanding the physics deeply; AI handles the rest.
 
 ---
 
-**Want more?** Read the [full methodology](guides/lessons_human_ai_research.md) for detailed patterns and examples. Read the [case studies](case_studies/) to see these lessons in action — including the failures.
+**Want more?** Read the [full methodology](guides/lessons_human_ai_research.md) for detailed patterns and examples. Read the [AI risks guide](guides/lessons_ai_risks_and_mitigation.md) for specific failure modes and prevention strategies. Read the [case studies](case_studies/) to see these lessons in action — including the failures.
