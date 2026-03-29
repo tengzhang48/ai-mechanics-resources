@@ -133,8 +133,8 @@ AI creativity falls into categories that differ in reliability:
 | **Cross-field connections** | Strong | Both fields are in the database; AI bridges them faster than human search |
 | **Known solutions to known problems** | Strong | 24-tet decomposition, MC33, etc. — well-documented in literature |
 | **Combining existing components in new ways** | Moderate | Architecture proposals, framework unification |
-| **Niche methodology applied to new problems** | Weak | If the niche method has few papers, AI defaults to mainstream |
-| **Challenging the dominant paradigm** | Very weak | AI reflects the consensus; it cannot judge that the consensus is wrong for your specific case |
+| **Niche methodology applied to new problems** | Weak without explicit prompting | If the niche method has few papers, AI defaults to mainstream. Can implement correctly when the methodology is stated explicitly and the theory document is provided as context. |
+| **Challenging the dominant paradigm** | Requires more human guidance | Challenging paradigms is hard for humans too — it hasn't changed for thousands of years. AI can help through debate and cross-field analogies when prompted, but won't proactively question consensus. The risk of defaulting to mainstream is highest here. |
 
 **How to prevent:**
 - Use AI for cross-field connections (where it's strong) and human judgment
