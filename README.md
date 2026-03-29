@@ -4,7 +4,7 @@
 
 Maintained by the [Teng Zhang](https://github.com/tengzhang48), Department of Mechanical and Aerospace Engineering, Syracuse University.
 
-**New here?** Read [START_HERE.md](START_HERE.md) for the five essential lessons in five minutes.
+**New here?** Read [START_HERE.md](START_HERE.md) for the six essential lessons in five minutes.
 
 ---
 
