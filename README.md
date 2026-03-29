@@ -22,7 +22,9 @@ Good research has always come from combining different perspectives — a collea
 
 These risks are documented with real examples and specific mitigations in the [AI Risks and Mitigation](guides/lessons_ai_risks_and_mitigation.md) guide.
 
-This repository documents what I've learned from integrating AI into my research workflow over the past year across multiple mechanics simulation projects. I document failures as carefully as successes, and I hope others will contribute their own experiences.
+**An important caveat:** The mitigations assume the researcher has domain expertise that AI augments — the dry-run review works because the human recognizes when the AI describes FEM instead of lattice springs. For researchers still developing that expertise, the risks are higher and the defenses are weaker. This is a tension the field will need to address.
+
+This repository documents what I've learned from integrating AI into my research workflow over the past year across multiple mechanics simulation projects. The findings come from one researcher's experience in computational mechanics. Some patterns — training data bias, silent methodology substitution, the debugging spiral — appear general enough to apply across fields. Others may be specific to the type of work described here. I document failures as carefully as successes, and I hope others will contribute their own experiences to test which lessons generalize and which don't.
 
 **Last updated:** March 2026. Guides reflect practice with Claude Opus 4.6, Gemini 3.1, DeepSeek, and Qwen as of early 2026. AI tools change fast; the methodology here is more stable than the specific tools.
 
