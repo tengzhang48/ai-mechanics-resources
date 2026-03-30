@@ -207,9 +207,7 @@ known.
 We do not have a solution to this problem. We note it as the
 underlying reason why longer context, better retrieval, and even
 structured handoff files are incomplete solutions. They help, but
-they do not address the core difficulty: knowledge is nonlinear
-structure extracted from linear experience, and the extraction
-requires judgment that is difficult to automate.
+they do not address the core difficulty: knowledge has structure — dependencies, corrections, boundaries of validity — that does not map onto the sequence in which it was acquired. Extracting that structure requires judgment that is difficult to automate.
 
 ---
 
