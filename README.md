@@ -2,7 +2,7 @@
 
 *Integrating domain expertise, physics, and AI in mechanics research.*
 
-Maintained by the [Teng Zhang](https://github.com/tengzhang48), Department of Mechanical and Aerospace Engineering, Syracuse University.
+Maintained by [Teng Zhang](https://github.com/tengzhang48), Department of Mechanical and Aerospace Engineering, Syracuse University.
 
 **New here?** Read [START_HERE.md](START_HERE.md) for the six essential lessons in five minutes.
 
@@ -39,6 +39,7 @@ This repository documents what I've learned from integrating AI into my research
 | [Lessons from Human-AI Collaboration](guides/lessons_human_ai_research.md) | The main document. One year of daily AI-assisted development. The plan-first workflow, iterative debugging, context management, multi-AI review with triage, when to force a change of approach. What AI contributes to scientific reasoning and where it fails. |
 | [How Debate with AI Produces Understanding](guides/lessons_from_conversation.md) | Three modes of productive human-AI debate. How to break the agreement equilibrium. Why asking AI to push back — and bringing one AI's output to another for review — produces deeper analysis than asking for answers. |
 | [AI Risks and Mitigation](guides/lessons_ai_risks_and_mitigation.md) | Six concrete risks from practice: confident wrong answers, silent methodology substitution, training data bias, tests-pass-but-method-wrong, debugging spirals, plausible-but-wrong results. Three-layer defense: prompt design, dry-run code review, methodology-specific testing. |
+| [From Information to Knowledge](guides/information_to_knowledge.md) | Observations on why AI processes information but struggles to accumulate knowledge. The information-knowledge distinction, the role of corrections, and four distinct problems behind "AI forgets." Based on one team's experience. |
 
 ### Case Studies
 
@@ -62,7 +63,8 @@ ai-mechanics-resources/
 ├── guides/
 │   ├── lessons_human_ai_research.md
 │   ├── lessons_from_conversation.md
-│   └── lessons_ai_risks_and_mitigation.md
+│   ├── lessons_ai_risks_and_mitigation.md
+│   └── information_to_knowledge.md
 └── case_studies/
     ├── lbm_ibm_thin_shell.md
     └── large_deformation_contact.md
@@ -75,6 +77,8 @@ ai-mechanics-resources/
 **Starting an AI-assisted project?** Read `guides/lessons_human_ai_research.md` for the full methodology.
 
 **Want to understand AI risks?** Read `guides/lessons_ai_risks_and_mitigation.md` for specific failure modes and how to prevent them.
+
+**Thinking about AI memory and knowledge persistence?** Read `guides/information_to_knowledge.md` for our observations on why longer context alone may not solve the real problem.
 
 **Want to understand limits?** Read the case studies, especially the contact one.
 
