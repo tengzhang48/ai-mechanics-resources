@@ -112,8 +112,12 @@ feasible within current frameworks is an open question.
 
 ## Four Problems, Not One
 
-The common complaint "AI forgets" conflates four distinct problems
-with different causes.
+The common complaint "AI forgets" describes a real problem, though
+not one unique to AI. Humans forget too. The difference is that human
+communities built institutions — lab notebooks, peer review, citation
+networks, apprenticeship — to compensate. AI systems lack equivalent
+structures. The complaint also conflates four distinct problems with
+different causes.
 
 **Memory across sessions.** Facts, decisions, and reasoning are lost
 between conversations. Automated memory stores fragments but not the
