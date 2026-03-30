@@ -195,8 +195,7 @@ not just the chronological sequence. A citation network captures
 logical dependency, not temporal order. These institutions separate
 the structure of knowledge from the sequence of its discovery.
 
-Current AI systems store the linear sequence (conversation history)
-but not the nonlinear structure that emerged from it. A correction at
+Current AI systems can store facts from conversations, but they do not track which facts were corrected, which depend on others, or why certain details matter more than others. A correction at
 turn 10 might be the most important moment in a 50-turn conversation,
 but nothing structural marks it as such. The uncertainty about what
 matters — which facts will prove critical, which corrections will
