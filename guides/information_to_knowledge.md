@@ -115,7 +115,8 @@ feasible within current frameworks is an open question.
 The common complaint "AI forgets" describes a real problem, though
 not one unique to AI. Humans forget too. The difference is that human
 communities built institutions — lab notebooks, peer review, citation
-networks, apprenticeship — to compensate. AI systems are developing early equivalents — memory features, procedural skills, retrieval with source attribution — but these currently operate at the information level. The transition from information tools to knowledge infrastructure is underway but incomplete. The complaint also conflates four distinct problems with
+networks, apprenticeship — to compensate. AI systems lack equivalent
+structures. The complaint also conflates four distinct problems with
 different causes.
 
 **Memory across sessions.** Facts, decisions, and reasoning are lost
@@ -150,38 +151,90 @@ Lumping them as "AI forgets" obscures where progress is possible.
 
 ---
 
+## Early Equivalents
+
+Human communities maintain knowledge through institutions that
+evolved over centuries. In our work, we found it useful to map
+these to emerging AI features:
+
+| Human institution | AI equivalent (emerging) | Our evidence |
+|---|---|---|
+| Lab notebooks | Memory, handoff files | Directly tested |
+| Peer review | Multi-AI review with adversarial prompts | Directly tested |
+| Citation networks | RAG with source attribution | Reasoning only |
+| Apprenticeship | Skills, system prompts, custom instructions | Partial |
+
+This mapping emerged from our practice, not from literature. The
+existing AI memory research maps human *cognitive* memory (episodic,
+semantic, working memory) to AI systems (context window, RAG,
+parametric memory). Our table maps human *institutional* knowledge
+infrastructure to AI features — a different level. Only the first two
+rows are grounded in our direct experience; the others are analogies
+we have not tested.
+
+The AI equivalents currently operate at the information level. Skills
+encode procedures well but not corrections or failure histories.
+Memory stores facts but not reasoning or dependencies. The transition
+from information tools to knowledge infrastructure is underway but
+incomplete.
+
+## Why Knowledge Is Fundamentally Hard
+
+The deeper challenge is that knowledge acquisition is nonlinear and
+non-unique. In our experience, the path to understanding involved
+dead ends, backtracking, corrections whose importance was only clear
+in retrospect, and insights that emerged from combining ideas across
+sessions. The same understanding could have been reached by different
+paths.
+
+This nonlinearity is not unique to AI — humans also experience events
+sequentially and build nonlinear understanding from them. The
+difference is that humans externalize the nonlinear structure through
+institutions: a lab notebook records what was tried and why it failed,
+not just the chronological sequence. A citation network captures
+logical dependency, not temporal order. These institutions separate
+the structure of knowledge from the sequence of its discovery.
+
+Current AI systems store the linear sequence (conversation history)
+but not the nonlinear structure that emerged from it. A correction at
+turn 10 might be the most important moment in a 50-turn conversation,
+but nothing structural marks it as such. The uncertainty about what
+matters — which facts will prove critical, which corrections will
+have downstream consequences — is only resolved in retrospect. This
+makes it fundamentally difficult to design a storage system for
+knowledge at the time of acquisition, because importance is not yet
+known.
+
+We do not have a solution to this problem. We note it as the
+underlying reason why longer context, better retrieval, and even
+structured handoff files are incomplete solutions. They help, but
+they do not address the core difficulty: knowledge is nonlinear
+structure extracted from linear experience, and the extraction
+requires judgment that is difficult to automate.
+
+---
+
 ## An Old Problem in a New Form
 
-The gap between information and knowledge is not new. It is among the
-oldest problems in intellectual history.
+The gap between information and knowledge is among the oldest problems
+in intellectual history. Libraries store information. Apprenticeships
+transmit knowledge — not just what to do, but why, and what goes
+wrong. Peer review exists because a claim is not knowledge until it
+has survived challenge. Lab notebooks record failures. Citation
+networks track dependencies. Textbooks explain reasoning, not just
+results.
 
-Libraries store information. Apprenticeships transmit knowledge —
-not just what to do, but why, and what goes wrong, and when the
-rules don't apply. Peer review exists because a claim is not
-knowledge until it has survived challenge. Lab notebooks record
-failures because knowing what doesn't work is as valuable as knowing
-what does. Citation networks track dependencies between claims.
-Textbooks explain reasoning, not just results.
-
-These institutions evolved over centuries because humanity recognized
-that transmitting knowledge requires more than transmitting
-information. Each addresses a specific aspect of the gap: peer review
-handles correction, citations handle dependency, lab notebooks handle
-failure documentation, apprenticeship handles judgment and context.
-
-AI systems currently lack most of these structures in practice. They
-process information faster than any human, but persistent correction
-tracking, dependency management, and failure documentation are not
-standard features of the tools researchers use daily. Research
-prototypes (knowledge graphs, versioned reasoning chains, retrieval
-with citation) address parts of this, but the gap between what exists
-in research and what is available in practice remains large.
+AI systems are developing early equivalents of these institutions, as
+the table above suggests. But persistent correction tracking,
+dependency management, and failure documentation are not yet standard
+features of the tools researchers use daily. Research prototypes
+address parts of this, but the gap between what exists in research
+and what is available in practice remains large.
 
 When the infrastructure for knowledge persistence reaches
 practitioners, it will likely address the same needs that the older
-institutions address: reliable corrections, tracked dependencies,
-documented failures, and human judgment about what matters. The tools
-will be different. The underlying problem will be the same.
+institutions address. The tools will be different. The underlying
+problem will be the same.
 
 ---
 
@@ -189,4 +242,4 @@ will be different. The underlying problem will be the same.
 computational mechanics (2025–2026). These observations come from
 one team in one domain.*
 
-*Version: 8.0 — March 2026*
+*Version: 9.0 — March 2026*
