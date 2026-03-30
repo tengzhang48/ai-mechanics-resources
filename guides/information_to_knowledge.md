@@ -115,8 +115,7 @@ feasible within current frameworks is an open question.
 The common complaint "AI forgets" describes a real problem, though
 not one unique to AI. Humans forget too. The difference is that human
 communities built institutions — lab notebooks, peer review, citation
-networks, apprenticeship — to compensate. AI systems lack equivalent
-structures. The complaint also conflates four distinct problems with
+networks, apprenticeship — to compensate. AI systems are developing early equivalents — memory features, procedural skills, retrieval with source attribution — but these currently operate at the information level. The transition from information tools to knowledge infrastructure is underway but incomplete. The complaint also conflates four distinct problems with
 different causes.
 
 **Memory across sessions.** Facts, decisions, and reasoning are lost
