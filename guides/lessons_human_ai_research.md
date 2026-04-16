@@ -114,7 +114,7 @@ A LAMMPS-based lattice model originally stored element data (stiffness, internal
 
 ## 3. What AI Cannot Do: Taste, Constraints, and Pivots
 
-The examples above might suggest that AI is a reliable idea generator. It is not. For every good connection, there were several that did not survive human evaluation. The human's role is irreplaceable in three specific ways:
+The examples above might suggest that AI is a reliable idea generator. For every good connection, there were several that did not survive human evaluation. The human's role is irreplaceable in three specific ways:
 
 ### Research Taste
 
