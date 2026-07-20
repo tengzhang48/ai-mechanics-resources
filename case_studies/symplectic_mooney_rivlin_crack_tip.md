@@ -4,7 +4,7 @@
 incomplete spectral scaffold, and several rounds of mutually inconsistent
 “verified” claims into a pre-submission candidate—then reopened it when a
 green gate proved blind to a leading-constraint-compatible measurement-space
-direction.**
+direction, and rebuilt the candidate around that failure.**
 
 ---
 
@@ -86,6 +86,12 @@ the derived full reaction-carrying operator. Several higher-order amplitudes mov
 missing dimensional factors, or were demoted from free parameters to
 conditional candidates. The submission draft became stronger by claiming less,
 and its July 19 signoff was reopened when the raw-profile gate failed.
+The conservative July 20 correction then synchronized the manuscript, ESI,
+and a local public-companion candidate: it retained the G/J/P core, made the
+raw-profile claim conditional, inserted the missing dominant-balance
+derivation, and replaced the blind tangent comparison with a target-free
+profile-mode audit. External review and publication of the corrected pinned
+artifact remain release steps, not scientific results already obtained.
 
 The scientific repository began in June 2026, with manuscript revisions
 recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
@@ -157,11 +163,17 @@ transformation. The mode is regular across the intact ligament and changes a
 physical coordinate; calling it a gauge does not make it invisible to a
 camera.
 
-The current manuscript asserts this decisive equilibrium reduction, while its
-public `derive_constraint_row.py` starts from the constraint and linearizes it.
-A complete dominant-balance derivation from both reduced-Piola equilibrium
-rows, including reaction scaling, orders, face conditions, and assumptions,
-still has to be placed in the manuscript or ESI.
+The corrected manuscript and ESI now derive this decisive equilibrium
+reduction from both reduced-Piola equilibrium rows. They state the dominant
+orders, show how the divergent c₂ term acts as a reaction rather than a
+leading stored-energy contribution, recover `J⁴ = |∇y₂|²`, impose the
+leading face and symmetry conditions, and identify the assumptions behind the
+dominant-principal-stretch reduction. The public companion now reproduces the
+exact stress, constraint-null, leading-field, and flux identities while
+explicitly scoping its older row-4 script as a linearization of the already
+derived constraint, not a derivation of this entire dominant-balance chain.
+This is an asymptotic dominant-balance derivation, not a uniform finite-c₂
+matching theorem.
 
 The angular profile g is selected by an endpoint regularity condition on the
 intact ligament. Its face value is g(π) = 2.0333… in the manuscript's
@@ -240,11 +252,17 @@ Jacobian had 3.2–9.1% angular spread, while the c₂ = 0 control showed
 window and remains a consistency cross-check for the stress relation. A July
 20 diagnostic refit of its stored fields supports a nonzero s-like background
 and is consistent with a conditional detrended remainder over the reported
-window, but this is
-not yet a synchronized manuscript/public release gate. Its former raw 2/5
-tip-shape claim is withdrawn: the Figure 8 pipeline assumed away the
-leading-constraint-compatible `C_s s` mode rather than testing its
-coefficient. It was not an independent specimen-scale validation.
+window. That diagnostic is now synchronized in the corrected manuscript, ESI,
+and local public-companion candidate. The production audit uses one physical
+offset shared across five rays, checks per-ray sensitivity, and fits the face
+exponent freely over five nested windows. The raw face slopes are
+0.513–0.514 in the disk and 0.502–0.503 in the strip. The fitted residual
+exponent ranges are 1.236–1.253 in the disk and 1.317–1.339 in the strip;
+they support a finite-window residual interpretation but do not establish a
+universal asymptotic 5/4 law. The former raw 2/5 tip-shape claim is withdrawn:
+the Figure 8 pipeline assumed away the leading-constraint-compatible `C_s s`
+mode rather than testing its coefficient. It was not an independent
+specimen-scale validation.
 
 This division mattered. The strip FEM does not impose the crack-tip field and
 can falsify the opening exponent, amplitude relation, and angular structure.
@@ -285,15 +303,20 @@ had been another category error.
 
 ## 5. Where the Defensible Scope Now Stops
 
-The July 20 audit reopened the manuscript; its source still contains the raw
-2/5 claim and has not yet been corrected. The evidence currently supports the
-following narrower scope.
+The July 20 audit reopened the manuscript, and the conservative correction is
+now implemented in its source and ESI. The corrected title emphasizes
+constrained asymptotics, the detailed unfinished spectral program has been
+reduced to an outlook, and the unconditional raw 2/5 claim has been removed.
+The evidence supports the following narrower scope.
 
 **Established at the stated evidence level:**
 
 - The leading opening, the selected r⁵ᐟ⁴ residual and first forced correction
   on the `C_s = 0` base branch, and the parameter-free energy and stress
   relations.
+- The leading energy flux with retained `C_s`: an exact Laurent-coefficient
+  audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂, g, g′, and the
+  normalized r⁵ᴟ⁴ amplitude used in that audit.
 - The strip G/P/J validation, the disk stress cross-check, and the July 20
   finite-window diagnostic of the omitted s-like background; the evidence does
   not validate a universal raw profile or independently validate a residual
@@ -327,9 +350,9 @@ following narrower scope.
 - The full k = 1 characteristic-shear completion and whether global matching
   selects `C_s = 0`; without that selection the raw deformed face has exponent
   1/2 rather than 2/5.
-- The full dominant-balance derivation of the central constraint from both
-  equilibrium rows; the current public derivation script assumes the
-  constraint before linearizing it.
+- A uniform finite-c₂ existence and matching analysis that connects the outer
+  constrained field, any shrinking angular/core layers, and the global
+  specimen while determining `C_s`.
 
 The core G/P/J relations survive the leading-map null addition. The selected
 r⁵ᐟ⁴ solution is retained on the `C_s = 0` branch, while its placement in a
@@ -558,7 +581,8 @@ measured near `θ = 2°`, where the s-mode is suppressed by
 `sin²(1°) ≈ 3.0×10⁻⁴`. The plot placed a 2/5 guide where the measured
 local slope happened to come closest to 2/5. Neither route tested `C_s = 0`.
 
-Refitting the stored fields with the leading-constraint-compatible face model
+An initial refit of the stored fields with the
+leading-constraint-compatible face model
 
 ```text
 y₁ = c₀ + C_s r + A r^(5/4)
@@ -575,6 +599,24 @@ slopes were about 0.391 and 0.374; because the detrending basis imposed the
 family conflated two pipelines: Figure 5 deliberately removed the background
 to isolate a residual, while Figure 8 omitted it and the numerical headline
 combined exponents from different rays.
+
+That quick probe was enough to falsify the zero-mode assumption, but its
+nuisance treatment was not yet a release analysis. The production correction
+imposed one physical `c₀` shared across five angular rays and added per-ray
+and nested-window sensitivity checks. It gave face `b` values of −2.1393 and
+−1.6718 for the λ = 1.5 and 2.0 disks, and −3.2684 and −3.5802 for the
+λ = 1.6 and 2.2 strips. Across angle, the fitted linear coefficient collapsed
+as `b(θ) ≈ C_s sin²(θ/2)`, with normalized residuals of 1.5–1.8% for the
+disk and 1.1–1.4% for the strip. This strongly supports a stable nonzero
+s-like background over those finite-core annuli; it does not establish the
+ultimate matched `r → 0` coefficient. The production raw face slopes were
+0.502–0.514. Target-free free-q fits of the detrended residual ranged from
+1.236 to 1.339 across cases and windows. These estimates are evidence about
+the stored finite-window fields, not a proof that the asymptotic exponent is
+exactly 5/4.
+No new FEM solve was needed to withdraw the universal raw-profile claim: the
+stored fields already contained the missing mode. New calculations would be
+needed to promote a stronger global-matching or universal-profile theorem.
 
 **Lesson:** asymptotic order depends on the observable. A regular mode can be
 subleading relative to the singular opening gradient and leading energy
@@ -634,10 +676,10 @@ They were converted into checks:
 vary P outside the unit gauge; differentiate the full nominal stress; run the
 c₂ = 0 control; reconstruct the endpoint series; decompose the flux; solve the
 same face identity by another route. The manuscript-level suite grew from 31
-to 57 checks, while specialized analysis scripts carried deeper derivations.
+to 59 checks, while specialized analysis scripts carried deeper derivations.
 Those counts are coverage descriptions, not proof by quantity: some checks
 encode printed identities, some independently derive them, and some are
-sampled numerical regressions. The July 19 manuscript and ESI label those
+sampled numerical regressions. The corrected manuscript and ESI label those
 levels rather than calling every assertion an independent proof.
 
 The workflow therefore combined a dependency-ordered claim graph with a closed
@@ -665,6 +707,11 @@ gates test a coherent evidence family only within their encoded model and
 scope. The `C_s s` incident showed that the gate model itself also needs a
 constraint-compatible candidate-mode audit. Neither kind of gate substitutes
 for the other.
+In claim-graph terms, the missing edge was not equation-to-equation but
+field-to-measurement: a null direction for the determinant remained visible in
+the camera coordinate. Release design now requires an explicit audit of every
+constraint-compatible mode below the claimed observable order, followed by a
+target-free fit or a proof that matching kills its coefficient.
 Likewise, fast reproduction from curated arrays and an expensive fresh
 finite-element solve are separate lanes: one checks the curated evidence
 against its derived summaries and regenerates its figures, while the other
@@ -831,8 +878,9 @@ pass reviewed the then-current theory/manuscript tree at `74edb13` and reported
 “Ready for submission.” That verdict predates the July 19 mesh-provenance,
 data, figure, and scope corrections and is not a review of public-companion
 commit `3369dbc`. It also predates the July 20 `C_s s` audit, its required
-withdrawal of the raw Figure 8 claim, and the still-pending manuscript
-synchronization. One intermediate DeepSeek review used stale state
+withdrawal of the raw Figure 8 claim, and the subsequently implemented
+manuscript/ESI and local-companion correction. One intermediate DeepSeek
+review used stale state
 and was retained as history rather than authority. GLM and Opus contributed
 earlier referee reports. The external ChatGPT report supplied by Teng exposed
 the `C_s s` issue; Codex confirmed the finite-window s-like background and the
@@ -883,7 +931,8 @@ The progression that matters:
       → fixes introduce dimensional, traction, and duality errors
       → independent routes, controls, and component decompositions
       → a green Figure 8 gate is blind to a constraint-compatible candidate
-      → audit withdraws raw shape claim; shipping synchronization remains
+      → audit withdraws raw shape claim; corrected artifacts are regenerated
+      → external review and an immutable public release remain
       → G/J/P core survives
 ```
 
@@ -904,24 +953,34 @@ have falsified, on the artifact it actually exercised, at the scope its
 dependencies and fitted basis permit. A residual-field check does not certify
 the raw observable from which the residual was extracted. The July 20 audit
 reopened the recorded pre-submission state precisely because that distinction
-had not yet become a gate.
+had not yet become a gate. The correction demonstrates the corresponding
+release discipline: revoke dependent claims, repair the claim graph,
+regenerate every affected artifact, and rerun the complete circuit. Reviewer
+performance must also be read at its stage: a late audit can expose a
+measurement-space failure partly because earlier derivation and integration
+rounds made the relevant mode catalog, observable, and artifact graph
+available to inspect.
 
 ---
 
 *This case study documents the Mooney–Rivlin plane-stress crack-tip project
 and its intensive June–July 2026 verification campaign. The festschrift
 manuscript reached a recorded signoff on July 19 but had not undergone journal
-peer review. The July 20 `C_s s` audit reopened that signoff. The sanitized
-companion is currently private, and its July 19 candidate commit
+peer review. The July 20 `C_s s` audit reopened that signoff; the manuscript
+and ESI have since received the conservative correction and were rebuilt. The
+sanitized companion repository is public. Its July 19 candidate commit
 [3369dbc](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/3369dbcfa8b415217e51cbcb4f50935fd45b5341),
 including its now-superseded raw-profile gate, is retained as the exact artifact
-that was audited. Its curated
+that was audited. Its then-current curated
 [verification lessons](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/3369dbcfa8b415217e51cbcb4f50935fd45b5341/PROCESS_AND_LESSONS.md)
-must be corrected before becoming the public process reference. The
+are likewise historical. A corrected local companion candidate synchronizes
+the mode-aware analysis, claims, figures, and gates; it still requires external
+review, a public push/tag, and an immutable release identifier before it can
+serve as the pinned process reference. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 0.98 (characteristic-shear correction audit)
+**Version:** 0.99 (conservative characteristic-shear correction implemented)
 **Last Updated:** July 20, 2026
