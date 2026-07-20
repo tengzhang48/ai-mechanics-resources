@@ -383,6 +383,19 @@ this. The error lived *between* individually plausible statements.
 tests. A positive verdict may only be read as broadly as the reviewer's probes
 could have falsified.
 
+A post-correction hostile audit found a smaller version of the same failure in
+the retained opening block. The manuscript introduced the separated angular
+shape `b(θ)` and then wrote its radial momentum as `∂ξb`; taken literally that
+derivative is zero. The duality `Λ′ = 3/2 − Λ` was nevertheless correct because
+the verification calculation had implicitly restored the radial exponential.
+The printed definition was repaired by writing the full field
+`u₂ = exp[(Λ−3/4)ξ]b(θ)` and `τ₂ = ∂ξu₂`, and the gate was changed to operate
+on those full fields. This did not alter the leading crack-tip physics, but it
+exposed a useful type error: after separation of variables, an angular
+eigenfunction and the physical field it parametrizes are not interchangeable.
+Verification should differentiate the same mathematical object that the paper
+defines, not an implicitly reconstructed one.
+
 ## 7. A Unit Gauge Hid a Missing Amplitude
 
 One revision corrected the hierarchy but introduced a new dimensional error:
@@ -968,15 +981,16 @@ and its intensive June–July 2026 verification campaign. The festschrift
 manuscript reached a recorded signoff on July 19 but had not undergone journal
 peer review. The July 20 `C_s s` audit reopened that signoff; the manuscript
 and ESI have since received the conservative correction and were rebuilt. The
-sanitized companion repository is public. Its July 19 candidate commit
-[3369dbc](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/3369dbcfa8b415217e51cbcb4f50935fd45b5341),
-including its now-superseded raw-profile gate, is retained as the exact artifact
-that was audited. Its then-current curated
-[verification lessons](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/3369dbcfa8b415217e51cbcb4f50935fd45b5341/PROCESS_AND_LESSONS.md)
-are likewise historical. A corrected local companion candidate synchronizes
-the mode-aware analysis, claims, figures, and gates; it still requires external
-review, a public push/tag, and an immutable release identifier before it can
-serve as the pinned process reference. The
+sanitized companion remains a local/private release candidate: its intended
+GitHub URL is not currently anonymously accessible. Its July 19 candidate
+commit `3369dbcfa8b415217e51cbcb4f50935fd45b5341`, including the now-superseded
+raw-profile gate, is retained locally as the exact artifact that was audited;
+its then-current curated `PROCESS_AND_LESSONS.md` is likewise historical. The
+corrected post-review commit `bca6ba81a0eac99da93f3494d10033167d2f53e3` synchronizes the
+mode-aware analysis, claims, figures, and gates, but remains local and unpushed.
+It still requires journal/external peer review, confirmed public visibility, a public
+push/tag, and a DOI or other immutable release identifier before it can serve
+as the pinned public process reference. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
