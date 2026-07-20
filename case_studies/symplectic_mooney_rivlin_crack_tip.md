@@ -1,6 +1,10 @@
 # Case Study: When Verification Rewrites the Theory — A Symplectic Mooney–Rivlin Crack Tip
 
-**How a human–AI team turned a new nonlinear crack-tip field, a useful but incomplete spectral scaffold, and several rounds of mutually inconsistent “verified” claims into a carefully scoped pre-submission draft — and why the decisive work was not generating equations, but learning exactly what each check could prove.**
+**How a human–AI team turned a new nonlinear crack-tip field, a useful but
+incomplete spectral scaffold, and several rounds of mutually inconsistent
+“verified” claims into a pre-submission candidate—then reopened it when a
+green gate proved blind to a leading-constraint-compatible measurement-space
+direction.**
 
 ---
 
@@ -13,7 +17,7 @@
 - [2. The Constraint That Reorganizes the Tip](#2-the-constraint-that-reorganizes-the-tip)
 - [3. From Local Theory to Parameter-Free Tests](#3-from-local-theory-to-parameter-free-tests)
 - [4. The Symplectic Promise and the Missing Operator](#4-the-symplectic-promise-and-the-missing-operator)
-- [5. Where the Final Manuscript Stops](#5-where-the-final-manuscript-stops)
+- [5. Where the Defensible Scope Now Stops](#5-where-the-defensible-scope-now-stops)
 
 **Part II — Technical Lessons**
 - [6. Correct Equations Can Still Form a Contradictory Paper](#6-correct-equations-can-still-form-a-contradictory-paper)
@@ -24,7 +28,7 @@
 - [11. Degenerate Endpoints Decide the Admissible Theory](#11-degenerate-endpoints-decide-the-admissible-theory)
 - [12. Find the Carrier by Decomposing the Flux](#12-find-the-carrier-by-decomposing-the-flux)
 - [13. A Closed Rung Is Not a Closed Tower](#13-a-closed-rung-is-not-a-closed-tower)
-- [14. Fix Passes and Stale State Are New Error Surfaces](#14-fix-passes-and-stale-state-are-new-error-surfaces)
+- [14. Fix Passes, Stale State, and Blind Gates Are New Error Surfaces](#14-fix-passes-stale-state-and-blind-gates-are-new-error-surfaces)
 
 **Part III — Collaboration Patterns**
 - [15. The Multi-AI Review Loop](#15-the-multi-ai-review-loop)
@@ -50,33 +54,42 @@ W = c₁(I₁ - 3) + c₂(I₂ - 3),        c₁ > 0, c₂ > 0,
 is the simplest standard rubber model outside that class. In plane stress,
 the second invariant does not merely perturb the known neo-Hookean solution.
 As the dominant tip stretch diverges, it becomes a stiff penalty that forces
-the two transverse stretches to become equal. That constraint changes the
-in-plane exponent, the deformed crack shape, and the areal stretch while
-leaving the leading energy-release relation in neo-Hookean form.
+the two transverse stretches to become equal. That constraint reorganizes the
+singular transverse in-plane field and the areal stretch while leaving the
+leading energy-release relation in neo-Hookean form. It does not determine a
+regular characteristic-parallel shear, a fact recognized only in a later
+mode-completeness audit.
 
-The resulting manuscript gives a leading opening proportional to r¹ᐟ², an
-in-plane field proportional to r⁵ᐟ⁴, a deformed-tip profile with exponent
-2/5, an angle-independent compensated Jacobian, and
+The July 19 manuscript reported a leading opening proportional to r¹ᐟ², an
+in-plane field proportional to r⁵ᐟ⁴, a raw deformed-tip profile with
+exponent 2/5, an angle-independent compensated Jacobian, and
 
 ```text
 G = (π/2) c₁ P².
 ```
 
-A pure-shear strip then fixes the tip amplitude P from the applied grip
-stretch. Finite-element calculations of that strip test this relation and the
-predicted kinematics without imposing the asymptotic crack-tip field.
+A pure-shear strip fixes the tip amplitude P from the applied grip stretch.
+Its finite-element solutions test the G–P relation and compensated-Jacobian
+kinematics without imposing the asymptotic crack-tip field.
 
-Those headline results survived the review campaign. Much of the higher-order
-story did not survive unchanged. A five-row spectral pencil that began as the
-organizing theory was ultimately scoped as a *scaffold*: exact on its opening
-block, useful for locating candidate families, but not the derived full
-reaction-carrying operator. Several higher-order amplitudes moved, acquired
+The core G, J, and P results survived the review campaign. The later audit
+withdrew the unconditional raw 2/5 imaging claim: the
+leading-constraint-compatible term
+`C_s s`, with `s = r sin²(θ/2)`, dominates the raw horizontal face coordinate
+if a nonzero coefficient persists after matching. The 2/5 law remains a
+conditional prediction for the detrended r⁵ᐟ⁴ remainder, or for a special
+solution in which matching selects `C_s = 0`. Much of the
+higher-order story also did not survive unchanged. A five-row spectral pencil
+that began as the organizing theory was ultimately scoped as a *scaffold*:
+exact on its opening block, useful for locating candidate families, but not
+the derived full reaction-carrying operator. Several higher-order amplitudes moved, acquired
 missing dimensional factors, or were demoted from free parameters to
-conditional candidates. The submission draft became stronger by claiming less.
+conditional candidates. The submission draft became stronger by claiming less,
+and its July 19 signoff was reopened when the raw-profile gate failed.
 
 The scientific repository began in June 2026, with manuscript revisions
-recorded from 3 July. The multi-AI review campaign ran from 5–19 July, with an
-especially intensive 17–19 July cycle. It used
+recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
+with an especially intensive 17–19 July cycle. It used
 Claude/Fable as the principal revision executor,
 GPT/Codex as a structural reviewer and later derivation lead, Kimi as an early
 independent verifier, DeepSeek/OpenCode as a late end-to-end auditor of the
@@ -131,12 +144,30 @@ surviving harmonic opening equation gives
 
 ```text
 y₂ = P r^(1/2) sin(θ/2) + …,
-y₁ = P^(-1/2) r^(5/4) g(θ) + … .
+y₁ = c₀ + C_s s + P^(-1/2) r^(5/4) g(θ) + …,
+s = r sin²(θ/2).
 ```
+
+The constraint fixes the component of `∇y₁` transverse to `∇y₂`; integrability
+then gives the selected r⁵ᐟ⁴ residual up to an opening-gradient-parallel null
+addition. It cannot fix `C_s s`: for the leading opening `y₂ = P√s`, `∇s` is
+parallel to `∇y₂`, so this addition leaves the leading-map determinant J
+exactly unchanged. More generally, `y₁ → y₁ + F(y₂)` is the exact null
+transformation. The mode is regular across the intact ligament and changes a
+physical coordinate; calling it a gauge does not make it invisible to a
+camera.
+
+The current manuscript asserts this decisive equilibrium reduction, while its
+public `derive_constraint_row.py` starts from the constraint and linearizes it.
+A complete dominant-balance derivation from both reduced-Piola equilibrium
+rows, including reaction scaling, orders, face conditions, and assumptions,
+still has to be placed in the manuscript or ESI.
 
 The angular profile g is selected by an endpoint regularity condition on the
 intact ligament. Its face value is g(π) = 2.0333… in the manuscript's
-normalization. At leading order near the tip, the resulting principal-stretch
+normalization. This is the manuscript's analytic outer-branch selection; a
+singular angular matching layer remains an acknowledged open issue. At leading
+order near the tip, the resulting principal-stretch
 magnitudes are angle-independent,
 
 ```text
@@ -160,12 +191,24 @@ Below the sheet thickness `t_s`, the field is three-dimensional; the formal
 `r → 0` computation verifies the reduced model's mathematical limit, not that
 sub-thickness field.
 
-On the crack face, y₂ ~ r¹ᐟ² while the in-plane distance from the deformed
-tip scales as r⁵ᐟ⁴. Eliminating r gives the 2/5 deformed-tip profile. The
-corresponding neo-Hookean profile has exponent 1/2.
+On the crack face `s = r`, so
 
-The first correction is forced by the *on-manifold I₂ stress*, not by
-off-manifold compliance. Its opening profile is
+```text
+y₁ - c₀ = C_s r + P^(-1/2)g(π)r^(5/4) + …,
+y₂ ~ r^(1/2).
+```
+
+If `C_s = 0`, eliminating r gives the 2/5 profile. If matching produces a
+nonzero coefficient that persists asymptotically, the regular linear term
+dominates the raw horizontal coordinate and the raw limiting exponent is 1/2,
+the same as the neo-Hookean face exponent. The 2/5 law is the selected theory's
+conditional prediction for the detrended remainder
+`y₁ - c₀ - C_s r`. Whether global specimen matching selects either branch is
+not established.
+
+On the previously selected `C_s = 0` base branch, the first correction is
+forced by the *on-manifold I₂ stress*, not by off-manifold compliance. Its
+opening profile is
 v(θ) = -(2/3)sin(θ/2), and its in-plane term carries the dimensional factor
 P⁻³ᐟ². This apparently small distinction in mechanism and scaling later became
 one of the review campaign's most consequential tests.
@@ -193,13 +236,20 @@ was the primary specimen-level validation: its computed energy flux agreed
 with hW∞ within 0.00–0.15%, and its measured P agreed with the closed-form
 prediction within 2.2–3.0% over the reported load range. Its compensated
 Jacobian had 3.2–9.1% angular spread, while the c₂ = 0 control showed
-101.5–112.2% angular spread. A boundary-driven disk reached much deeper toward
-the tip and served as a consistency cross-check for the in-plane profile,
-2/5 tip shape, and stress relation. It was not presented as an independent
-specimen-scale validation.
+101.5–112.2% angular spread. A boundary-driven disk used a deeper fitting
+window and remains a consistency cross-check for the stress relation. A July
+20 diagnostic refit of its stored fields supports a nonzero s-like background
+and is consistent with a conditional detrended remainder over the reported
+window, but this is
+not yet a synchronized manuscript/public release gate. Its former raw 2/5
+tip-shape claim is withdrawn: the Figure 8 pipeline assumed away the
+leading-constraint-compatible `C_s s` mode rather than testing its
+coefficient. It was not an independent specimen-scale validation.
 
 This division mattered. The strip FEM does not impose the crack-tip field and
-can falsify the predicted exponent, amplitude relation, and angular structure.
+can falsify the opening exponent, amplitude relation, and angular structure.
+A positive detrended-exponent claim needs a noncircular free-exponent or
+holdout gate; a fixed-r⁵ᐟ⁴ subtraction is only a consistency test.
 The disk instead tests interior consistency under a homogeneous remote-stretch
 boundary condition.
 The c₂ = 0 control is especially valuable because it shares enough of the
@@ -224,7 +274,7 @@ variable. The generic second-variation theorem was sound; the identification
 of the printed five rows with its full operator was not derived.
 
 The correction was not to discard the scaffold. It was to name it accurately.
-The final manuscript establishes the conserved pairing and the
+The current manuscript establishes the conserved pairing and the
 3/2 − Λ duality exactly on the opening block. It uses the remaining rows as a
 classified spectral scaffold and states that a future full constrained
 operator would replace, not simply ratify, them. At the scaffold/eigenvector-
@@ -233,16 +283,21 @@ s¹⁻ᵏ, corresponding to labels k and 1 − k. This is not yet a full-operato
 shear-channel conservation theorem. Applying the opening reflection globally
 had been another category error.
 
-## 5. Where the Final Manuscript Stops
+## 5. Where the Defensible Scope Now Stops
 
-The final scope has several layers.
+The July 20 audit reopened the manuscript; its source still contains the raw
+2/5 claim and has not yet been corrected. The evidence currently supports the
+following narrower scope.
 
 **Established at the stated evidence level:**
 
-- The leading constrained field, its first forced correction, and the
-  parameter-free energy and stress relations.
-- The finite-element strip validation and disk cross-check of the named
-  leading predictions.
+- The leading opening, the selected r⁵ᐟ⁴ residual and first forced correction
+  on the `C_s = 0` base branch, and the parameter-free energy and stress
+  relations.
+- The strip G/P/J validation, the disk stress cross-check, and the July 20
+  finite-window diagnostic of the omitted s-like background; the evidence does
+  not validate a universal raw profile or independently validate a residual
+  2/5 exponent.
 - The exact opening-block pairing and its 3/2 − Λ duality.
 - The normalized outer base multiplier of the *formal leading constrained
   action* and its non-smooth endpoint incompatibility.
@@ -269,11 +324,18 @@ The final scope has several layers.
   the non-smooth outer multiplier to the smooth finite-c₂ solution.
 - Normalized extraction integrals for the higher parameters.
 - Whether a specimen actually excites the candidate amplitudes B and Qₖ.
+- The full k = 1 characteristic-shear completion and whether global matching
+  selects `C_s = 0`; without that selection the raw deformed face has exponent
+  1/2 rather than 2/5.
+- The full dominant-balance derivation of the central constraint from both
+  equilibrium rows; the current public derivation script assumes the
+  constraint before linearizing it.
 
-The paper's leading field and energy release rate do not depend on those open
-items. The higher amplitudes are candidates, not established universal second
-parameters. That separation between result and program is part of the result
-of the review process.
+The core G/P/J relations survive the leading-map null addition. The selected
+r⁵ᐟ⁴ solution is retained on the `C_s = 0` branch, while its placement in a
+completed k = 1 branch with nonzero `C_s` remains open. The higher amplitudes are
+candidates, not established universal second parameters. That separation
+between result and program is part of the review process.
 
 ---
 
@@ -421,9 +483,11 @@ projection.
 ## 13. A Closed Rung Is Not a Closed Tower
 
 The integer shears Qₖ, k ≥ 2, initially appeared as reaction-free scaffold
-modes. (Q₁ = P⁻¹ᐟ² is the leading-field gauge, not a member of this family.)
-The corrected action calculation found two ordered consequences rather than a
-single closed tower:
+modes. The separate leading-constraint-compatible k = 1 candidate/null
+direction `C_s s` is not the normalization P⁻¹ᐟ² of the r⁵ᐟ⁴ slave field;
+treating both as a gauge helped
+hide the raw-profile error described below. The corrected action calculation
+for k ≥ 2 found two ordered consequences rather than a single closed tower:
 
 ```text
 bare Qₖ shear
@@ -445,7 +509,7 @@ which balance is closed. A later residual is a source for the next problem,
 not evidence that the current solution failed — and not permission to claim
 the whole tower succeeded.
 
-## 14. Fix Passes and Stale State Are New Error Surfaces
+## 14. Fix Passes, Stale State, and Blind Gates Are New Error Surfaces
 
 The review did not follow a clean sequence of “find error, remove error.” The
 first major fix introduced the *omission* of P⁻³ᐟ² and an over-strong traction
@@ -466,7 +530,7 @@ helper and several assertions that merely restated definitions. The displayed
 formulas survived, but the evidence was weaker than advertised; the gates were
 replaced by less definition-dependent routes.
 
-The final public-companion audit exposed the same problem across data
+The July 19 public-companion audit exposed the same problem across data
 representations. Most scalar and ray records used a 15,360-cell strip mesh,
 two material-ratio records used 15,616 cells, and the full-field snapshots had
 the opposite split. Reproducing one headline case therefore could not certify
@@ -481,8 +545,51 @@ They yielded 14 scalar JSON files, 70 ray CSVs, and six field NPZ snapshots
 with mesh and continuation metadata; the release-candidate gate now checks
 their inventory, numerical parity, geometry, and cross-file provenance.
 
-The same final audit caught prose quantifiers that were stronger than their
-evidence. The radial-mesh study supports the representative `λ = 1.6`,
+### A residual-field gate failed the raw observable
+
+A still later mode-completeness audit exposed a different failure. The
+leading constraint and scaffold catalog contained the regular characteristic shear
+`C_s s`, but the leading physical map and raw-profile claim omitted it. The
+existing data had already revealed the term: the angular-profile extraction
+fitted `y₁ = c + br + ar^(5/4)` and removed the linear background before
+recovering `g(θ)`. Figure 8 then fitted only an offset plus r⁵ᐟ⁴, and its
+numerical headline divided a face opening exponent by an in-plane exponent
+measured near `θ = 2°`, where the s-mode is suppressed by
+`sin²(1°) ≈ 3.0×10⁻⁴`. The plot placed a 2/5 guide where the measured
+local slope happened to come closest to 2/5. Neither route tested `C_s = 0`.
+
+Refitting the stored fields with the leading-constraint-compatible face model
+
+```text
+y₁ = c₀ + C_s r + A r^(5/4)
+```
+
+gave face-proxy coefficients `b = -1.6339` for the λ = 2 disk and
+`b = -3.2402` for the λ = 1.6 strip. Across angle, the fitted linear
+coefficient followed `b(θ) ≈ C_s sin²(θ/2)`, strongly supporting a stable
+nonzero s-like background over those finite-core annuli. It does not establish
+the ultimate matched `r → 0` coefficient. The raw face slopes were about 0.510
+and 0.501. After subtracting the fitted linear term, fixed-r⁵ᐟ⁴ consistency
+slopes were about 0.391 and 0.374; because the detrending basis imposed the
+5/4 power, these are not independent exponent measurements. The evidence
+family conflated two pipelines: Figure 5 deliberately removed the background
+to isolate a residual, while Figure 8 omitted it and the numerical headline
+combined exponents from different rays.
+
+**Lesson:** asymptotic order depends on the observable. A regular mode can be
+subleading relative to the singular opening gradient and leading energy
+density—leaving G, the Jacobian plateau, and P intact—yet dominate a raw horizontal coordinate and
+the r⁵ᐟ⁴ residual gradient. Before converting
+field exponents into a visible shape law, enumerate every
+lower-coordinate-order candidate compatible with the governing constraints
+and fit or constrain its coefficient. A gate whose basis
+omits the nuisance mode cannot falsify it; a tangent guide is visualization,
+not evidence. Most importantly, a nuisance-removal operation used to isolate a
+theoretical field must not be forgotten when that residual is promoted to a
+physical observable.
+
+Separately, the July 19 audit caught prose quantifiers that were stronger than
+their evidence. The radial-mesh study supports the representative `λ = 1.6`,
 `c₁ = c₂` case, not every reported case. The no-compression statement applies
 to the sampled `c₂ > 0` strip fields; the auxiliary control reaches a small
 `0.993` chord stretch only on a specimen-scale interval outside the near-tip
@@ -530,8 +637,8 @@ same face identity by another route. The manuscript-level suite grew from 31
 to 57 checks, while specialized analysis scripts carried deeper derivations.
 Those counts are coverage descriptions, not proof by quantity: some checks
 encode printed identities, some independently derive them, and some are
-sampled numerical regressions. The final manuscript and ESI label those levels
-rather than calling every assertion an independent proof.
+sampled numerical regressions. The July 19 manuscript and ESI label those
+levels rather than calling every assertion an independent proof.
 
 The workflow therefore combined a dependency-ordered claim graph with a closed
 release circuit, rather than a flat checklist. The release circuit was:
@@ -550,16 +657,18 @@ downstream checks still appeared green. Multiple gates were treated as
 stronger evidence only to the extent that their failure modes did not share the
 same equation, code path, basis, or fixed gauge.
 
-The release candidate made the relational character of evidence visible. The
-claim ledger and code/evidence map declared the scope; gates checked
+The July 19 release candidate made the relational character of evidence
+visible. The claim ledger and code/evidence map declared the scope; gates checked
 raw-to-summary, figure-to-input, and artifact-to-protocol edges; nested content
 locks pinned the resulting bytes. Checksums establish byte identity; semantic
-gates establish that the artifacts form a coherent evidence family and support
-the stated claim. Neither substitutes for the other. Likewise, fast
-reproduction from curated arrays and an expensive fresh finite-element solve
-are separate lanes: one checks the curated evidence against its derived
-summaries and regenerates its figures, while the other tests whether the
-underlying computation can reproduce that evidence.
+gates test a coherent evidence family only within their encoded model and
+scope. The `C_s s` incident showed that the gate model itself also needs a
+constraint-compatible candidate-mode audit. Neither kind of gate substitutes
+for the other.
+Likewise, fast reproduction from curated arrays and an expensive fresh
+finite-element solve are separate lanes: one checks the curated evidence
+against its derived summaries and regenerates its figures, while the other
+tests whether the underlying computation can reproduce that evidence.
 
 ## 16. Different Review Styles Saw Different Failure Classes
 
@@ -590,6 +699,14 @@ evidentiary scope—one lacked SymPy execution and one used a stale checkout—t
 the later pass on the pinned tree. GLM and Opus supplied earlier referee-style
 pressure.
 
+After the recorded signoff, a separate ChatGPT review compared the Λ = 1 mode
+catalog with the physical crack-face observable and challenged the omitted
+`C_s s` term. Codex then tested that objection against both FEM geometries and
+the figure/test code, confirming a stable nonzero s-like finite-window
+background and the blind raw-profile gate. The full matched k = 1 branch remains
+open. This late finding did not rank one reviewer above the others; it used a
+probe that the earlier rounds had not posed.
+
 These differences were stage-dependent as well as reviewer-dependent. Early
 review was most valuable when it challenged framing and claim scope; middle
 rounds needed dependency-local derivations, admissibility checks, and distinct
@@ -611,6 +728,11 @@ angular derivative vanishes did not establish a nonlinear traction statement.
 
 **It assumed fitted models were complete.** A same-order outer background was
 invisible until a mechanism-removing control was run.
+
+**It verified a residual and promoted it to a raw observable.** One pipeline
+removed an O(r) background to recover the r⁵ᐟ⁴ field. Another omitted that
+background, combined exponents from different rays, and called the result a
+camera-visible 2/5 face profile.
 
 **It made quantifier jumps.** One verified dual pair became a universal
 duality rule; selected nonzero Q₂/Q₃ logarithmic residues risked becoming a
@@ -657,19 +779,24 @@ decision, not copyediting.
 
 **“Pause and submit.”** The theory–verification loop had no natural terminal
 rung. Teng first wrote a stopping line — analysis for endpoint solvability and
-conservation, numerics for a well-posed spectrum — and then made the stronger
-decision to pause before completing it because no printed leading result
-depended on the unfinished blocks. External peer review was designated as the
-next verification instrument.
+conservation, numerics for a well-posed spectrum. At that stage, none of the
+recognized unfinished higher-order blocks fed the printed G/J/P core, so Teng
+paused the tower extension and designated external review as the next
+instrument. The later `C_s s` audit showed that the broader raw-shape claim
+still depended on an unclosed matching coefficient, and the signoff was
+reopened.
 
 This separated three decisions that are often collapsed. **Review again** when
 a promoted result lacks a discriminating falsification route adequate to its
 scope. **Continue** when an unresolved claim or failed gate lies on the
 dependency path of a claim the paper needs. **Release** when the bounded claim
-subgraph passes its full circuit and all remaining open work has been scoped
-out of the shipping claims and named explicitly. Release readiness is not
-research completion: the verified leading result could be frozen and shared
-while the full constrained operator remained an open program.
+subgraph passes its full circuit, its load-bearing gates have been audited for
+omitted leading-constraint-compatible directions, and all remaining open work
+has been scoped out of the shipping claims and named explicitly. Release
+readiness is not research
+completion: the verified G/J/P core could be frozen and shared while the full
+constrained operator remained an open program, but only after a G/J/P-only
+artifact had been synchronized and passed its corrected release circuit.
 
 The human also owned the physical problem, the manuscript's claims, the
 choice of which FEM comparisons counted as validation, and the final decision
@@ -701,12 +828,16 @@ Kimi supplied independent reproduction and code-versus-text checks in the
 early rounds, including an independent route to P⁻³ᐟ² and the P2 element
 correction. DeepSeek/OpenCode performed the late end-to-end audits. Its third
 pass reviewed the then-current theory/manuscript tree at `74edb13` and reported
-“Ready for submission.” That verdict predates the final mesh-provenance, data,
-figure, and scope corrections and is not a review of public-companion commit
-`3369dbc`. One intermediate DeepSeek review used stale state and was retained
-as history rather than authority. GLM and Opus contributed earlier
-referee reports. This was an AI review verdict before journal peer review, not
-a proof statement or an external signoff.
+“Ready for submission.” That verdict predates the July 19 mesh-provenance,
+data, figure, and scope corrections and is not a review of public-companion
+commit `3369dbc`. It also predates the July 20 `C_s s` audit, its required
+withdrawal of the raw Figure 8 claim, and the still-pending manuscript
+synchronization. One intermediate DeepSeek review used stale state
+and was retained as history rather than authority. GLM and Opus contributed
+earlier referee reports. The external ChatGPT report supplied by Teng exposed
+the `C_s s` issue; Codex confirmed the finite-window s-like background and the
+blind gate against the stored fields and code. These were AI review results
+before journal peer review, not proof statements or external signoff.
 
 Line-level authorship cannot be reconstructed reliably from a shared working
 tree, and this case study does not assign it. Some source records were drafted
@@ -731,7 +862,8 @@ The progression that matters:
 
   Two-invariant plane-stress gap
       → emergent uniaxial constraint
-      → r^(1/2) opening, r^(5/4) in-plane field, 2/5 tip shape
+      → r^(1/2) opening and a selected r^(5/4) residual on the C_s = 0 branch
+      → 2/5 only after C_s s detrending, or if matching selects C_s = 0
       → G = (π/2)c₁P² and parameter-free strip test
 
   Useful five-row spectral pencil
@@ -750,7 +882,9 @@ The progression that matters:
       → local checks pass while cross-claims conflict
       → fixes introduce dimensional, traction, and duality errors
       → independent routes, controls, and component decompositions
-      → scoped submission draft with open problems named
+      → a green Figure 8 gate is blind to a constraint-compatible candidate
+      → audit withdraws raw shape claim; shipping synchronization remains
+      → G/J/P core survives
 ```
 
 **When AI worked well:** the claim could be attacked from a genuinely
@@ -767,27 +901,27 @@ than the evidence. More re-reading inside the same frame did not help.
 **The meta-lesson:** executable verification is essential, but “make a test”
 is not the end of the scientific question. A test certifies only what it could
 have falsified, on the artifact it actually exercised, at the scope its
-dependencies permit. The project reached its recorded pre-submission state
-when that sentence became a rule for equations, code, reviewer reports, and
-prose alike.
+dependencies and fitted basis permit. A residual-field check does not certify
+the raw observable from which the residual was extracted. The July 20 audit
+reopened the recorded pre-submission state precisely because that distinction
+had not yet become a gate.
 
 ---
 
 *This case study documents the Mooney–Rivlin plane-stress crack-tip project
-and its intensive June–July 2026 verification campaign. At the recorded
-signoff, the festschrift manuscript was prepared for submission but had not
-yet undergone journal peer review. The sanitized release-candidate companion
-is currently private pending the author's visibility decision. Its pinned
-commit is
+and its intensive June–July 2026 verification campaign. The festschrift
+manuscript reached a recorded signoff on July 19 but had not undergone journal
+peer review. The July 20 `C_s s` audit reopened that signoff. The sanitized
+companion is currently private, and its July 19 candidate commit
 [3369dbc](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/3369dbcfa8b415217e51cbcb4f50935fd45b5341),
-and its curated
+including its now-superseded raw-profile gate, is retained as the exact artifact
+that was audited. Its curated
 [verification lessons](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/3369dbcfa8b415217e51cbcb4f50935fd45b5341/PROCESS_AND_LESSONS.md)
-are intended to replace raw internal review records as the public process
-reference once released. The
+must be corrected before becoming the public process reference. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 0.97 (gate-architecture review draft)
+**Version:** 0.98 (characteristic-shear correction audit)
 **Last Updated:** July 20, 2026
