@@ -154,9 +154,11 @@ y₁ = c₀ + C_s s + P^(-1/2) r^(5/4) g(θ) + …,
 s = r sin²(θ/2).
 ```
 
-The constraint fixes the component of `∇y₁` transverse to `∇y₂`; integrability
-then gives the selected r⁵ᐟ⁴ residual up to an opening-gradient-parallel null
-addition. It cannot fix `C_s s`: for the leading opening `y₂ = P√s`, `∇s` is
+The constraint fixes the component of `∇y₁` transverse to `∇y₂`. After the
+opening-gradient-parallel null addition is separated, formal power balance
+gives an r⁵ᐟ⁴ constraint-active residual on a chosen regular-axis analytic outer
+representative. The local constraint cannot fix `C_s s`: for the leading
+opening `y₂ = P√s`, `∇s` is
 parallel to `∇y₂`, so this addition leaves the leading-map determinant J
 exactly unchanged. More generally, `y₁ → y₁ + F(y₂)` is the exact null
 transformation. The mode is regular across the intact ligament and changes a
@@ -213,12 +215,12 @@ y₂ ~ r^(1/2).
 If `C_s = 0`, eliminating r gives the 2/5 profile. If matching produces a
 nonzero coefficient that persists asymptotically, the regular linear term
 dominates the raw horizontal coordinate and the raw limiting exponent is 1/2,
-the same as the neo-Hookean face exponent. The 2/5 law is the selected theory's
-conditional prediction for the detrended remainder
+the same as the neo-Hookean face exponent. The 2/5 law is the chosen
+regular-axis analytic representative's conditional prediction for the detrended remainder
 `y₁ - c₀ - C_s r`. Whether global specimen matching selects either branch is
 not established.
 
-On the previously selected `C_s = 0` base branch, the first correction is
+On the chosen `C_s = 0` outer representative, the first correction is
 forced by the *on-manifold I₂ stress*, not by off-manifold compliance. Its
 opening profile is
 v(θ) = -(2/3)sin(θ/2), and its in-plane term carries the dimensional factor
@@ -311,12 +313,13 @@ The evidence supports the following narrower scope.
 
 **Established at the stated evidence level:**
 
-- The leading opening, the selected r⁵ᐟ⁴ residual and first forced correction
-  on the `C_s = 0` base branch, and the parameter-free energy and stress
-  relations.
-- The leading energy flux with retained `C_s`: an exact Laurent-coefficient
-  audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂, g, g′, and the
-  normalized r⁵ᴟ⁴ amplitude used in that audit.
+- The formal leading opening, r⁵ᐟ⁴ constraint-active residual, and first forced
+  correction on the chosen `C_s = 0` analytic outer representative, together
+  with the parameter-free energy and stress relations.
+- The leading energy flux on the superposed truncated map: an exact
+  Laurent-coefficient audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂,
+  g, g′, and the normalized r⁵ᴟ⁴ amplitude used in that audit. This is not a
+  completed retained-`C_s`, finite-compliance equilibrium branch.
 - The strip G/P/J validation, the disk stress cross-check, and the July 20
   finite-window diagnostic of the omitted s-like background; the evidence does
   not validate a universal raw profile or independently validate a residual
@@ -354,9 +357,10 @@ The evidence supports the following narrower scope.
   constrained field, any shrinking angular/core layers, and the global
   specimen while determining `C_s`.
 
-The core G/P/J relations survive the leading-map null addition. The selected
-r⁵ᐟ⁴ solution is retained on the `C_s = 0` branch, while its placement in a
-completed k = 1 branch with nonzero `C_s` remains open. The higher amplitudes are
+The core G/P/J relations survive the leading-map null addition. The formal
+r⁵ᐟ⁴ residual is retained on the chosen `C_s = 0` analytic representative,
+while its placement in a completed k = 1 branch with nonzero `C_s` remains
+open. The higher amplitudes are
 candidates, not established universal second parameters. That separation
 between result and program is part of the review process.
 
@@ -395,6 +399,15 @@ exposed a useful type error: after separation of variables, an angular
 eigenfunction and the physical field it parametrizes are not interchangeable.
 Verification should differentiate the same mathematical object that the paper
 defines, not an implicitly reconstructed one.
+
+The final wording audit exposed the semantic counterpart of that type error:
+the manuscript called the `C_s = 0` field “selected by the asymptotic balance”
+even though the next sentence correctly said that the same local balance leaves
+`C_s` undetermined. “Selected” is not a decorative synonym for “chosen.” It
+must name a selector—local balance, regular-axis continuation, global matching,
+or an imposed boundary condition. The manuscript now calls `C_s = 0` a chosen
+representative and reserves selection language for the operation that actually
+performs it.
 
 ## 7. A Unit Gauge Hid a Missing Amplitude
 
@@ -603,7 +616,7 @@ y₁ = c₀ + C_s r + A r^(5/4)
 
 gave face-proxy coefficients `b = -1.6339` for the λ = 2 disk and
 `b = -3.2402` for the λ = 1.6 strip. Across angle, the fitted linear
-coefficient followed `b(θ) ≈ C_s sin²(θ/2)`, strongly supporting a stable
+coefficient followed `b(θ) ≈ C_s sin²(θ/2)`, consistent with a stable
 nonzero s-like background over those finite-core annuli. It does not establish
 the ultimate matched `r → 0` coefficient. The raw face slopes were about 0.510
 and 0.501. After subtracting the fitted linear term, fixed-r⁵ᐟ⁴ consistency
@@ -613,14 +626,15 @@ family conflated two pipelines: Figure 5 deliberately removed the background
 to isolate a residual, while Figure 8 omitted it and the numerical headline
 combined exponents from different rays.
 
-That quick probe was enough to falsify the zero-mode assumption, but its
-nuisance treatment was not yet a release analysis. The production correction
+That quick probe was enough to falsify use of the zero-mode assumption as an
+unqualified description of the stored finite-window fields, but its nuisance
+treatment was not yet a release analysis. The production correction
 imposed one physical `c₀` shared across five angular rays and added per-ray
 and nested-window sensitivity checks. It gave face `b` values of −2.1393 and
 −1.6718 for the λ = 1.5 and 2.0 disks, and −3.2684 and −3.5802 for the
 λ = 1.6 and 2.2 strips. Across angle, the fitted linear coefficient collapsed
 as `b(θ) ≈ C_s sin²(θ/2)`, with normalized residuals of 1.5–1.8% for the
-disk and 1.1–1.4% for the strip. This strongly supports a stable nonzero
+disk and 1.1–1.4% for the strip. This is consistent with a stable nonzero
 s-like background over those finite-core annuli; it does not establish the
 ultimate matched `r → 0` coefficient. The production raw face slopes were
 0.502–0.514. Target-free free-q fits of the detrended residual ranged from
@@ -762,8 +776,9 @@ pressure.
 After the recorded signoff, a separate ChatGPT review compared the Λ = 1 mode
 catalog with the physical crack-face observable and challenged the omitted
 `C_s s` term. Codex then tested that objection against both FEM geometries and
-the figure/test code, confirming a stable nonzero s-like finite-window
-background and the blind raw-profile gate. The full matched k = 1 branch remains
+the figure/test code, finding finite-window consistency with a nonzero s-like
+background and exposing the blind raw-profile gate. The full matched k = 1
+branch remains
 open. This late finding did not rank one reviewer above the others; it used a
 probe that the earlier rounds had not posed.
 
@@ -923,7 +938,7 @@ The progression that matters:
 
   Two-invariant plane-stress gap
       → emergent uniaxial constraint
-      → r^(1/2) opening and a selected r^(5/4) residual on the C_s = 0 branch
+      → r^(1/2) opening and a formal r^(5/4) residual on a chosen C_s = 0 representative
       → 2/5 only after C_s s detrending, or if matching selects C_s = 0
       → G = (π/2)c₁P² and parameter-free strip test
 
@@ -986,7 +1001,7 @@ GitHub URL is not currently anonymously accessible. Its July 19 candidate
 commit `3369dbcfa8b415217e51cbcb4f50935fd45b5341`, including the now-superseded
 raw-profile gate, is retained locally as the exact artifact that was audited;
 its then-current curated `PROCESS_AND_LESSONS.md` is likewise historical. The
-corrected post-review commit `bca6ba81a0eac99da93f3494d10033167d2f53e3` synchronizes the
+corrected post-review commit `85253b73681c611deaf38ae3c5de4500bb5045ce` synchronizes the
 mode-aware analysis, claims, figures, and gates, but remains local and unpushed.
 It still requires journal/external peer review, confirmed public visibility, a public
 push/tag, and a DOI or other immutable release identifier before it can serve
