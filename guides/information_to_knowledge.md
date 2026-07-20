@@ -1,5 +1,11 @@
 # From Information to Knowledge in AI-Assisted Research
 
+> **Historical guide — March 2026.** Its central argument about corrections,
+> dependencies, bounds, and evidence remains valuable. Product-level claims
+> about memory, skills, and agent capabilities predate the July 2026 workflow.
+> See [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
+> and the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md).
+
 ---
 
 ## The Gap

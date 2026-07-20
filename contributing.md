@@ -10,7 +10,9 @@ Contributions are welcome — especially from researchers who have used AI in th
 
 ## Requirements
 
-- Everything must come from **real, tested experience**. No theoretical frameworks or untested advice.
+- Observed examples must come from **real, tested experience**. Author
+  reflections, proposed practices, and untested hypotheses are welcome only
+  when they are labeled clearly and kept separate from findings.
 - **Document what went wrong**, not just what worked.
 - **Pin your versions** — which AI model, which software, which environment.
 - **Don't overclaim.** If something only worked sometimes, say so.
@@ -18,5 +20,3 @@ Contributions are welcome — especially from researchers who have used AI in th
 ## How to contribute
 
 Open an issue or pull request. For small corrections, a PR is fine. For new case studies or guides, open an issue first to discuss scope.
-
-All contributions are under the [MIT License](LICENSE).

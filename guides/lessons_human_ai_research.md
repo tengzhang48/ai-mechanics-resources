@@ -1,5 +1,13 @@
 # Lessons from Human-AI Collaboration in Computational Research
 
+> **Historical guide — March–April 2026.** This document preserves the
+> chat-assistant-era workflow and project record. Many numerical and
+> verification lessons remain useful, but its fixed human/AI capability split
+> and several workflow prescriptions are dated. The current companion is
+> [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md).
+> See the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md) for specific
+> qualifications.
+
 **A practitioner's field guide, drawn from a year of AI-assisted development of computational mechanics software (CoupMPM, CoupLB, and others).**
 
 ---

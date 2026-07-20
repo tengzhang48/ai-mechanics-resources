@@ -1,5 +1,12 @@
 # How Debate with AI Produces Understanding
 
+> **Historical guide — March 2026.** This document records a chat-era set of
+> conversation experiments. Its lessons about bounded challenge, correction,
+> and reviewer triage remain useful, but model voting, same-thread continuity,
+> and prompt-dominance claims require qualification in agent workflows. See
+> [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
+> and the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md).
+
 **Insights from extended human-AI research collaboration, where the debate process itself demonstrated the methodology being discussed.**
 
 ---

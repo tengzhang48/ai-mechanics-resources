@@ -1,10 +1,19 @@
 # AI Risks and Mitigations in Research
 
+> **Historical guide — March 2026.** The core risks remain important, especially
+> plausible inapplicability, silent method substitution, and inadequate tests.
+> Some numerical claims, capability boundaries, and chat-era mitigations are
+> dated or await source verification. Use this with
+> [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
+> and the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md).
+
 **Concrete risks identified from practice, with specific prevention strategies.**
 
-Part of the [AI-Mechanics-Resources](../README.md) collection.  
-For the full methodology guide, see [Lessons from Human-AI Collaboration](lessons_human_ai_research.md).  
-For the debate methodology, see [How Debate with AI Produces Understanding](lessons_from_conversation.md).
+Part of the [AI-Mechanics-Resources](../README.md) collection.
+
+- Current methodology: [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
+- Historical methodology: [Lessons from Human-AI Collaboration](lessons_human_ai_research.md)
+- Debate methodology: [How Debate with AI Produces Understanding](lessons_from_conversation.md)
 
 ---
 
