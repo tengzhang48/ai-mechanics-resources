@@ -4,7 +4,8 @@
 incomplete spectral scaffold, and several rounds of mutually inconsistent
 “verified” claims into a pre-submission candidate—then reopened it when a
 green gate proved blind to a leading-constraint-compatible measurement-space
-direction, and rebuilt the candidate around that failure.**
+direction, rebuilt the reaction-carrying hierarchy, and found that a second
+family of green gates shared the wrong inner variable map.**
 
 ---
 
@@ -36,6 +37,9 @@ direction, and rebuilt the candidate around that failure.**
 - [17. Where AI Failed, Specifically](#17-where-ai-failed-specifically)
 - [18. The Human's Critical Contributions](#18-the-humans-critical-contributions)
 - [19. Attribution, Carefully](#19-attribution-carefully)
+
+**Part IV — Comparing Two Method-Defining Frontiers**
+- [20. Crack Tip and Wrinkle: Different Walls, the Same Standard](#20-crack-tip-and-wrinkle-different-walls-the-same-standard)
 
 - [Summary](#summary)
 
@@ -92,6 +96,20 @@ raw-profile claim conditional, inserted the missing dominant-balance
 derivation, and replaced the blind tangent comparison with a target-free
 profile-mode audit. External review and publication of the corrected pinned
 artifact remain release steps, not scientific results already obtained.
+
+The July 21–22 campaign asked a harder question: how far could the candidate
+`B` and `Q_k` families be carried by the radial symplectic method before they
+were merely a catalog? Gates 1–3 rebuilt the reaction-carrying Hessian system,
+its boundary current, and the first sourced `B` handoff from the constrained
+action. Gate 4 extended several formal outer rungs, while Gate 5A froze the
+isolated opening projectors. Gate 6 then invalidated the archived axis-layer
+target itself. A derivation restarted from fixed-Cartesian physical PK1 found
+a different cusp operator, and the next one-scale reaction problem produced
+an exact incompatibility between smooth-axis parity and its prescribed outer
+tail. This is a precise obstruction to the present sequential one-scale
+endpoint construction, not a proof that the nonlinear continuum crack problem
+has no solution. A two-scale
+endpoint construction is now a future-paper problem.
 
 The scientific repository began in June 2026, with manuscript revisions
 recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
@@ -293,23 +311,146 @@ reaction is slaved and that the full momentum differs from the scaffold
 variable. The generic second-variation theorem was sound; the identification
 of the printed five rows with its full operator was not derived.
 
-The correction was not to discard the scaffold. It was to name it accurately.
-The current manuscript establishes the conserved pairing and the
-3/2 − Λ duality exactly on the opening block. It uses the remaining rows as a
-classified spectral scaffold and states that a future full constrained
-operator would replace, not simply ratify, them. At the scaffold/eigenvector-
-audit level, a characteristic shear sᵏ pairs with the singular auxiliary
-s¹⁻ᵏ, corresponding to labels k and 1 − k. This is not yet a full-operator
+The July 20 correction did not discard the scaffold. It named it accurately.
+At that checkpoint the manuscript established the conserved pairing and the
+3/2 − Λ duality exactly on the opening block and retained the other rows as a
+classified spectral scaffold. At the scaffold/eigenvector-audit level, a
+characteristic shear sᵏ pairs with the singular auxiliary s¹⁻ᵏ,
+corresponding to labels k and 1 − k. This is not by itself a full-operator
 shear-channel conservation theorem. Applying the opening reflection globally
-had been another category error.
+had been another category error. The later Gate-1/2 work derives a
+reaction-carrying constrained *outer* operator and current; it does not
+retroactively turn the old five rows into that operator or supply the physical
+finite-compliance endpoint domain.
 
 ## 5. Where the Defensible Scope Now Stops
 
 The July 20 audit reopened the manuscript, and the conservative correction is
-now implemented in its source and ESI. The corrected title emphasizes
-constrained asymptotics, the detailed unfinished spectral program has been
-reduced to an outlook, and the unconditional raw 2/5 claim has been removed.
-The evidence supports the following narrower scope.
+implemented in its source and ESI. At that checkpoint the working title
+emphasized constrained asymptotics, the unfinished five-row scaffold was
+reduced to an outlook, and the unconditional raw 2/5 claim was removed. The
+July 21–22 work did not restore the old scaffold as a completed spectrum. It
+derived substantially more of the exact symplectic construction and made the
+framework, rather than the energy-flux corollary alone, central again. The
+evidence supports the following bounded scope.
+
+### The July 21–22 gate campaign
+
+The next decision was not to put every higher-order candidate back into the
+paper. It was to determine whether the candidates `B` and `Q_k` came from a
+reproducible symplectic construction or only from the old five-row catalog.
+The team wrote a dependency-ordered six-gate program:
+
+```text
+Gate 1   reaction-carrying Hessian operator and provisional outer endpoint chart
+Gate 2   Green/symplectic current and admissible pairing domain
+Gate 3   selected B seed and its first complete sourced handoff
+Gate 4   nonlinear outer recursion and Fredholm assembly
+Gate 5   normalized dual extraction from finite-radius fields
+Gate 6   finite-compliance endpoint matching and physical selection
+```
+
+Gates 1 and 2 replaced the inferred scaffold dynamics with a non-autonomous
+Hessian DAE derived from the constrained action, including the reaction in the
+canonical momentum, total endpoint tractions, and an off-shell Green identity.
+Gate 3 then closed the selected analytic-displacement `B` block at its frozen-
+leading, first-handoff scope. Its endpoint logarithms, current tails, and
+source-resolved Fredholm data survived a hostile Kimi review that restarted
+from the physical action rather than trusting the coefficient generator.
+
+Gate 4 was deliberately harder. It had to combine the `B`, `Q_k`, material,
+and background ladders rather than continue one mode in isolation. Several
+representative rungs closed exactly, including the first stationary-background
+handoff, and the calculation exposed a formal `Lambda = 17/4` outer field that
+leaves the regular finite-action endpoint class. This is a verified handoff,
+not total Gate-4 closure. Gate 5 was not skipped: Gate 5A independently froze
+the normalized projectors for the isolated opening harmonics and their source/
+face ledger. Mixed reaction-carrying extraction must wait for the physical
+endpoint form.
+
+That dependency pulled Gate 6 forward. An extensive archived T3 calculation
+had solved a scalar axis-layer ODE accurately, but the ODE itself had not been
+derived from physical PK1. The deformed components `y_1,y_2` are fixed
+Cartesian scalars; only the reference columns of their gradients are resolved
+in the polar frame. T3 had inserted the `-B,+A` connections appropriate to
+spatial components expressed in a rotating polar basis. It had also failed to
+carry the fixed-physical-angle radial derivative of
+`eta = theta/delta(r)`, for which
+
+```text
+r partial_r [r^alpha U(eta)]
+  = r^alpha [alpha U-(eta/2)U']       when delta is proportional to r^(1/2).
+```
+
+Returning to the exact reduced energy and direct fixed-Cartesian PK1 gave the
+physical `h=3` cusp equation
+
+```text
+(1+4eta^2)Z''-14eta Z'+18Z=0,
+```
+
+not the archived T3 target. Exact symbolic extraction, substitution into the
+unexpanded stress divergence, and an independent finite-difference gauge all
+confirmed the reset. The old T3 numerics remain a record of an internally
+consistent assumed model; they are not evidence for this physical operator.
+
+The reset did more than change coefficients. The first inhomogeneous
+one-scale reaction connection is
+
+```text
+(1+4eta^2)Pi1''-10eta Pi1'+12Pi1
+  = 30(1+4eta^2)^(-1/4).
+```
+
+The solution selected only by the required far-field tail cannot also obey
+smooth Mode-I parity. With the homogeneous test function
+`H = 1-6eta^2`, the exact Green identity gives
+
+```text
+-Pi1'(0)
+  = 30 integral_0^infinity
+      (1-6eta^2)(1+4eta^2)^(-5/2) d eta
+  = 5/2.
+```
+
+Thus the tail-selected branch has `Pi1'(0) = -5/2`, whereas smooth-axis parity
+requires zero. The even homogeneous solution cannot change that derivative;
+the odd repair grows at infinity and reorders the matching. The local
+differential row and its outer tail can therefore both be correct while the
+proposed one-scale half-line boundary-value problem is incompatible as posed.
+Any later
+`Lambda = 17/4` cascade built on that tail is conditional connection data, not
+a closed smooth-axis solution. The final bounded one-scale audits closed two
+important loopholes. The complete homogeneous connection fixes the odd
+parity-repair coefficient to `5/2`; after optimally removing its faster
+`eta^2` component, the exact `(10sqrt(2)/3)eta^(3/2)` overlap remains. A
+separate `t = sqrt(delta)` grade audit proves that regular analytic
+finite-compliance backgrounds cannot alter the obstructed `t^1` Green moment;
+direct PK1 puts their local mixing and the `c1` tangent at `t^5`. A
+nonanalytic same-grade sector, retained-`C_s` reordering, or a two-scale match
+can still alter the balance and was not solved. Nor does the mismatch predict
+a physical divergent axis field: the outer obstruction enters inside the shrinking
+finite-compliance region where the smooth inner solution must supersede the
+outer expansion. It is matching data that forces a reorganization.
+
+This checkpoint separates three meanings of completion that earlier notes had
+blurred:
+
+- A **submission-ready reduced-model paper** needs every printed claim and
+  figure supported and reproducible. It may leave higher-order matching open.
+- **Six-gate reduced-model closure** would also complete the declared outer
+  hierarchy, physical endpoint domain, dual extraction, and composite
+  matching. It is stronger than the present manuscript requires.
+- **Full mathematical closure** would prove existence, uniqueness,
+  convergence, and global control for the unreduced nonlinear continuum
+  problem. This project does not claim it.
+
+The present paper should push the one-scale symplectic analysis to an exact
+frontier and prove through its claim ledger that the unresolved connection is
+not a hidden premise of the leading field, Jacobian plateau, energy relation,
+or exact opening-block pairing. A two-scale polyhomogeneous/switchback
+endpoint state, retained-`C_s` intermediate deck, singular dual normalization,
+and composite PK1/FEM matching belong to a future paper.
 
 **Established at the stated evidence level:**
 
@@ -325,6 +466,14 @@ The evidence supports the following narrower scope.
   not validate a universal raw profile or independently validate a residual
   2/5 exponent.
 - The exact opening-block pairing and its 3/2 − Λ duality.
+- The Gate-1 reaction-carrying constrained Hessian DAE and Gate-2 off-shell
+  Green identity on their declared provisional outer endpoint domain.
+- The Gate-3 selected `B` seed and first source-resolved handoff, including
+  its polyhomogeneous endpoint current and formal Fredholm data.
+- For the stated one-scale `Pi1` connection equation, the exact tail/parity
+  defect `Pi1'(0) = -5/2`. This is an obstruction result, not Gate-6 closure.
+- The Gate-5A normalized isolated-opening projectors and source/face ledger;
+  these are extraction infrastructure, not a mixed physical extractor.
 - The normalized outer base multiplier of the *formal leading constrained
   action* and its non-smooth endpoint incompatibility.
 - The analytic families of the five-row scaffold, as candidate locations and
@@ -342,13 +491,16 @@ The evidence supports the following narrower scope.
 
 **Still open:**
 
+- Total Gate 4: the all-source background/material/`B`/`Q_k` recursion and its
+  assembled Fredholm conditions.
 - Higher material orders of the k + 1/2 block.
-- The row-two rung generated at k + 3 and any tower beyond it.
-- The general reaction-carrying constrained endpoint operator and its full
-  conserved pairing.
-- The finite-compliance operator and the shrinking axis layer needed to match
-  the non-smooth outer multiplier to the smooth finite-c₂ solution.
-- Normalized extraction integrals for the higher parameters.
+- The generic row-two family generated at k + 3 and its later tower. The
+  representative k = 2 rung closes formally, but does not establish the
+  all-`k`, all-source recursion.
+- The *physical finite-compliance* endpoint domain and its inner symplectic
+  boundary form. The formal outer operator/current does not supply this datum.
+- Mixed reaction-carrying extraction integrals and controlled finite-radius
+  error laws for the higher parameters.
 - Whether a specimen actually excites the candidate amplitudes B and Qₖ.
 - The full k = 1 characteristic-shear completion and whether global matching
   selects `C_s = 0`; without that selection the raw deformed face has exponent
@@ -356,6 +508,11 @@ The evidence supports the following narrower scope.
 - A uniform finite-c₂ existence and matching analysis that connects the outer
   constrained field, any shrinking angular/core layers, and the global
   specimen while determining `C_s`.
+- The nonanalytic same-grade or reordered sector that must absorb the exact
+  parity-repair switchback; regular analytic backgrounds have been excluded at
+  this grade.
+- The two-scale repair of the exact `Pi1'(0) = -5/2` parity/tail mismatch and
+  every later endpoint coefficient that depends on that repair.
 
 The core G/P/J relations survive the leading-map null addition. The formal
 r⁵ᐟ⁴ residual is retained on the chosen `C_s = 0` analytic representative,
@@ -657,6 +814,51 @@ not evidence. Most importantly, a nuisance-removal operation used to isolate a
 theoretical field must not be forgotten when that residual is promoted to a
 physical observable.
 
+### A green family can share one wrong derivation root
+
+The Gate-6 reset exposed a failure that test-count summaries conceal. The T3
+scripts agreed with one another because they inherited the same insertion map:
+the same polar-vector connections, the same treatment of radial differentiation,
+and the same scalar target. High-precision ODE solutions, coefficient
+regressions, and matching-power checks could certify that implementation while
+remaining unable to test whether its variables represented the physical
+fixed-Cartesian deformation. Porting the system to JAX would have produced
+faster and more accurate derivatives of the wrong residual.
+
+The corrective test changed the derivation root. One route differentiated the
+exact reduced energy to physical PK1 and took its polar divergence; another
+inserted manufactured profiles into the unexpanded stress; a third used a
+different numerical gauge. Only after those routes agreed was the new cusp
+operator promoted. The subsequent Green identity did not merely report that a
+boundary solver failed. It returned the exact defect `Pi1'(0) = -5/2`, showing
+which pair of one-scale conditions cannot coexist.
+
+**Lesson:** independence is structural, not social. Two agents, solvers, or
+scripts are not independent when they reuse the same coordinate map or reduced
+generator. Every new variable reduction needs at least one audit that begins
+again at the physical action or stress, states which basis rotates, and keeps
+the physical coordinate held fixed during differentiation. A verified
+obstruction is a stronger endpoint than a converged solution of an assumed
+equation.
+
+This is also a publication-risk lesson. The unconditional raw 2/5 profile,
+the scaffold/full-operator identification, and the T3 physical axis target all
+reached polished, internally checked states before a root-changing audit found
+the missing alternative. None was an obvious algebraic typo. A reviewer given
+only a conventional manuscript could reasonably miss a constraint-null mode,
+a theorem-to-operator gap, or a coordinate-map error distributed across a
+derivation archive. That possibility does not lower the standard; it places
+the burden on the authors to perform the hostile audit before release. In this
+project, stopping at the first green candidate could have placed a partially
+wrong result in the literature.
+
+Near-submission status therefore became a trigger for four attacks: enumerate
+every lower-order mode visible in the claimed observable, restart one route at
+the physical energy or PK1, derive the endpoint domain with an exact Green
+test, and inspect the immutable tree that would actually ship. A bounded paper
+may still stop short of the future two-scale problem, but any new finding that
+reconnects to a printed claim revokes the release state immediately.
+
 Separately, the July 19 audit caught prose quantifiers that were stronger than
 their evidence. The radial-mesh study supports the representative `λ = 1.6`,
 `c₁ = c₂` case, not every reported case. The no-compression statement applies
@@ -852,6 +1054,20 @@ exact opening block, the formal constrained-action Qₖ responses, the spectral
 scaffold, and the still-open full operator. This was a scientific positioning
 decision, not copyediting.
 
+**“How far are we from closing the problem?”** This question converted a long
+list of candidate calculations into the six dependency-ordered gates. It also
+forced each checkpoint to say whether it closed an operator, an endpoint
+domain, one sourced rung, an extractor, or a matched physical branch.
+
+**“This is a reduced model, not full mathematical closure.”** Teng rejected a
+misleading use of “full closure” and separated manuscript readiness, six-gate
+reduced-model closure, and existence/convergence for the unreduced PDE.
+
+**“The two-scale problem can be a future paper.”** Once the exact one-scale
+parity/tail defect was identified, this set a principled stopping boundary.
+The present work must state the obstruction and protect its claim ledger; it
+need not hide a second research paper inside the current submission.
+
 **“Pause and submit.”** The theory–verification loop had no natural terminal
 rung. Teng first wrote a stopping line — analysis for endpoint solvability and
 conservation, numerics for a well-posed spectrum. At that stage, none of the
@@ -870,8 +1086,9 @@ omitted leading-constraint-compatible directions, and all remaining open work
 has been scoped out of the shipping claims and named explicitly. Release
 readiness is not research
 completion: the verified G/J/P core could be frozen and shared while the full
-constrained operator remained an open program, but only after a G/J/P-only
-artifact had been synchronized and passed its corrected release circuit.
+finite-compliance matched hierarchy remained an open program, but only after a
+G/J/P-only artifact had been synchronized and passed its corrected release
+circuit.
 
 The human also owned the physical problem, the manuscript's claims, the
 choice of which FEM comparisons counted as validation, and the final decision
@@ -892,16 +1109,21 @@ review dispositions, and manuscript revisions. Several important errors
 introduced during its fix passes were caught in subsequent rounds.
 
 Codex/GPT began as the structural falsifier and later, by explicit human
-decision, led the Qₖ derivation rounds. It contributed the action/scaffold
-distinction, dimensional and full-stress attacks, exact endpoint and flux
-checks, and the later companion construction. In the subsequent release work,
-it also helped formalize the multi-gate circuit. Fable reviewed the promoted
-results at the scope recorded in each handoff; the later k + 3/2 construction
-received a dedicated PASS before manuscript integration.
+decision, led the Qₖ and six-gate derivation rounds. It contributed the
+action/scaffold distinction, dimensional and full-stress attacks, exact
+endpoint and flux checks, the reaction-carrying Gate-1/2 construction, and the
+fixed-Cartesian Gate-6 reset. In the subsequent release work, it also helped
+formalize the multi-gate circuit. Fable reviewed promoted results at the scope
+recorded in each handoff; the later k + 3/2 construction received a dedicated
+PASS before manuscript integration.
 
 Kimi supplied independent reproduction and code-versus-text checks in the
 early rounds, including an independent route to P⁻³ᐟ² and the P2 element
-correction. DeepSeek/OpenCode performed the late end-to-end audits. Its third
+correction. In the July 21–22 campaign Kimi also performed a hostile Gate-3
+review, rebuilt early Gate-4 rungs, and independently confirmed both the
+`Lambda = 17/4` formal outer obstruction and the later `Pi1'(0) = -5/2`
+one-scale connection defect. DeepSeek/OpenCode performed the late end-to-end
+audits. Its third
 pass reviewed the then-current theory/manuscript tree at `74edb13` and reported
 “Ready for submission.” That verdict predates the July 19 mesh-provenance,
 data, figure, and scope corrections and is not a review of public-companion
@@ -931,6 +1153,131 @@ allowed both statements to be true.
 
 ---
 
+# Part IV — Comparing Two Method-Defining Frontiers
+
+---
+
+## 20. Crack Tip and Wrinkle: Different Walls, the Same Standard
+
+The crack-tip and wrinkle projects did not become important because they took
+a long time or consumed many review rounds. Difficulty is evidence only when
+it identifies which assumption, representation, or asymptotic scale controls
+the result. A prolonged calculation inside a shared wrong frame is not deeper
+than a short correct derivation. Conversely, a quick leading solution is not
+shallow when its scope is stated honestly.
+
+What makes these projects comparable is that each reached a point where the
+method's name became an executable scientific claim.
+
+| Question | Wrinkle bifurcation project | Mooney–Rivlin crack-tip project |
+|---|---|---|
+| Early successful object | Fourier × depth-FE calculation near the observed period-doubling range | Five-row spectral scaffold, formal outer modes, and a solved T3 scalar axis-layer target |
+| What the numerics really supplied | A depth-resolved oracle showing that through-depth relaxation matters | Accurate solutions of formal outer rungs, an assumed inner ODE, and global finite-resolution FEM evidence |
+| Hidden method mismatch | The paper promised analytical depth while the production unknowns were nodal through depth | The inner map treated fixed-Cartesian deformation components as rotating polar components and omitted a fixed-angle radial connection |
+| Human method boundary | No depth-nodal unknowns in the selected paper method; global analytical-depth Ritz coefficients were allowed | Derive the physical inner residual from the reduced action/direct PK1 before choosing a solver; distinguish one-scale reduced-model closure from full mathematical closure |
+| Rebuild | Coefficient-only analytical-depth symplectic-basis Rayleigh–Ritz state and signed Floquet Hessian | Reaction-carrying Hessian/current gates, then a fixed-Cartesian direct-PK1 cusp and exact endpoint connection audit |
+| Frontier result | Retained-space analytical-depth thresholds with convergence evidence, not continuum error bounds | Exact one-scale parity/tail incompatibility; the two-scale endpoint repair remains open |
+
+### The wrinkle wall was a method-identity wall
+
+The wrinkle depth-FE calculation was valuable. It relaxed the depth profile,
+located a plausible threshold, and acted as a numerical oracle against which
+reduced spaces could be judged. But its assembled unknowns were depth-node
+values, so it could not substantiate the paper's claimed analytical-depth
+symplectic method. Teng's intervention was not a request for a preferred
+decimal. It was a method contract: exact Hamiltonian–Stroh functions had to
+provide the depth backbone, nonlinear enrichment had to be represented by
+global coefficients, and stability had to come from the signed Floquet
+Hessian of that retained state. Fable's difficult turnaround mattered because
+it built a calculation that met that contract. The final thresholds are still
+retained-space estimates rather than full continuum closure.
+
+### The crack wall is an endpoint-uniformity wall
+
+The crack project first appeared easier because the leading constrained field,
+Jacobian plateau, and energy flux closed quickly. The difficulty entered when
+the paper's larger purpose was stated: demonstrate a reusable radial
+symplectic framework for a nonlinear constrained crack-tip hierarchy, rather
+than solve only for one leading specimen field. That goal made `B`, `Q_k`, the
+reaction-carrying momentum, the boundary current, and the degenerate endpoint
+part of the method rather than optional algebra.
+
+The formal outer gates made substantial progress. The failure occurred at the
+transition from their single-angular-scale endpoint data to a smooth physical
+finite-compliance axis. Unlike the wrinkle case, replacing one numerical
+representation with a method-compliant one is not enough. The exact
+`Pi1'(0) = -5/2` identity says that the isolated one-scale half-line problem as
+posed cannot obey both required conditions. The missing object is structural: an
+additional scale, switchback state, reordered background, or global datum must
+enter the matching. Constructing that two-scale canonical boundary form is a
+new mechanics problem and is reserved for a future paper.
+
+### Numerical work was essential, but it answered scoped questions
+
+Both histories reject the idea that numerical work was wasted when it failed
+to become the final method. In the wrinkle project, the depth-FE oracle showed
+which physical freedom the analytical basis had to recover. In the crack
+project, the FEM continues to test leading finite-window observables, and the
+outer ODE calculations expose endpoint powers, resonances, and candidate
+connections. The archived T3 solutions also preserve useful negative controls
+and matching guesses.
+
+The authority of each result is nevertheless bounded by the equation and
+state space it solved. Numerical convergence cannot derive a residual.
+Automatic differentiation cannot choose the physical variables. Global FEM
+agreement validates a reduced model over resolved windows; it does not prove
+its singular endpoint limit. The correct sequence in both projects was
+
+```text
+physical variational statement
+  -> declared variables and approximation space
+  -> derived operator and boundary form
+  -> independent root-changing audit
+  -> numerical solution and convergence
+  -> paper claim at the same scope
+```
+
+### Why the symplectic framework remains the point
+
+The Gate-6 obstruction is not evidence that symplectic mechanics caused the
+crack difficulty. The noncommuting radial, angular, and compliance limits; the
+constraint-null family; endpoint logs; resonances; and global selection of
+local amplitudes are already properties of the crack problem. The symplectic
+formulation converts them into auditable interfaces: action to canonical
+operator, operator to Green current, current to endpoint defect, and endpoint
+defect to a Fredholm or matching condition. In this case the Green identity
+turned a vague failure to satisfy two boundary conditions into the exact
+number `-5/2`.
+
+That is also why the framework fits AI-assisted nonlinear mechanics. Agents
+can work on bounded symbolic rungs, numerical connections, and hostile
+re-derivations in parallel, while the current and endpoint form provide
+cross-checks. The failure mode is equally clear: many agents can share the
+same reduction root. A multi-agent workflow becomes stronger only when one
+route is required to restart from the physical action or stress.
+
+### Struggle is a diagnostic, not a target
+
+The useful comparison is therefore not that the crack project should consume
+as much effort as the wrinkle project. It is that both should be pushed until
+the strongest paper-facing claim has either a method-compliant construction or
+a named exact obstruction. For the wrinkle project, that point was the
+analytical-depth retained-space method. For the present crack paper, it is the
+leading constrained solution plus exact opening-block symplectic structure,
+together with an honest one-scale boundary for the unfinished higher-order
+program. The future two-scale paper begins from the exact half-line
+incompatibility rather than from an unexplained solver failure.
+
+Submission, six-gate reduced-model closure, and full mathematical closure are
+not synonyms. The manuscript can be ready when its bounded claim graph is
+correct, reproducible, and independent of the unresolved connection. The
+six-gate program can continue as a stronger method-development objective.
+Existence and convergence for the unreduced nonlinear crack PDE remain beyond
+both. Stating these levels is not retreat; it is what makes the framework and
+the AI research record reusable by others.
+
+---
+
 ## Summary
 
 ```text
@@ -954,6 +1301,18 @@ The progression that matters:
       → k+3/2 companions on the constrained branch
       → generated k+3 rung remains open
 
+  Six-gate method push
+      → Gates 1–2 derive the reaction-carrying Hessian DAE and Green current
+      → Gate 3 closes the selected B seed and first sourced handoff
+      → Gate 4 advances formal outer ladders; Gate 5A freezes isolated projectors
+      → Gate 6 returns to fixed-Cartesian physical PK1
+      → archived T3 inner target is quarantined
+      → exact Pi1'(0) = -5/2 contradicts smooth one-scale parity
+      → homogeneous repair leaves exact eta^(3/2) overlap
+      → regular analytic backgrounds cannot alter that Green grade
+      → later outer connection data are conditional
+      → two-scale endpoint construction becomes a future paper
+
   Manuscript review
       → local checks pass while cross-claims conflict
       → fixes introduce dimensional, traction, and duality errors
@@ -973,7 +1332,9 @@ Generation was fast because falsification was concrete.
 **When AI struggled:** the missing content was outside the frame it had been
 given — an omitted constitutive coupling, an unmodeled same-order background,
 a theorem-to-operator identification, a stale file, or a quantifier stronger
-than the evidence. More re-reading inside the same frame did not help.
+than the evidence. More re-reading inside the same frame did not help, and
+multiple green implementations of one inherited variable map did not create
+independence.
 
 **The meta-lesson:** executable verification is essential, but “make a test”
 is not the end of the scientific question. A test certifies only what it could
@@ -989,10 +1350,23 @@ measurement-space failure partly because earlier derivation and integration
 rounds made the relevant mode catalog, observable, and artifact graph
 available to inspect.
 
+The comparison with the wrinkle project sharpens the point. There, a numerical
+oracle had to be separated from the analytical-depth method promised by the
+paper. Here, a formally successful inner calculation had to be separated from
+the physical fixed-Cartesian PK1 problem. In both cases the decisive advance
+was not more computation but a method contract that made the representation
+falsifiable. The time or token cost of the struggle is not evidence; the
+reusable result is the exact boundary it reveals.
+
 ---
 
 *This case study documents the Mooney–Rivlin plane-stress crack-tip project
-and its intensive June–July 2026 verification campaign. The festschrift
+and its intensive June–July 2026 verification campaign. The July 21–22
+extension was checked against the six-gate closure plan, Gate-3 hostile review,
+Gate-4 handoffs, direct-PK1 and penalty-bridge executables, the Gate-6 pivot and
+one-scale cascade records, exact homogeneous-connection and analytic-
+background audits, and the publication-scope decision memo. The
+festschrift
 manuscript reached a recorded signoff on July 19 but had not undergone journal
 peer review. The July 20 `C_s s` audit reopened that signoff; the manuscript
 and ESI have since received the conservative correction and were rebuilt. The
@@ -1011,5 +1385,5 @@ symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 0.99 (conservative characteristic-shear correction implemented)
-**Last Updated:** July 20, 2026
+**Version:** 1.0 (one-scale symplectic frontier and two-scale boundary)
+**Last Updated:** July 22, 2026
