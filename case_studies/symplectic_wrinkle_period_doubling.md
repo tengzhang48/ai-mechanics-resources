@@ -915,11 +915,11 @@ package roles carry the same numerical result?”
 
 The correct release test has two layers. Each package-local record should
 identify the bytes it actually governs: the research ledger identifies the
-raw internal artifact, whereas the public claims ledger and manifest identify
-the sanitized public artifact. The transformation between them must be
-stated; both packages must be internally hash-consistent; and the numerical
-payloads, configurations, and source identities must be compared
-semantically across the transformation. Publication sanitization may
+raw internal artifact, whereas the public claims ledger identifies the
+sanitized public artifact. The transformation between them must be stated;
+each ledger/source pair must be internally hash-consistent; and the numerical
+payloads, configurations, and source identities must be compared semantically
+across the transformation. Publication sanitization may
 legitimately change provenance-only fields, but paper-facing public ledgers
 should use repository-relative source paths. Raw generation records may retain
 historical machine-local paths when they are labeled as nonportable metadata
@@ -1007,7 +1007,7 @@ When several agents touch shared files, prose provenance is too weak. The projec
 moved toward a directed chain:
 
 ```text
-runner -> numerical artifact -> claims ledger -> figure/manuscript -> manifest
+runner -> numerical artifact -> claims ledger -> figure/manuscript -> versioned release
 ```
 
 A finding was considered closed only when the implementation, comparison
@@ -1228,8 +1228,8 @@ location.
 *This case study documents the symplectic wrinkle period-doubling and
 quadrupling project from January through July 2026. The companion manuscript
 is being prepared for journal submission. The public companion repository is
-[nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations/tree/v1.0.0)
-(release v1.0.0).*
+[nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations/tree/v1.0.1)
+(release v1.0.1).*
 
 **Version:** 1.1 (late-review and physics-narrative update)
 

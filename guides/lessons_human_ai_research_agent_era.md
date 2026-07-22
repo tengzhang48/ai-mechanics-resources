@@ -611,7 +611,7 @@ mismatch may prove only that an internal raw artifact and a sanitized release
 artifact occupy different package roles. Sanitizing provenance-only fields can
 legitimately change the hash without changing the configuration or numerical
 payload. The research ledger and the public package's own claims
-ledger/manifest should each hash the file they actually govern, the release
+ledger should each hash the file they actually govern, the release
 transformation should be documented, and semantic fields should be compared
 explicitly. Paper-facing public ledgers should use repository-relative source
 paths. Historical raw generation records may retain machine-local paths when
@@ -769,7 +769,7 @@ without reconstructing a long conversation:
 In the wrinkle project this became the directed chain
 
 ```text
-runner → numerical artifact → claims ledger → figure/manuscript → manifest
+runner → numerical artifact → claims ledger → figure/manuscript → versioned release
 ```
 
 ([wrinkle case, §13](../case_studies/symplectic_wrinkle_period_doubling.md#13-agent-autonomy-made-provenance-and-communication-scientific-requirements)).
@@ -912,11 +912,10 @@ A correction upstream should invalidate or reopen its dependent claims. A test
 that imports a non-shipping copy, silently skips, or only restates a definition
 does not close the graph. A hash proves byte identity, not scientific meaning
 or public availability. For a transformed public package, use portable paths
-in the paper-facing release ledger, regenerate that ledger and the manifest
-from the files that actually ship, and separately confirm that the scientific
-payload agrees with the internal source artifact. Historical raw generation
-records may retain machine-local paths when clearly labeled as nonportable
-metadata.
+in the paper-facing release ledger, regenerate that ledger from the files that
+actually ship, and separately confirm that the scientific payload agrees with
+the internal source artifact. Historical raw generation records may retain
+machine-local paths when clearly labeled as nonportable metadata.
 
 ### 12.5 Separate stopping from completion
 
