@@ -143,6 +143,72 @@ The agent era therefore changes both productivity and epistemic risk. More
 autonomy makes repository state, authorization, method identity, and artifact
 lineage part of the scientific method rather than clerical support.
 
+### 2.1 Why conversation remains a powerful research interface
+
+The transition from chat assistant to workspace agent does not make
+conversation obsolete. Dialogue is a low-friction steering interface between
+participants with different roles and authority. A human can intervene when
+a calculation becomes physically unconvincing, a method crosses an intended
+boundary, or an apparently successful number feels too easy. The intervention
+does not need to arrive as a complete alternative derivation. It can begin as
+“that is not the method I asked for,” “this residual is being interpreted
+incorrectly,” or “the agreement may be accidental.” An agent can then turn
+that constraint or discomfort into a source trace, derivation, discriminating
+test, refinement ladder, or revised claim.
+
+Conversation also externalizes part of the reasoning that would otherwise
+remain tacit. The human can state physical taste, priorities, forbidden
+substitutions, and stopping judgments; the agent can expose assumptions,
+propose consequences, and report what the live calculation does. Repeated
+challenge and response, when written into durable project records, can
+preserve why a route was accepted, demoted, or withdrawn. In the two case
+studies, this record mattered because several decisive corrections began
+neither as a theorem nor as a bug report, but as a short objection that was
+subsequently converted into an auditable artifact. This is an observed benefit
+of the interface in this program, not evidence that every long conversation
+improves research.
+
+The wrinkle residual discussion gives a precise example. The selected finite
+state is a stationary point of the unexpanded energy **against the retained
+Ritz test space**. That is the equilibrium equation the method actually
+solves. It is not a claim that the corresponding first Piola stress has zero
+pointwise divergence or that every boundary traction is already exact. Stress,
+`Div P`, and traction fields are derived from the retained displacement field
+and remain valuable strong-form diagnostics. After implementation, convention,
+quadrature, and boundary-condition errors have been excluded, their spatial
+spectra can show where the retained representation lacks resolution. They are
+not, however, independent solution variables or the Newton residual of this
+global variational method.
+
+This distinction prevents a second numerical overreach. A reported
+strong-residual ratio of, for example, 0.22 is not by itself a 22% error bar on
+a bifurcation threshold. No such conversion follows without an error estimate
+linking that residual norm, the omitted approximation directions, the parent
+state, and the stability eigenvalue. In this calculation, threshold sensitivity
+was therefore assessed through matched enrichment of the parent and
+perturbation spaces, mode tracking, and movement of the neutral crossing. The
+strong diagnostics still matter: large or structured values limit any claim
+of pointwise continuum equilibrium and, after other error sources are
+excluded, identify where further enrichment is needed. The defensible
+statement is therefore neither “stationarity proves the continuum solution”
+nor “a 22% strong residual makes the threshold 22% wrong.”
+It is that the state is stationary in a named retained space, with separately
+reported strong-form limitations and observable-specific convergence evidence
+([wrinkle case, §6](../case_studies/symplectic_wrinkle_period_doubling.md#6-independent-audit-and-retained-space-closure)
+and [§11](../case_studies/symplectic_wrinkle_period_doubling.md#11-coupled-approximations-must-be-closed-together)).
+
+The chat transcript is not the warrant for any of those statements.
+Conversational fluency, apparent memory, confidence, persistence, and agreement
+between a human and an agent are not scientific evidence. Memory can preserve
+an obsolete path; agreement can preserve a shared error; and a persuasive
+explanation can describe code that never ran. Dialogue becomes effective for
+research when it is coupled to live workspace access, executable derivations
+and tests, explicit method and evidence contracts, provenance, appropriate
+convergence studies, and a claims ledger that survives beyond the session.
+The human scientific owner retains publication authority and responsibility.
+Conversation supplies unusually responsive steering and a challenge-response
+record; the scientific warrant comes from the evidence graph it helps create.
+
 ---
 
 ## 3. Capability is shared; authority is assigned
@@ -314,7 +380,8 @@ companions. It does **not** establish a closed infinite tower, the full
 finite-compliance operator, normalized higher-parameter extraction integrals,
 the finite-compliance axis-layer match, higher material orders, or the
 generated `k + 3` rung
-([crack-tip case, §§5 and 19](../case_studies/symplectic_mooney_rivlin_crack_tip.md#5-where-the-final-manuscript-stops)).
+([crack-tip case, §5](../case_studies/symplectic_mooney_rivlin_crack_tip.md#5-where-the-defensible-scope-now-stops)
+and [§19](../case_studies/symplectic_mooney_rivlin_crack_tip.md#19-attribution-carefully)).
 
 The leading crack-tip field is itself a reduced plane-stress asymptotic with an
 overlap regime. It is not a description of the sub-thickness three-dimensional
@@ -467,6 +534,10 @@ least the following.
 - Is the residual notion appropriate to the method—for example, weak
   Rayleigh–Ritz stationarity rather than an incorrectly imposed collocation
   residual?
+- If strong-form stress, divergence, or traction diagnostics are reported,
+  have implementation and convention errors been excluded before they are
+  interpreted as indicators of unresolved field content rather than direct
+  percentage errors in an eigenvalue or bifurcation threshold?
 
 ### Artifact and claim
 
@@ -533,6 +604,56 @@ No reviewer was self-authenticating. Codex corrected an initial overbroad
 criticism after tracing the real-valued production basis, while several
 confident “ready” assessments preceded genuine source-level findings
 ([wrinkle case, §15](../case_studies/symplectic_wrinkle_period_doubling.md#15-attribution-and-the-multi-ai-review-loop)).
+
+Late cross-review added the converse warning: a critical review finding is
+also provisional until its evidence path is checked. A reported byte-hash
+mismatch may prove only that an internal raw artifact and a sanitized release
+artifact occupy different package roles. Sanitizing provenance-only fields can
+legitimately change the hash without changing the configuration or numerical
+payload. The research ledger and the public package's own claims
+ledger/manifest should each hash the file they actually govern, the release
+transformation should be documented, and semantic fields should be compared
+explicitly. Paper-facing public ledgers should use repository-relative source
+paths. Historical raw generation records may retain machine-local paths when
+they are labeled as nonportable metadata rather than presented as public entry
+points. A hash certifies byte identity inside a named package; it does not
+certify scientific equivalence across a documented transformation.
+
+Claims that evidence is absent require the same care. In the wrinkle
+cross-review, intermediate strong-residual ratios described as unstored were
+already present in tracked JSON under
+`.states["0.24"].gate_report.strong_divp`. The stored `residual_l2` and
+`gradient_l2` components also reproduced every `relative_l2` ratio exactly.
+Before an absence claim changes a paper or starts a costly rerun, search the
+schema and candidate paths, inspect neighboring fields, and recompute the
+claimed quantity from stored components when possible.
+
+Reviewer identity is provenance too. Record the model or person named in the
+artifact header or verified execution metadata; do not infer authorship from
+which reviewer was expected, from a filename, or from surrounding chat. If
+identity cannot be reconciled, label it unknown. Conversational multi-agent
+review is powerful because it generates competing hypotheses rapidly and
+lets one participant test another's assumptions. It remains non-self-
+certifying: the reviewer, attribution, hash interpretation, and absence claim
+all pass through the same validation circuit as the scientific result.
+
+The final wrinkle-paper reviews supplied a particularly clear example. Several
+agents focused on the same large strong-form ratio and implicitly mapped it
+onto uncertainty in `T45`. Their agreement measured the salience of the table,
+not several independent validations: they read the same diagnostic and shared
+the same unstated premise. Artifact review preserved the valid conclusion
+that continuum adequacy remained open, but separated it from the physical
+observable. The retained `T45` is the compression at which the lowest
+quarter-wavenumber Hessian eigenvalue of the doubled parent vanishes. The
+strong ratio is an `L2`-normalized measure of the derived stress-divergence
+imbalance over the represented domain. The review campaign therefore produced
+a disposition by claim, premise, evidence path and action. Findings that share
+a premise count as one hypothesis until a distinct test is supplied
+([wrinkle case, §13](../case_studies/symplectic_wrinkle_period_doubling.md#final-ai-pre-submission-review-agreement-had-to-be-decomposed)).
+
+The reviews strengthened the audit trail, but the organizing physics remained
+the repeated subharmonic mechanism. Diagnostics govern the scope of a claim;
+they should not replace the mechanism as the scientific narrative.
 
 The useful unit of multi-agent review is therefore **a disagreement converted
 into a falsifiable artifact**, not a vote.
@@ -790,7 +911,12 @@ choose and audit the question
 A correction upstream should invalidate or reopen its dependent claims. A test
 that imports a non-shipping copy, silently skips, or only restates a definition
 does not close the graph. A hash proves byte identity, not scientific meaning
-or public availability.
+or public availability. For a transformed public package, use portable paths
+in the paper-facing release ledger, regenerate that ledger and the manifest
+from the files that actually ship, and separately confirm that the scientific
+payload agrees with the internal source artifact. Historical raw generation
+records may retain machine-local paths when clearly labeled as nonportable
+metadata.
 
 ### 12.5 Separate stopping from completion
 
@@ -899,6 +1025,13 @@ provide examples or counterexamples.
 ### About evidence and authority
 
 - Can another participant reproduce the exact artifact from the current tree?
+- Was each review finding checked against the actual schema, call path, or
+  package role before it changed the claim?
+- Do hashes govern the files that actually ship, with repository-relative
+  paths in the public claims ledger and semantically checked transformed
+  artifacts?
+- Is reviewer identity taken from the artifact or verified metadata rather
+  than inferred from the surrounding conversation?
 - Which claims were retracted or superseded, and why?
 - Did the latest correction reopen downstream claims?
 - What remains provisional, open, or outside the paper?
@@ -948,15 +1081,17 @@ The principal public records used for this guide are:
   guide](lessons_human_ai_research.md)
 - [July 2026 guide review note](GUIDES_REVIEW_NOTE_2026-07-20.md)
 
-The companion scientific repositories are private release candidates as of 20
-July 2026:
+At the 20 July 2026 audit, both companion scientific repositories were release
+candidates. The wrinkle companion is now public; the crack-tip companion
+remains a release candidate:
 
-- `nonlinear-symplectic-wrinkle-bifurcations` — planned public companion
+- [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations)
+  — public companion release
 - `nonlinear-symplectic-mooney-rivlin-crack-tip` — public visibility pending
 
-- **Version:** 1.0
-- **Last updated:** July 2026
+- **Version:** 1.1 (conversation and cross-review update)
+- **Last updated:** 22 July 2026
 - **Evidence window:** January–July 2026
 - **Scope:** One human–multi-agent computational-mechanics research program
 - **Research framing and responsibility:** Teng Zhang
-- **Evidence synthesis and draft:** Codex (GPT-5), 20 July 2026
+- **Evidence synthesis and draft:** Codex (GPT-5), 20–22 July 2026

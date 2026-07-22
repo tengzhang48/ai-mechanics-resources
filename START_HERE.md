@@ -105,6 +105,11 @@ Seek checks that fail differently:
 The deriver should not sign off alone. Every review finding must be checked
 against the current source, executed path, and physical claim.
 
+Before treating several reviews as independent, identify their premises and
+the physical observable each diagnostic measures. Several agents repeating
+one interpretation constitute one hypothesis until a distinct failure mode is
+tested.
+
 ---
 
 ## 6. Human adaptation means evidence-governed trust

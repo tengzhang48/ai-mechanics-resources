@@ -64,11 +64,12 @@ For the main modulus-ratio benchmark, the final retained-space calculation
 gives a period-doubling estimate of 0.179. A separately discretized lattice
 calculation crosses at 0.176; both sit near the lower edge of the broader
 0.18–0.20 experimental and finite-element comparison range. Applied about the
-doubled branch, the same analytical framework gives a
-doubling-to-quadrupling estimate of 0.244, close to a separately discretized
-single-grid lattice crossing at 0.243. These are retained-space numerical
-estimates, not rigorous continuum bounds; the manuscript reports their
-refinement behavior and the remaining strong-form limitations.
+doubled branch, the same analytical framework gives a retained-space
+period-four neutral point at 0.244, close to a separately discretized
+single-grid lattice crossing at 0.243. The Ritz values are retained-space
+numerical estimates, while the lattice values are single-grid crossings;
+neither is a rigorous continuum bound. The manuscript reports their refinement
+behavior and the remaining strong-form limitations.
 
 The collaboration history explains how the final values acquired their
 present scope. A depth-resolved Fourier–finite-element calculation had earlier
@@ -81,8 +82,8 @@ oracle and the claimed analytical method be separated. Fable then built a
 coefficient-only analytical-depth method. That effort involved conditioning
 and mode-identification failures, withdrawn thresholds, an ambitious but
 incomplete precise-integration-method (PIM) strip referee, and repeated
-revisions of the convergence argument. Independent reviewers later repaired,
-audited, and extended specific retained-space tasks.
+revisions of the convergence argument. Later agents audited the work and
+repaired or extended specific retained-space tasks.
 
 The depth-FE family also retained convergence and provenance limitations, so
 its status as an oracle did not make it a publication-grade endpoint. The
@@ -307,10 +308,23 @@ the basis combined:
 - analytical product-rate enrichments motivated by nonlinear harmonic
   interactions.
 
-The coefficients were determined by Newton iteration on the unexpanded
-compressible neo-Hookean energy. The primary amplitude was therefore an output
-of energy stationarity. Gauss points were used for integration, but no
-displacement value at a Gauss point was an unknown.
+The nonlinear unknowns were exactly the coefficients of this finite,
+kinematically admissible analytical displacement basis. Writing the retained
+fields as `Phi_j`, the calculation has the form
+
+```text
+u_N(c) = sum_j c_j Phi_j
+Pi_N(c) = (1/L) integral_Omega [W(F_0 + grad u_N(c)) - W(F_0)] dV
+d Pi_N / d c_j = 0  for every retained coefficient c_j.
+```
+
+Newton iteration stationarized the **unexpanded** compressible neo-Hookean
+energy `Pi_N`; it did not solve a truncated amplitude equation. The primary
+amplitude was therefore an output of energy stationarity. Gauss points were
+used to evaluate the integrals, but neither displacement values at Gauss
+points nor stress values were unknowns. This is projected weak, or
+Rayleigh–Ritz, equilibrium in the retained space—not pointwise solution of the
+unrestricted continuum equations.
 
 The first state calculations already passed useful gates. The energy was
 invariant under quadrature refinement to near machine precision, and the
@@ -506,7 +520,11 @@ Quadrupling remains less closed than doubling. The analytical `T45=0.244`
 estimate is close to the single-grid lattice crossing at 0.243448, but the
 doubled parents retain strong residual ratios of roughly 0.22–0.30. The
 analytical period-four state at compression 0.2675 is stationary and stable in the
-retained space, while its film strong-residual ratio is about 0.495. A finite-
+retained space, while its film strong-residual ratio is about 0.495. Here the
+strong ratio is the `L2` norm of `Div P` divided by the `L2` scale of its two
+stress-gradient contributions in quadrature. It measures incomplete
+pointwise cancellation in the derived stress field. It is not a 22–49.5%
+error estimate for the energy, retained Hessian, `T24`, or `T45`. A finite-
 element phase diagram for a related incompressible model has been read near
 0.26. That reading is approximate and the material model differs, so the
 offset is an open comparison rather than a failed validation. These
@@ -716,13 +734,43 @@ then released the constraint before accepting the state.
 The project also had to use a convergence test appropriate to the selected
 method. Rayleigh–Ritz equilibrium means that the first variation vanishes
 against every retained test function. It does not make `Div P` vanish
-pointwise. Teng repeatedly corrected attempts to turn the strong residual
-into the method's Newton equation. The eventual protocol used nested energy
-changes, residual work in newly opened analytical directions, physical-field
-overlap, and stability changes as the primary convergence evidence. The
-pointwise traction and `Div P` spectra were retained as independent indicators
-of where the basis still needed enrichment. This avoided two opposite errors:
-claiming continuum equilibrium from a small coefficient gradient, and
+pointwise in the unrestricted continuum space. Stress is a derived field,
+`P = dW/dF`, rather than an independent unknown. After a coefficient solve,
+separate reporting routines evaluated `Div P`, free-surface traction, and the
+interface traction jump. Those quantities were post-solve strong-form
+diagnostics; they were not additional collocation equations imposed by the
+Newton solve. Natural traction balance entered the variational statement only
+through its weak action on the retained test space.
+
+This distinction fixes the meaning of the reported ratios. For example, the
+bulk diagnostic used
+
+```text
+R_str = ||dP_i1/dX1 + dP_i2/dX2||_L2
+        / (||dP_i1/dX1||_L2^2 + ||dP_i2/dX2||_L2^2)^(1/2).
+```
+
+Boundary and interface tractions had their own stress-scale normalizations.
+After differentiation, convention, quadrature, and boundary-condition checks
+excluded implementation error, these ratios measured unresolved strong-form
+content and showed where the finite basis needed enrichment. They do **not**
+directly measure percentage error in the stationary energy, retained Hessian,
+or bifurcation thresholds. Conversely, convergence of those retained-space
+quantities does not make a large strong residual irrelevant: it limits the
+continuum claim that can be attached to them. This is why `T24` and `T45` can
+be reported as retained-space Ritz estimates with nested state/comb
+sensitivity, while `T45`, whose doubled parents have much larger strong
+residuals and fewer independently closed refinement axes, carries the more
+serious continuum-adequacy qualification.
+
+Teng repeatedly corrected attempts to turn the strong residual into the
+method's Newton equation. The eventual protocol used nested energy changes,
+residual work in newly opened analytical directions, physical-field overlap,
+and stability changes as the primary retained-space convergence evidence. The
+pointwise traction and `Div P` spectra remained independent indicators of
+where the basis still needed enrichment after other error sources were
+excluded. This avoided two opposite errors: claiming continuum equilibrium
+from a small coefficient gradient, and
 rejecting a valid variational solution because it was not a strong-form
 collocation method.
 
@@ -816,6 +864,143 @@ What claim can it support?
 What remains exploratory?
 ```
 
+### Why iterative conversation worked—and where it stopped
+
+The conversational AI interface was effective here because the scientific
+contract was revised through sustained challenge rather than fixed in one
+initial prompt. The record preserved the reason behind each boundary as well
+as its current wording. Teng could keep the no-depth-node requirement while
+later permitting a global Rayleigh–Ritz closure; the team could then state
+separately what was symplectic, what was variational, and what remained only a
+diagnostic route.
+
+Two exchanges changed the method and the scope of the scientific claims, not
+merely the prose. First, Teng challenged the “symplectic” and “mesh-free”
+descriptions of the earlier paper-facing route. Source inspection then exposed
+its depth-nodal unknowns, the route was reclassified as an oracle, and Fable
+built the coefficient-only analytical-depth replacement. Later, Teng
+challenged interpretations that treated strong-form residuals as though they
+were equations that the Ritz Newton solve should drive to zero, or as direct
+percentage errors in a threshold. That objection forced the project to
+separate retained-space stationarity from post-solve `Div P` and traction
+diagnostics and to state the weaker continuum scope of the quadrupling result.
+
+The useful conversational pattern was therefore concrete:
+
+```text
+human objection -> inspect the live generator -> formulate a falsifiable test
+                 -> save an artifact -> revise the claim and method contract
+```
+
+The objections produced an assembly-level method classification, coefficient
+gradient and Hessian checks, corrected traction diagnostics, strong-residual
+reports, coupled convergence ladders, and a claims ledger. Conversation kept
+the human able to question labels, interpretations, and stopping decisions;
+it did not verify any of them by itself. The decisive evidence came from the
+live code paths, numerical artifacts, independent limiting cases, and gates
+that could change or withdraw a claim. Without that artifact layer, a fluent
+chat history would only preserve a plausible story.
+
+### Cross-review findings entered the same verification circuit
+
+A late cross-review showed that review output must be treated as a hypothesis
+about the evidence, not as evidence by itself. One note interpreted different
+SHA-256 values for the research and companion copies of three `T45` JSON
+artifacts as a serious provenance conflict. The byte difference was real, but
+the scientific payloads were the same: the companion copies had replaced a
+long dirty-worktree inventory with a publication-safe provenance message.
+Their package hashes therefore had to differ. A byte hash answers “are these
+exactly the same bytes within this package?” It does not answer “do these two
+package roles carry the same numerical result?”
+
+The correct release test has two layers. Each package-local record should
+identify the bytes it actually governs: the research ledger identifies the
+raw internal artifact, whereas the public claims ledger and manifest identify
+the sanitized public artifact. The transformation between them must be
+stated; both packages must be internally hash-consistent; and the numerical
+payloads, configurations, and source identities must be compared
+semantically across the transformation. Publication sanitization may
+legitimately change provenance-only fields, but paper-facing public ledgers
+should use repository-relative source paths. Raw generation records may retain
+historical machine-local paths when they are labeled as nonportable metadata
+rather than presented as public entry points. An internal hash must not be
+presented as the hash of a deliberately transformed release file.
+
+Another review note said that the intermediate `T45` strong-residual ratios
+had not been stored. A schema/path search found them directly in the tracked
+closure artifacts at
+`.states["0.24"].gate_report.strong_divp.{film,substrate}.relative_l2`.
+The three exact pairs were
+`0.27610694/0.26612986`, `0.23312684/0.26254366`, and
+`0.21563008/0.26009726`; each also recomputed exactly as
+`residual_l2/gradient_l2` from neighboring stored components. No new
+calculation or artifact was required. An absence claim therefore requires a
+schema inventory, path search, and component-level recomputation before it is
+allowed to create new work or weaken a manuscript claim.
+
+The same discipline applies to attribution. A conversation may say which
+models were expected to review, but the durable record should use the
+reviewer identity actually written in the note or captured in verified
+metadata. If those sources conflict or are absent, authorship remains
+unassigned rather than inferred. Multi-agent conversation was effective
+because it generated diverse, quickly testable objections; it was not
+self-certifying, because every objection—including a reviewer's provenance or
+absence claim—had to pass the same evidence circuit as the manuscript.
+
+### Final AI pre-submission review agreement had to be decomposed
+
+Three late AI pre-submission reviews converged on the large strong-form ratios
+of the doubled parent and period-four daughter. Their common concern had a
+valid core: those fields were not continuum-closed, so the quadrupling result
+could not be presented as a continuum-extrapolated threshold and the developed
+period-four morphology required separate refinement. But several reviews
+implicitly treated the diagnostic as uncertainty in the threshold itself.
+
+The raw artifacts answer different questions. In the retained Ritz problem,
+`T45=0.244` is the stored zero of the lowest quarter-wavenumber Hessian
+eigenvalue about the stationary doubled parent—the point where that parent
+loses quadratic stiffness to a period-four perturbation. The sequence in the
+coupled retained spaces was `0.245792 -> 0.244645 -> 0.244001`. The
+strong-form ratio is instead a post-solve, `L2`-normalized measure of
+incomplete cancellation in the derived stress-divergence field over the
+represented domain. No established estimator converts that ratio into a
+percentage error in the neutral crossing. The supported conclusion is
+therefore twofold: the finite
+retained space has a well-defined period-four neutral point, while its
+continuum accuracy remains open.
+
+The audit therefore separated five questions: stationarity in the retained
+coefficient space, movement of the retained Hessian crossing under coupled
+enrichment, pointwise strong and traction diagnostics, agreement with a
+separate fixed-grid lattice discretization, and continuum or experimental
+validation. It retained the supported finite-space neutral point and its open
+continuum limitation. It rejected extrapolated error bars and a proposed
+compressibility explanation based on treating the `0.228` and `0.167`
+results of two different asymptotic formulations as one parameter sweep.
+
+The overbroad diagnoses were still useful. They exposed four places where the
+physics could be clearer: the historical comparison, the origin
+and finite selection of product-rate functions, the integration domain of the
+strong diagnostic, and the distinct roles of the Figure 7 parent crossing,
+decay control, and amplitude-stabilized daughters. Those points were clarified
+without demoting a result that the artifacts still supported. Repeated
+concerns can reveal what readers find salient, but agreement becomes
+independent evidence only after the premises and failure modes are separated.
+
+The review campaign also exposed an editorial imbalance. Numerical settings,
+digits, residuals, and qualifications had become more visible than the event
+being calculated. Teng restored the hierarchy: the doubled parent,
+quarter-wavenumber perturbation, constitutive second variation, and zero
+eigenvalue define the physics; convergence ladders, strong diagnostics,
+lattice comparisons, and experiments then delimit the corresponding claims.
+The main paper was reorganized around the repeated subharmonic mechanism and
+the contrast between primary and secondary sensitivity to stiffness ratio.
+Appendix A retained the detailed numerical audit. Full machine records remain
+in the project data; the public reproduction map connects the committed
+evidence to each figure and table. Moving evidence to the layer where it can
+be read and checked did not hide it; it kept the audit trail from replacing
+the scientific story.
+
 ### Reproducibility became an artifact graph
 
 When several agents touch shared files, prose provenance is too weak. The project
@@ -878,7 +1063,8 @@ the following contribution ledger:
 | **Fable / Claude Fable 5** | Primary architect and principal contributor to the analytical-depth computational method: global analytical-depth state evaluated with the unexpanded energy, analytical stability dictionaries, doubled-cell representation, reflection sectors, branch-capture practices, coupled ladders, and much of the convergence and error-budget logic. |
 | **GLM** | Found four defects in the experimental PIM strip and rebuilt its critical propagation step on the validated mixed-energy convention. The repaired strip remained diagnostic rather than production. |
 | **Codex / GPT** | Performed the principal source and physics audit, including correction of its own initial overbroad signed-harmonic criticism; later contributed carrier-correct `T45` closure, exact period-four lifting and continuation, diagnostic hardening, and paper-facing asset integration on Fable's framework. |
-| **Kimi, DeepSeek, and other reviewers** | Supplied independent manuscript, convention, hierarchy, bound-transcription, provenance, and presentation checks with their scopes recorded in project notes. |
+| **Kimi and DeepSeek** | Supplied manuscript, convention, hierarchy, bound-transcription, provenance, and presentation checks with their scopes recorded in project notes. |
+| **Late AI pre-submission review set: Claude/Opus, a Z.ai/GLM-labeled review, and a Qwen-labeled review artifact** | Separately reviewed the near-final manuscript. Their overlapping concern about strong-form residuals exposed a real continuum-scope and writing problem; artifact review separated that limitation from the retained Hessian zero and adopted four clarifications. The PDF metadata identifies Z.ai, while GLM is preserved from user/project attribution. The Qwen identification is preserved from the filename and user attribution because the note body contains no independent model metadata. |
 
 Fable's retractions belong in this ledger. Fable withdrew premature values,
 accepted findings that reopened the calculation, preserved failed hypotheses,
@@ -909,7 +1095,7 @@ conflation of the real-valued production comb with the incomplete complex
 strip is the clearest counterexample, and the review record preserves the
 correction. Independent models broadened coverage because their claims were
 tested against code and mechanics; no individual AI verdict was treated as
-self-authenticating. Several confident “JMPS-ready” assessments preceded
+self-authenticating. Several confident “submission-ready” assessments preceded
 source-level findings of real errors, so reviewer confidence and consensus
 never replaced an independent gate.
 
@@ -954,11 +1140,24 @@ The evidence supports the following transferable lessons:
 - an instrument must resolve the absolute scale of the observable;
 - diagnostics, tests, and reviewer verdicts need gates that can falsify the
   claim they are asked to certify;
+- review findings are hypotheses: hash claims need package scope, absence
+  claims need schema searches, and reviewer identity needs artifact-level
+  provenance;
+- repeated concern about a conspicuous diagnostic is a writing signal until
+  its premise and the physical observable it bears on are identified;
 - physical symmetry can be more reliable than heuristic mode scoring;
 - parent-state and stability approximations must be refined together;
+- finite-basis Ritz stationarity is projected weak equilibrium; post-solve
+  strong residuals diagnose omitted continuum content rather than percentage
+  errors in the energy, Hessian, or threshold;
 - a local daughter branch must be captured by its physical identity, not by
   whichever minimum a kick finds;
 - retractions are valuable when their causes and artifacts are preserved;
+- iterative conversation can preserve and revise the scientific contract and
+  turn human objections into tests, but live artifacts and evidence gates—not
+  the conversation—verify the result;
+- full numerical evidence should remain available, while the main scientific
+  narrative leads with the mechanism and the claim that the evidence limits;
 - agent-to-agent reasoning does not replace concise communication with the
   human owner; and
 - in autonomous research workflows, provenance and current-state checks are
@@ -967,7 +1166,7 @@ The evidence supports the following transferable lessons:
 The final record shows a clear division of labor. Teng kept the scientific
 claim tied to the requested method; Fable built and repeatedly repaired the
 analytical-depth framework after the depth-nodal closure was rejected; and
-independent reviewers tested distinct call paths, invariants, and branches.
+reviewers tested distinct call paths, invariants, and branches.
 The resulting method is more carefully named, more limited, and more
 defensible. That change—not recovery of a preferred decimal—is the main
 outcome of the project.
@@ -989,10 +1188,16 @@ This case study was checked against the following internal project records:
 | `analytic_depth_method/CODEX_SOURCE_AUDIT_OF_FABLE_2026-07-11.md` | Independent call-path, physics, method-classification, and provenance audit, including reviewer self-correction |
 | `analytic_depth_method/ANALYTICAL_DEPTH_TURNAROUND_RETROSPECTIVE_2026-07-12.md` | Dated Codex attribution ledger and technical chronology |
 | `analytic_depth_method/PAPER_METHOD_DATA_FIGURE_UPDATE_REPORT_2026-07-12.md` | Governing method integration and final credit record, subject to its dated addenda |
-| `analytic_depth_method/CODEX_JMPS_MANUSCRIPT_REVIEW_2026-07-17.md` | Snapshot audit of manuscript commit `18c964a`, covering physics, equations, data, figures, code paths, and retained-space limitations |
+| `analytic_depth_method` manuscript review dated 17 July 2026 | Snapshot audit of manuscript commit `18c964a`, covering physics, equations, data, figures, code paths, and retained-space limitations |
 | `analytic_depth_method/GPT_REVIEW_PUBLIC_REPO_AND_CASE_STUDY_2026-07-19.md` | Snapshot audit of public HEAD `6584809` and case-study v0.9, including independent recomputation of both lattice crossings |
+| `analytic_depth_method/VARIATIONAL_SCOPE_AND_STRESS_DIAGNOSTICS_2026-07-20.md` | Equation-level record of the finite Ritz problem, derived-stress diagnostics, and the limits of residual interpretation |
+| `analytic_depth_method/REBUTTAL_TO_EXTERNAL_WRINKLE_REVIEW_2026-07-20.md` | Point-by-point evidence response distinguishing retained-space convergence, continuum closure, and optional strengthening |
+| `analytic_depth_method/REVIEW_NOTE_2026-07-20.md` | Final editorial audit documenting the physics-centered restructuring, separation of evidence layers, raw-data rounding check, rendered-PDF verification, and remaining release gates |
+| `analytic_depth_method/FABLE_REVIEW_OF_REBUTTAL_AND_REVISION_2026-07-20.md` | Fable's late review; its intermediate-residual absence claim was subsequently checked against the stored JSON schema and components |
+| `analytic_depth_method/CODEX_VALIDATION_OF_LATE_CROSS_REVIEWS_2026-07-20.md` | Package-scope hash audit and direct schema/component check of the allegedly absent intermediate strong ratios |
+| `analytic_depth_method` late-review validation dated 21 July 2026 | Artifact-level disposition of the final review set, including the retained-Hessian zero, strong-form diagnostic scope, historical-comparison audit, and four manuscript clarifications |
 | `analytic_depth_method/LESSONS.md` | Failure-to-rule ledger, including method identity, coupled ladders, handoffs, provenance, and test-scope lessons |
-| `pd-analysis/paper/JMPS_manuscript.tex` and `pd-analysis/results/paper_numerical_claims.json` | Governing final method wording and numerical values |
+| Current manuscript source and `pd-analysis/results/paper_numerical_claims.json` | Governing final method wording and numerical values |
 
 ### Source hierarchy and limits
 
@@ -1022,12 +1227,12 @@ location.
 
 *This case study documents the symplectic wrinkle period-doubling and
 quadrupling project from January through July 2026. The companion manuscript
-is being prepared for submission to JMPS. The planned public companion
-repository is
-[nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations).*
+is being prepared for journal submission. The public companion repository is
+[nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations/tree/v1.0.0)
+(release v1.0.0).*
 
-**Version:** 1.0 (substantive rewrite for author review)
+**Version:** 1.1 (late-review and physics-narrative update)
 
-**Last Updated:** July 2026
+**Last Updated:** 22 July 2026
 
-**Evidence review and rewrite:** Codex (GPT-5), 19 July 2026
+**Evidence review and rewrite:** Codex (GPT-5), 19–22 July 2026

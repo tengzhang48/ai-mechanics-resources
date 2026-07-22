@@ -53,7 +53,7 @@ Real project experiences — what happened, what worked, what didn't. Released a
 
 | Case Study | What it shows |
 |---|---|
-| [Symplectic Wrinkle Period Doubling and Quadrupling](case_studies/symplectic_wrinkle_period_doubling.md) | Method substitution and recovery, analytical-depth construction, Gram-tail conditioning, symmetry-resolved bifurcations, coupled convergence, retractions, provenance, and layered human/agent contributions. |
+| [Symplectic Wrinkle Period Doubling and Quadrupling](case_studies/symplectic_wrinkle_period_doubling.md) | Method substitution and recovery, analytical-depth construction, coupled convergence, review findings treated as hypotheses, physics-first evidence layers, provenance, and human/agent contributions. |
 | [Symplectic Mooney–Rivlin Crack Tip](case_studies/symplectic_mooney_rivlin_crack_tip.md) | Unknown nonlinear fields made auditable through asymptotics, constrained action, FEM controls, multi-agent falsification, claim graphs, and an explicit program/result boundary. |
 | [LBM-IBM for Thin Shells in Fluid](case_studies/lbm_ibm_thin_shell.md) | Extending from solid mechanics into CFD with AI assistance. Five paradigm shifts, practitioner blind spots, multi-AI debugging. |
 | [Large-Deformation Self-Contact](case_studies/large_deformation_contact.md) | Where fast iteration cannot overcome fundamental numerical difficulty. Plasticity succeeded; contact struggled. Four frameworks, five formulations. |
@@ -113,8 +113,9 @@ labeled clearly.
 - [CoupMPM](https://github.com/tengzhang48/CoupMPM) — Material Point Method package for LAMMPS
 - [CoupLB](https://github.com/tengzhang48/CoupLB) — Lattice Boltzmann + Immersed Boundary Method for LAMMPS
 - [taichi_lbm_ibm](https://github.com/tengzhang48) — LBM+IBM solver for thin-shell aerodynamics
-- `nonlinear-symplectic-wrinkle-bifurcations` — Private release candidate for
-  the analytical-depth wrinkle bifurcation framework; public release pending
+- [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations)
+  — Public companion release for the analytical-depth wrinkle bifurcation
+  framework
 - `nonlinear-symplectic-mooney-rivlin-crack-tip` — Private release candidate
   for the nonlinear crack-tip theory and verification companion; public
   visibility pending

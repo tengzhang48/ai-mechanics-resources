@@ -6,8 +6,9 @@
 Authority**](lessons_human_ai_research_agent_era.md) is the current July 2026
 methodology. It covers research taste, agent mathematical and computational
 contributions, verified discovery without a known final answer, verification
-versus validation, evidence-governed trust, question formulation, and an
-operating model for autonomous research agents.
+versus validation, multi-agent review by premise and failure mode,
+evidence-governed trust, question formulation, and an operating model for
+autonomous research agents.
 
 ## Historical March–April 2026 guides
 
