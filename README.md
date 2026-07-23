@@ -116,9 +116,9 @@ labeled clearly.
 - [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations)
   — Public companion release for the analytical-depth wrinkle bifurcation
   framework
-- `nonlinear-symplectic-mooney-rivlin-crack-tip` — Private release candidate
-  for the nonlinear crack-tip theory and verification companion; public
-  visibility pending
+- [nonlinear-symplectic-mooney-rivlin-crack-tip](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip)
+  — Public companion for the nonlinear crack-tip theory, verification code,
+  curated data, and figure reproduction
 
 ---
 

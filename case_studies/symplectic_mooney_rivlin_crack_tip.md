@@ -466,6 +466,13 @@ and composite PK1/FEM matching belong to a future paper.
   not validate a universal raw profile or independently validate a residual
   2/5 exponent.
 - The exact opening-block pairing and its 3/2 − Λ duality.
+- At the opening-block pencil label `Lambda = 13/4`, corresponding to opening
+  power r⁵ᐟ², the resonance and its compatibility condition are exact. On the
+  selected `C_s = 0` branch, the restricted `rho*stationary` scalar source has
+  a numerically converged nonzero compatibility projection, so that formal
+  coefficient requires a generalized r⁵ᐟ² log(r/r₀) opening contribution.
+  This is a coefficient- and sector-qualified result, not a completed coupled
+  field or a universal physical logarithm.
 - The Gate-1 reaction-carrying constrained Hessian DAE and Gate-2 off-shell
   Green identity on their declared provisional outer endpoint domain.
 - The Gate-3 selected `B` seed and first source-resolved handoff, including
@@ -493,6 +500,10 @@ and composite PK1/FEM matching belong to a future paper.
 
 - Total Gate 4: the all-source background/material/`B`/`Q_k` recursion and its
   assembled Fredholm conditions.
+- At `Lambda = 13/4`, the total same-grade multi-sector defect, sourced
+  coupled response, total-traction selection, and physically selected net
+  logarithmic amplitude. The restricted scalar result does not close any of
+  these objects.
 - Higher material orders of the k + 1/2 block.
 - The generic row-two family generated at k + 3 and its later tower. The
   representative k = 2 rung closes formally, but does not establish the
@@ -874,6 +885,65 @@ command, and input/output manifest. It cannot be inherited by a later checkout
 merely because the filenames and headline values look unchanged. Inspect the
 file that actually ships, then sweep the body, conclusion, status documents,
 and data-availability language together.
+
+### A passing recurrence can share the derivative map it should audit
+
+A later `Lambda = 13/4` tranche made the shared-oracle problem unusually
+concrete. Its imported implementation reported 58/58 exact self-gates and 5/5
+numerical self-gates. Those counts were accurate for the implemented objects,
+but three quantities were reused in ways the gates did not challenge.
+First, a derivative-free Fredholm defect and its raw projection were treated
+as the same normalization operand even though they differ by the opening
+exponent. Second, a stored reaction field already contained an inherited
+amplitude direction, which was appended a second time. Third, the symbolic
+angular derivative map sent `w` to `w'` and `v` to `v'` but supplied no
+successors for those derivative variables when they entered the stress.
+
+The recurrence generated from that incomplete map could still have zero
+residual under the same map. Likewise, tests assembled from the twice-counted
+field could verify coefficients of the field they were given. The green
+result therefore established internal consistency of a representation, not
+completeness of the governing derivative chain or uniqueness of the amplitude
+assembly.
+
+The decisive audits changed the probes rather than increasing their number. A
+typed normalization check kept the two defect definitions separate.
+Unit-direction differentiation exposed the doubled inherited amplitude.
+A jet-closure audit enumerated every free field and required its angular
+successor, while a separate route substituted the full profiles into the
+unreduced angular stress and differentiated that expression directly. These
+checks corrected the implemented recurrence, but the corrected route still
+reused lower profiles and source construction from the imported route. It was
+a repair, not an independent reproduction.
+
+The resulting evidence boundary was deliberately narrow. The opening-block
+resonance and compatibility condition are exact. For the selected
+`C_s = 0`, restricted `rho*stationary` scalar coefficient, the numerically
+converged nonzero compatibility projection requires a logarithmic generalized
+contribution. The total same-grade source, sourced coupled response,
+total-traction-selected reaction, and physical net logarithmic amplitude
+remain open. No provisional higher-order coefficient was promoted.
+
+A separate scope adjudication received five concrete disputed propositions,
+not a request to rerun the calculation. It upheld this narrower boundary and
+corrected overstatements in the earlier review handoff itself. The adjudication
+therefore closed the publication claim while leaving the unfinished
+mathematics explicitly open.
+
+The human scientific owner chose to stop this calculation because none of the
+manuscript's leading-field, flux, Jacobian, or exact opening-pairing claims
+depends on uncertified `Lambda = 13/4` completion. This was an evidence and
+scope decision, not a claim that the missing coefficient is physically
+unobservable or that the higher hierarchy cannot be completed.
+
+**Lesson:** self-tests establish implemented scope, not omitted completeness.
+Give mathematically different quantities distinct types, differentiate a
+completed field with respect to each inherited amplitude before adding another
+copy, and require symbolic derivative maps to be closed over every jet
+variable they consume. After a repair, distinguish exact algebraic correction
+from independent derivation and from numerical certification. A bounded stop
+is scientifically useful when the open dependency is explicit and no printed
+claim relies on it.
 
 ---
 
@@ -1305,6 +1375,13 @@ The progression that matters:
       → Gates 1–2 derive the reaction-carrying Hessian DAE and Green current
       → Gate 3 closes the selected B seed and first sourced handoff
       → Gate 4 advances formal outer ladders; Gate 5A freezes isolated projectors
+      → Lambda=13/4 opening resonance and compatibility are exact
+      → restricted rho*stationary scalar projection is numerically converged and nonzero
+      → that formal coefficient requires an r^(5/2) log r contribution
+      → a shared-map audit finds a normalization mismatch, a doubled
+        inherited direction, and an incomplete derivative chain
+      → total coupled response and physical net log amplitude remain open
+      → the bounded calculation stops because manuscript claims do not depend on it
       → Gate 6 returns to fixed-Cartesian physical PK1
       → archived T3 inner target is quarantined
       → exact Pi1'(0) = -5/2 contradicts smooth one-scale parity
@@ -1365,25 +1442,26 @@ and its intensive June–July 2026 verification campaign. The July 21–22
 extension was checked against the six-gate closure plan, Gate-3 hostile review,
 Gate-4 handoffs, direct-PK1 and penalty-bridge executables, the Gate-6 pivot and
 one-scale cascade records, exact homogeneous-connection and analytic-
-background audits, and the publication-scope decision memo. The
-festschrift
-manuscript reached a recorded signoff on July 19 but had not undergone journal
-peer review. The July 20 `C_s s` audit reopened that signoff; the manuscript
-and ESI have since received the conservative correction and were rebuilt. The
-sanitized companion remains a local/private release candidate: its intended
-GitHub URL is not currently anonymously accessible. Its July 19 candidate
-commit `3369dbcfa8b415217e51cbcb4f50935fd45b5341`, including the now-superseded
-raw-profile gate, is retained locally as the exact artifact that was audited;
-its then-current curated `PROCESS_AND_LESSONS.md` is likewise historical. The
-corrected post-review commit `85253b73681c611deaf38ae3c5de4500bb5045ce` synchronizes the
-mode-aware analysis, claims, figures, and gates, but remains local and unpushed.
-It still requires journal/external peer review, confirmed public visibility, a public
-push/tag, and a DOI or other immutable release identifier before it can serve
-as the pinned public process reference. The
+background audits, and the publication-scope decision memo. The July 23
+bounded `Lambda = 13/4` review added the restricted resonance result and the
+shared-derivative-map postmortem without promoting the unfinished coupled
+response. The festschrift manuscript reached a recorded signoff on July 19
+but had not undergone journal peer review. The July 20 `C_s s` audit reopened
+that signoff; the manuscript and ESI have since received the conservative
+correction and were rebuilt. The
+[sanitized companion repository](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip)
+is now publicly reachable. Its corrected evidence branch is pinned at
+[commit `d6a954e`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/commit/d6a954e0ec58ed59e669ee2722ede0edef95b241);
+that commit includes the mode-aware claims, public theory and scope notes,
+curated data, figure generators, rendered assets, and a 169-file hash
+manifest. The older July 19 candidate remains visible in history as
+provenance, not as the controlling claim set. A release tag,
+journal/external peer review, and a DOI or other immutable archive identifier
+remain future steps. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.0 (one-scale symplectic frontier and two-scale boundary)
-**Last Updated:** July 22, 2026
+**Version:** 1.1 (bounded resonance and verification-lessons update)
+**Last Updated:** July 23, 2026
