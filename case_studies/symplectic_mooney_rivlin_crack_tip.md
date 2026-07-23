@@ -906,6 +906,12 @@ result therefore established internal consistency of a representation, not
 completeness of the governing derivative chain or uniqueness of the amplitude
 assembly.
 
+The publication check supplied a smaller version of the same failure mode. An
+initial “clean-clone” command created an isolated clone but did not change into
+it before running the checks, so it actually retested the source worktree. That
+run was discarded. The replacement printed and verified both its working
+directory and exact commit before executing the full release circuit.
+
 The decisive audits changed the probes rather than increasing their number. A
 typed normalization check kept the two defect definitions separate.
 Unit-direction differentiation exposed the doubled inherited amplitude.
@@ -940,10 +946,11 @@ unobservable or that the higher hierarchy cannot be completed.
 Give mathematically different quantities distinct types, differentiate a
 completed field with respect to each inherited amplitude before adding another
 copy, and require symbolic derivative maps to be closed over every jet
-variable they consume. After a repair, distinguish exact algebraic correction
-from independent derivation and from numerical certification. A bounded stop
-is scientifically useful when the open dependency is explicit and no printed
-claim relies on it.
+variable they consume. Treat execution context the same way: a clean-clone
+claim must assert the working directory and commit it actually tested. After a
+repair, distinguish exact algebraic correction from independent derivation and
+from numerical certification. A bounded stop is scientifically useful when
+the open dependency is explicit and no printed claim relies on it.
 
 ---
 
