@@ -263,33 +263,35 @@ G = h(c₁ + c₂)(λ² + λ⁻² - 2),
 so the remote loading determines P without a numerical specimen calculation.
 This creates a stricter test than fitting an unconstrained tip amplitude.
 
-The finite-element campaign used two specimens with distinct roles. The strip
-was the primary specimen-level validation: its computed energy flux agreed
-with hW∞ within 0.00–0.15%, and its measured P agreed with the closed-form
-prediction within 2.2–3.0% over the reported load range. Its compensated
-Jacobian had 3.2–9.1% angular spread, while the c₂ = 0 control showed
-101.5–112.2% angular spread. A boundary-driven disk used a deeper fitting
-window and remains a consistency cross-check for the stress relation. A July
-20 diagnostic refit of its stored fields supports a nonzero s-like background
-and is consistent with a conditional detrended remainder over the reported
-window. That diagnostic is now synchronized in the corrected manuscript, ESI,
-and local public-companion candidate. The production audit uses one physical
-offset shared across five rays, checks per-ray sensitivity, and fits the face
-exponent freely over five nested windows. The raw face slopes are
-0.513–0.514 in the disk and 0.502–0.503 in the strip. The fitted residual
-exponent ranges are 1.236–1.253 in the disk and 1.317–1.339 in the strip;
-they support a finite-window residual interpretation but do not establish a
-universal asymptotic 5/4 law. The former raw 2/5 tip-shape claim is withdrawn:
-the Figure 8 pipeline assumed away the leading-constraint-compatible `C_s s`
-mode rather than testing its coefficient. It was not an independent
-specimen-scale validation.
+The finite-element campaign ultimately retained one specimen for physical
+validation: the Rivlin–Thomas pure-shear strip. Its computed energy flux
+agreed with hW∞ within 0.00–0.15%, and its measured P agreed with the
+closed-form prediction within 2.2–3.0% over the reported load range. Its
+compensated Jacobian had 3.2–9.1% angular spread, while the c₂ = 0 control
+showed 101.5–112.2% angular spread.
+
+An auxiliary boundary-driven disk was initially presented as a second
+cross-check. A later boundary-condition and geometry audit showed that its
+prescribed outer map imposed a different loading path, including strong
+crack-parallel compression, and constrained parts of the crack mouth. At the
+larger loads its stationary finite-element branch also developed a same-face
+self-intersection. The disk calculations were therefore quarantined as a
+reproducible failed auxiliary boundary-value problem, not retained as evidence
+for pure-shear crack-tip physics.
+
+The strip-only production audit uses one physical offset shared across five
+rays, checks per-ray sensitivity, and fits the face exponent freely over nested
+windows. The raw face slopes remain close to the leading opening exponent
+across the sampled loads. The detrended residual estimates support a
+finite-window residual interpretation but do not establish a universal
+asymptotic 5/4 law. The former raw 2/5 tip-shape claim is withdrawn: its legacy
+estimator omitted the leading-constraint-compatible `C_s s` term rather than
+testing its coefficient. It was not an independent specimen-scale validation.
 
 This division mattered. The strip FEM does not impose the crack-tip field and
 can falsify the opening exponent, amplitude relation, and angular structure.
 A positive detrended-exponent claim needs a noncircular free-exponent or
 holdout gate; a fixed-r⁵ᐟ⁴ subtraction is only a consistency test.
-The disk instead tests interior consistency under a homogeneous remote-stretch
-boundary condition.
 The c₂ = 0 control is especially valuable because it shares enough of the
 leading opening behavior to rule out a generic mesh or fitting explanation for
 the Mooney–Rivlin Jacobian plateau.
@@ -461,10 +463,10 @@ and composite PK1/FEM matching belong to a future paper.
   Laurent-coefficient audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂,
   g, g′, and the normalized r⁵ᴟ⁴ amplitude used in that audit. This is not a
   completed retained-`C_s`, finite-compliance equilibrium branch.
-- The strip G/P/J validation, the disk stress cross-check, and the July 20
-  finite-window diagnostic of the omitted s-like background; the evidence does
-  not validate a universal raw profile or independently validate a residual
-  2/5 exponent.
+- The strip G/P/J validation and the finite-window diagnostic of the omitted
+  s-like background; the evidence does not validate a universal raw profile or
+  independently validate a residual 2/5 exponent. The auxiliary disk is
+  quarantined and supplies no physical validation claim.
 - The exact opening-block pairing and its 3/2 − Λ duality.
 - At the opening-block pencil label `Lambda = 13/4`, corresponding to opening
   power r⁵ᐟ², the resonance and its compatibility condition are exact. On the
@@ -824,6 +826,38 @@ omits the nuisance mode cannot falsify it; a tangent guide is visualization,
 not evidence. Most importantly, a nuisance-removal operation used to isolate a
 theoretical field must not be forgotten when that residual is promoted to a
 physical observable.
+
+### Boundary conditions and global injectivity are part of validation
+
+The auxiliary disk incident exposed a failure mode that residual and
+convergence checks do not detect. Its nonlinear solver found stationary
+solutions of the boundary-value problem it was given, but those boundary
+conditions did not represent the pure-shear experiment used to motivate the
+comparison. Boundary conditions are part of the physics, not merely a
+numerical container around the tip.
+
+At higher loading, the stored deformation also became globally non-injective:
+one crack face intersected itself away from the tip. This was not contact
+between opposing faces, and the model contained no contact, global-injectivity,
+bending, or stability mechanism that could assign such a branch physical
+meaning. A smooth-looking inner fitting window cannot rescue evidence taken
+from a post-onset global branch. Local residual quality and global
+admissibility must be audited separately, and both must pass.
+
+The comparison also clarified what load variation can test. The normalized
+local similarity exponents and angular shapes belong to the local asymptotic
+problem; loading changes amplitudes, crossover scales, and global matching.
+Apparent load-dependent exponents can therefore signal a changing fitting
+window, an omitted regular term, or an inadmissible global branch rather than
+new local physics. Here an independent review found exactly such an omission:
+the legacy profile estimator left out the regular `C_s r` face contribution.
+
+**Lesson:** validate the intended boundary-value problem before interpreting a
+converged field. Check global injectivity as well as local residuals, classify
+self-intersection geometrically before calling it contact, and separate
+load-independent local exponents from load-dependent amplitudes and matching.
+An estimator must include every lower-order term allowed in the measured
+observable.
 
 ### A green family can share one wrong derivation root
 
@@ -1403,6 +1437,8 @@ The progression that matters:
       → independent routes, controls, and component decompositions
       → a green Figure 8 gate is blind to a constraint-compatible candidate
       → audit withdraws raw shape claim; corrected artifacts are regenerated
+      → a stationary disk branch fails the intended-BC and global-injectivity audits
+      → disk evidence is quarantined; physical FEM claims become strip-only
       → external review and an immutable public release remain
       → G/J/P core survives
 ```
