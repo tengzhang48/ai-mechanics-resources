@@ -1247,7 +1247,7 @@ The principal public records used for this guide are:
   study](../case_studies/symplectic_mooney_rivlin_crack_tip.md)
 - [March–April 2026 human–AI research field
   guide](lessons_human_ai_research.md)
-- [July 2026 guide review note](GUIDES_REVIEW_NOTE_2026-07-20.md)
+- [July 2026 guide review note](../docs/guide_review_2026-07-20.md)
 - [Public crack-tip verification process and
   lessons](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/PROCESS_AND_LESSONS.md)
 - [Public matching-circle

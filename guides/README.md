@@ -33,7 +33,7 @@ was last changed in March.
 
 ## Review record
 
-The [20 July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md) records the
+The [20 July 2026 review note](../docs/guide_review_2026-07-20.md) records the
 specific outdated claims, cross-guide contradictions, technical
 qualifications, and recommended propagation work that motivated the new
 release. Later crack-tip evidence is traced in the current guide and the

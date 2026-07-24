@@ -1,4 +1,4 @@
-# Contributing
+# Contributing to AI Mechanics Resources
 
 Contributions are welcome — especially from researchers who have used AI in their own computational work and want to share what they learned.
 

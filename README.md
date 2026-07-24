@@ -45,7 +45,6 @@ rankings.
 | [How Debate with AI Produces Understanding](guides/lessons_from_conversation.md) | Historical conversation experiments on challenge, correction, disagreement, and review triage. |
 | [AI Risks and Mitigation](guides/lessons_ai_risks_and_mitigation.md) | Historical risk taxonomy covering plausible inapplicability, method substitution, inadequate tests, debugging spirals, and plausible quantitative errors. Read with its July qualification banner. |
 | [From Information to Knowledge](guides/information_to_knowledge.md) | Historical analysis of corrections, dependency propagation, validity bounds, and persistent knowledge. Product-level memory claims predate the agent-era update. |
-| [July 2026 Guide Review Note](guides/GUIDES_REVIEW_NOTE_2026-07-20.md) | Claim-by-claim audit of outdated statements, internal contradictions, technical qualifications, and recommended propagation work. |
 
 ### Case Studies
 
@@ -60,21 +59,30 @@ Real project experiences — what happened, what worked, what didn't. Released a
 | CoupLB: LBM+IBM for LAMMPS | Building a production MPI-parallel package. *(available after review)* |
 | CoupMPM: MPM for LAMMPS | Complex package, scalable architecture. *(planned)* |
 
+### Documentation Records
+
+The [documentation index](docs/README.md) holds dated public audits and
+provenance records. The [20 July 2026 guide
+review](docs/guide_review_2026-07-20.md) records the claim-by-claim audit that
+motivated the agent-era update.
+
 ### Repository Structure
 
 ```
 ai-mechanics-resources/
 ├── README.md
 ├── START_HERE.md
-├── contributing.md
+├── CONTRIBUTING.md
+├── docs/
+│   ├── README.md
+│   └── guide_review_2026-07-20.md
 ├── guides/
 │   ├── README.md
 │   ├── lessons_human_ai_research_agent_era.md
 │   ├── lessons_human_ai_research.md
 │   ├── lessons_from_conversation.md
 │   ├── lessons_ai_risks_and_mitigation.md
-│   ├── information_to_knowledge.md
-│   └── GUIDES_REVIEW_NOTE_2026-07-20.md
+│   └── information_to_knowledge.md
 └── case_studies/
     ├── symplectic_wrinkle_period_doubling.md
     ├── symplectic_mooney_rivlin_crack_tip.md
@@ -88,7 +96,7 @@ ai-mechanics-resources/
 
 **Starting an agent-assisted research project?** Read [Human–AI Research in the Agent Era](guides/lessons_human_ai_research_agent_era.md) for the current methodology.
 
-**Studying the transition from chat assistants?** Read the [March–April field guide](guides/lessons_human_ai_research.md) together with the [July review note](guides/GUIDES_REVIEW_NOTE_2026-07-20.md).
+**Studying the transition from chat assistants?** Read the [March–April field guide](guides/lessons_human_ai_research.md) together with the [July review note](docs/guide_review_2026-07-20.md).
 
 **Want to understand AI risks?** Read the historical [AI Risks and
 Mitigations guide](guides/lessons_ai_risks_and_mitigation.md) for specific
@@ -102,7 +110,7 @@ problem.
 
 **Want to understand verified discovery?** Read the two symplectic case studies. For a case where rapid iteration could not overcome the numerical formulation, read the contact study.
 
-**Want to contribute?** See [contributing.md](contributing.md). Observations
+**Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md). Observations
 must come from real, tested experience; reflections and hypotheses must be
 labeled clearly.
 

@@ -148,6 +148,6 @@ Read [Human–AI Research in the Agent
 Era](guides/lessons_human_ai_research_agent_era.md) for the full current
 methodology. The [March–April 2026 field
 guide](guides/lessons_human_ai_research.md) is retained as a historical record,
-and the [July review note](guides/GUIDES_REVIEW_NOTE_2026-07-20.md) documents why
+and the [July review note](docs/guide_review_2026-07-20.md) documents why
 the framing changed. The [case studies](case_studies/) show the evidence,
 including failed checks, retractions, and open claims.

@@ -5,7 +5,7 @@
 > and reviewer triage remain useful, but model voting, same-thread continuity,
 > and prompt-dominance claims require qualification in agent workflows. See
 > [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
-> and the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md).
+> and the [July 2026 review note](../docs/guide_review_2026-07-20.md).
 
 **Insights from extended human-AI research collaboration, where the debate process itself demonstrated the methodology being discussed.**
 

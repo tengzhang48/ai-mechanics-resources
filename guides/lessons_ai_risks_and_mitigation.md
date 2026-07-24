@@ -5,7 +5,7 @@
 > Some numerical claims, capability boundaries, and chat-era mitigations are
 > dated or await source verification. Use this with
 > [Human–AI Research in the Agent Era](lessons_human_ai_research_agent_era.md)
-> and the [July 2026 review note](GUIDES_REVIEW_NOTE_2026-07-20.md).
+> and the [July 2026 review note](../docs/guide_review_2026-07-20.md).
 
 **Concrete risks identified from practice, with specific prevention strategies.**
 
