@@ -6,13 +6,15 @@ incomplete spectral scaffold, and several rounds of mutually inconsistent
 green gate proved blind to a leading-constraint-compatible measurement-space
 direction, rebuilt the reaction-carrying hierarchy, found that a second
 family of green gates shared the wrong inner variable map, and closed a
-bounded release with a nuisance-free matching-circle test.**
+bounded release with a nuisance-free exact-axis channel in a matching-circle
+campaign.**
 
 ---
 
 ## 📖 Table of Contents
 
 - [Overview](#overview)
+- [Evidence map](#evidence-map)
 
 **Part I — The Scientific Journey**
 - [1. The Problem: A Two-Invariant Crack Tip](#1-the-problem-a-two-invariant-crack-tip)
@@ -41,9 +43,10 @@ bounded release with a nuisance-free matching-circle test.**
 
 **Part IV — Closing the Verification Loop**
 - [20. Remove Nuisance Directions Before Estimating a Singular Power](#20-remove-nuisance-directions-before-estimating-a-singular-power)
+- [21. Submission Readiness Was an Executable Checkpoint](#21-submission-readiness-was-an-executable-checkpoint)
 
 **Part V — Comparing Two Method-Defining Frontiers**
-- [21. Crack Tip and Wrinkle: Different Walls, the Same Standard](#21-crack-tip-and-wrinkle-different-walls-the-same-standard)
+- [22. Crack Tip and Wrinkle: Different Walls, the Same Standard](#22-crack-tip-and-wrinkle-different-walls-the-same-standard)
 
 - [Summary](#summary)
 
@@ -111,8 +114,8 @@ a different cusp operator, and the next one-scale reaction problem produced
 an exact incompatibility between smooth-axis parity and its prescribed outer
 tail. This is a precise obstruction to the present sequential one-scale
 endpoint construction, not a proof that the nonlinear continuum crack problem
-has no solution. A two-scale
-endpoint construction is now a future-paper problem.
+has no solution. A two-scale endpoint construction is now a future-paper
+problem.
 
 The July 22–24 closure did not attempt to finish that second paper. A
 restricted 13/4 calculation established an opening-sector resonance and a
@@ -124,10 +127,12 @@ changed the numerical observable instead of abandoning the result. On the
 intact axis, the two undetermined matching contributions vanish identically.
 A matching-circle campaign then obtained `q = 1.251529` and a parameter-free
 amplitude ratio of `1.012420`, with a free two-power fit recovering the next
-radial slot near 7/4. The public companion was frozen as `v1.2.0` on 24 July.
-A final AI pre-submission review passed the bounded physics/data chain after
-two release conditions were closed. This is internal verification, not
-journal peer review.
+radial slot near 7/4. The paper-facing public state was frozen as `v1.2.0` on
+24 July. A final AI pre-submission review passed the bounded physics/data chain
+after two release conditions were closed. A later full-document reading,
+submission-package build, and reference/scope audit added further checks
+without changing the central equations or numerical values. These are
+documented internal verification steps, not journal peer review.
 
 The scientific repository began in June 2026, with manuscript revisions
 recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
@@ -135,11 +140,35 @@ with an especially intensive 17–19 July cycle. It used
 Claude/Fable as the principal revision executor,
 GPT/Codex as a structural reviewer and later derivation lead, Kimi as an early
 independent verifier, DeepSeek/OpenCode as a late end-to-end auditor of the
-then-current theory tree, and earlier GLM and Opus reports. Teng Zhang, the human author, acted
-as the meta-reviewer and made the scope and stopping decisions. The central
-lesson is not that multiple AIs vote their way to correctness. They do not.
-The useful unit was a disagreement converted into an artifact that could
-falsify one side.
+then-current theory tree, and earlier GLM and Opus reports. Teng Zhang, the
+human author, acted as the meta-reviewer and made the scope and stopping
+decisions. The central lesson is not that multiple AIs vote their way to
+correctness. They do not. The useful unit was a disagreement converted into
+an artifact that could falsify one side.
+
+---
+
+## Evidence map
+
+This case study separates public scientific evidence from internal process
+evidence. The public release contains the equations, tests, curated numerical
+records, claims ledger, and reproduction paths. Signed agent reports and
+superseded branches remain in the research workspace and are used here only
+to establish who checked what, when, and with which limitations.
+
+| Episode | Controlling evidence | What the evidence supports | What it does not support |
+|---|---|---|---|
+| Leading constraint, opening, Jacobian, and energy relation | [`principal_claims.json`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/data/claims/principal_claims.json), the [`run_verification.py`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/tests/run_verification.py) analytical runner, and the stored strip controls | The bounded plane-stress claim set and its executable checks | Experimental validation of the constitutive model |
+| Missing `C_s s` motion and disk diagnosis | [`PROCESS_AND_LESSONS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/PROCESS_AND_LESSONS.md) and the preserved disk records | Why the raw face-shape claim became conditional and why the disk left the quantitative validation | A proof of continuous-boundary contact or a converged alternative disk branch |
+| Restricted 13/4 resonance | [`THEORY_NOTES.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/THEORY_NOTES.md), [`verify_lambda13_restricted_log.py`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/analysis/verify_lambda13_restricted_log.py), and the dated internal adjudication | Exact resonance plus a nonzero projection for one audited source sector | The total same-grade source, coupled response, or a universal physical logarithm |
+| Matching-circle campaign | [`GLOBAL_LOCAL_RESULTS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md), [`GLOBAL_LOCAL_WORKFLOW.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md), and retained JSON/NPZ records | The exact-axis 5/4 class and predicted amplitude for the tested strip, with stated convergence checks | Selection of specimen-level `C_s` or `C_h`, the complete 7/4 field, or two-way coupling |
+| Public release | Tag [`v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0), commit `bba3c93`, and its 201-file `MANIFEST.sha256` | The immutable paper-facing code/data state | A DOI, journal acceptance, or external peer review |
+| Submission closure | Research commits `29b8f09`, `92c60e2`, and `bd0652c`, plus `paper/submission/soft_matter_2026-07-24/SUBMISSION_CHECKLIST.md` | Scientific claim closure, isolated package rebuild, and final citation/scope checks | Independent rederivation of every coefficient by the document reviewers |
+
+The map is intentionally claim-specific. A reviewer who read every page but
+did not rerun the code supplied a different kind of evidence from a reviewer
+who checked archived values or an executable that differentiated the action.
+Those probes should not be counted as interchangeable votes.
 
 ---
 
@@ -281,12 +310,12 @@ G = h(c₁ + c₂)(λ² + λ⁻² - 2),
 so the remote loading determines P without a numerical specimen calculation.
 This creates a stricter test than fitting an unconstrained tip amplitude.
 
-The finite-element campaign ultimately retained one specimen for physical
-validation: the Rivlin–Thomas pure-shear strip. Its computed energy flux
-agreed with hW∞ within 0.00–0.15%, and its measured P agreed with the
-closed-form prediction within 2.2–3.0% over the reported load range. Its
-compensated Jacobian had 3.2–9.1% angular spread, while the c₂ = 0 control
-showed 101.5–112.2% angular spread.
+The finite-element campaign ultimately retained one specimen for a
+quantitative within-model check: the Rivlin–Thomas pure-shear strip. Its
+computed energy flux agreed with hW∞ within 0.00–0.15%, and its measured P
+agreed with the closed-form prediction within 2.2–3.0% over the reported load
+range. Its compensated Jacobian had 3.2–9.1% angular spread, while the c₂ = 0
+control showed 101.5–112.2% angular spread.
 
 An auxiliary boundary-driven disk was initially presented as a second
 cross-check. A later boundary-condition and geometry audit showed that its
@@ -308,11 +337,14 @@ the leading-constraint-compatible term rather than testing its coefficient.
 
 The final test changed the observable. On the intact axis,
 `C_s r sin²(θ/2)` and the homogeneous
-`C_h r^(5/4) sin^(5/2)(θ/2)` both vanish exactly. The same global pure-shear
-strip supplied a P2 displacement trace on a matching circle, and a
-tip-refined local submodel received that trace. The campaign varied matching
-radius, inner-core size, and angular resolution. Its finest exact-axis fit
-gave
+`P^(-1/2) C_h r^(5/4) sin^(5/2)(θ/2)` both vanish exactly. Six newly built
+global strips supplied complete quadratic (P2) displacement traces on matching
+circles: four formed the core/angular sequence and two varied the matching
+radius. For each accepted case, the strip cells inside the circle were
+transferred and re-solved as an exact-restriction consistency check. This local
+step did not add independent tip resolution. Core convergence came from
+rebuilding the global strip at successively smaller cores. Its finest
+exact-axis fit gave
 
 ```text
 q = 1.251529,
@@ -327,18 +359,19 @@ angular ODE family when its homogeneous member was admitted. It did not
 select `C_h = 0`.
 
 This division mattered. The global FEM did not impose the crack-tip field,
-and the local solve tested the transferred global solution rather than
+and the exact restriction checked the transferred global solution rather than
 prescribing the asymptotic displacement. The exact-axis channel removed the
 two matching coefficients algebraically before fitting, while the free
 two-power and holdout tests checked that the result was not created by fixing
-the target exponent. The one-way submodel supports the asymptotic class and
-its parameter-free exact-axis amplitude for the tested strip. It does not
-determine specimen-selected `C_s` or `C_h`, and it is not a two-way
-global–local coupling.
+the target exponent. A separately refined local mesh was retained only as a
+one-way diagnostic and did not enter the exponent sequence. The campaign
+supports the asymptotic class and its parameter-free exact-axis amplitude for
+the tested strip. It does not determine specimen-selected `C_s` or `C_h`, and
+it is not a two-way global–local coupling.
 
 The c₂ = 0 control is especially valuable because it shares enough of the
-leading opening behavior to rule out a generic mesh or fitting explanation for
-the Mooney–Rivlin Jacobian plateau.
+leading opening behavior to argue strongly against a generic mesh or fitting
+explanation for the Mooney–Rivlin Jacobian plateau.
 
 ## 4. The Symplectic Promise and the Missing Operator
 
@@ -505,7 +538,7 @@ and composite PK1/FEM matching belong to a future paper.
   with the parameter-free energy and stress relations.
 - The leading energy flux on the superposed truncated map: an exact
   Laurent-coefficient audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂,
-  g, g′, and the normalized r⁵ᴟ⁴ amplitude used in that audit. This is not a
+  g, g′, and the normalized r⁵ᐟ⁴ amplitude used in that audit. This is not a
   completed retained-`C_s`, finite-compliance equilibrium branch.
 - The strip G/P/J validation, the finite-window diagnosis of the omitted
   s-like background, and matching-circle support for the exact-axis r⁵ᐟ⁴
@@ -517,9 +550,10 @@ and composite PK1/FEM matching belong to a future paper.
 - The exact opening-block pairing and its 3/2 − Λ duality.
 - At the opening-block pencil label `Lambda = 13/4`, corresponding to opening
   power r⁵ᐟ², the resonance and its compatibility condition are exact. On the
-  selected `C_s = 0` branch, the restricted `rho*stationary` scalar source has
-  a numerically converged nonzero compatibility projection, so that formal
-  coefficient requires a generalized r⁵ᐟ² log(r/r₀) opening contribution.
+  chosen `C_s = 0` representative, the restricted `rho*stationary` scalar
+  source has a numerically converged nonzero compatibility projection, so that
+  formal coefficient requires a generalized r⁵ᐟ² log(r/r₀) opening
+  contribution.
   This is a coefficient- and sector-qualified result, not a completed coupled
   field or a universal physical logarithm.
 - The Gate-1 reaction-carrying constrained Hessian DAE and Gate-2 off-shell
@@ -1205,15 +1239,34 @@ commit.
 the claim it “verifies.” Until the dependency is examined, a passing gate may
 certify transcription rather than truth.
 
+**It confused available hardware with executed parallelism.** An early
+full-domain refinement used 42,240 triangles and 170,146 quadratic
+displacement degrees of freedom before boundary conditions, but it was
+launched on one MPI rank and used about 1.3 of the machine's 64 available
+cores. Repeated serial sparse-direct factorizations made the two-dimensional
+problem slow. The nonlinear solve reached the target load, but the exporter
+rejected 402 of 43,440 requested samples, so no scientific fit was accepted
+from that run. The later MPI-safe path used root-owned mesh distribution,
+MUMPS, distributed point ownership, root-only output, and one BLAS/OpenMP
+thread per rank. Its final 16-rank strip solve took 29.4 seconds. Hardware
+allocation, process activity, solver exit, and validated scientific output
+are four different facts.
+
 **It became defensive when a result was challenged.** Removing a disputed
 figure, narrowing a claim, or labeling a calculation “quarantined” reduced
 immediate publication risk. In the disk episode, that response began to
-replace the harder work of asking whether the fold came from loading,
+replace the harder work of asking whether the observed fold came from loading,
 dimensionless geometry, branch selection, missing contact or bending, or a
 numerical defect. The same tendency could have erased the analytical
 r⁵ᐟ⁴ residual merely because the available finite window could not yet
-separate it from an allowed O(r) motion. Claim control is necessary, but it
-is not mechanism discovery.
+separate it from an allowed O(r) motion. Claim control is necessary, but it is
+not mechanism discovery.
+
+The corrected process used four dispositions: **false**, **unsupported**,
+**conditional**, and **open but testable**. False results were retracted.
+Unsupported results were demoted, conditional results retained their
+assumptions, and open results received discriminating tests. This prevented
+editorial risk control from being mistaken for a physical explanation.
 
 **The workflow had no intrinsic stopping condition.** The Qₖ campaign could
 always generate one more rung. The stopping decision required scientific
@@ -1261,7 +1314,7 @@ two-term face field became difficult to interpret, Teng rejected the emerging
 defensive strategy. The revised instruction was to retain the physical
 observation, enumerate mechanisms, and define discriminating numerical tests.
 For the disk, this means separating discrete stationarity, global
-admissibility, and inner-field convergence, then varying the
+admissibility or contact, and inner-field convergence, then varying the
 outer-radius-to-crack-length ratio and remote loading. For the face field, it
 means fitting the regular O(r) motion and r⁵ᐟ⁴ residual together. This
 intervention changed a manuscript-protection exercise back into a research
@@ -1357,11 +1410,21 @@ record before being used here. The defensible attribution is layered: human
 scientific ownership and termination, AI-assisted derivation and integration,
 independent calculation-specific checks, and final human responsibility.
 
+The process reports themselves were not exempt. Kimi's signed July 24 report
+was preserved at `b03d249`. A separate signed Codex report recorded eight
+factual corrections, including the restricted source census, the distinction
+between one convention error and two implementation defects, the manuscript
+page count, the final release commit, and the status of the disk trace. The
+earlier report was not silently rewritten. A signed narrative is provenance,
+not self-validating evidence.
+
 Two statements coexist. No individual AI verdict was trustworthy without an
 artifact capable of falsifying it. The calculations emerged through documented
-handoffs among participants; no load-bearing AI derivation was promoted on one
-model's unreviewed assertion. The transferable result is the protocol that
-allowed both statements to be true.
+handoffs among participants. The central load-bearing derivations described
+here were not promoted from one agent's assertion alone; the recorded final
+claim set attaches an independent review or executable cross-check to them.
+That record is not proof that every possible dependency was found. The
+transferable result is the protocol that allowed both statements to coexist.
 
 ---
 
@@ -1380,21 +1443,25 @@ independently rediscover the exponent it assumes.
 The human intervention was not “trust the analytical result anyway.” It was
 to ask for a numerical problem in which the global specimen selects the
 boundary data while the local observable removes the unresolved amplitudes.
-That led to a one-way matching-circle submodel:
+That led to a one-way matching-circle construction. Four related routes
+must be kept distinct:
 
-```text
-global pure-shear strip
-    → complete live-P2 displacement trace on an interior circle
-    → exact-cell local restriction or independently refined inner mesh
-    → near-tip sampling and asymptotic estimators
-```
+| Calculation | What changes | Role |
+|---|---|---|
+| Tip/core-refined global strip | Matching radius, core radius, or angular resolution in the full strip mesh | Supplies the convergence sequence and the complete live-P2 trace |
+| Exact inner restriction | Reuses and re-solves the strip cells inside the matching circle | Supplies the accepted profiles and checks transfer and interface equilibrium; it adds no independent mesh resolution |
+| Independently refined local solve | Refines the local cells at a fixed core while holding the outer strip unchanged | Diagnostic one-way submodel only; it is not used in the reported exponent sequence |
+| Future two-way coupling | Would return local reaction changes to the outer strip | Not implemented and not needed for the present exact-axis claim |
 
-This is not a disk loaded by an analytical tip field. The outer solution is
-the nonlinear strip solution. The exact-restriction local problem receives
-the complete P2 trace, uses that field as its initial state, and solves again
-at the final load. The independently refined local submodel is retained as a
-diagnostic, but it is not used in the reported exponent sequence and it does
-not feed its reaction change back into the global strip.
+This is not a disk loaded by an analytical tip field. The nonlinear strip is
+the outer solution. Its exact restriction receives the complete P2 trace,
+uses the transferred field as its initial state, and solves again at the final
+load. Core convergence comes from rebuilding the global strip, not from
+calling the restricted solve “refined.” The separate refined local diagnostic
+ended with a positive Jacobian but a 2.10% P2 reaction-coefficient defect
+relative to the unchanged strip. That coefficient-vector norm is not a
+mesh-invariant 2.10% traction error, but it shows why one-way displacement
+transfer is not two-way equilibrium.
 
 The implementation checks the interface before interpreting the exponent.
 For the final case, the manufactured P2 transfer error is
@@ -1422,8 +1489,9 @@ A_axis/A_axis,pred = 1.012420.
 ```
 
 The critical design choice is the exact axis. There,
-`sin²(θ/2) = sin^(5/2)(θ/2) = 0`, so both `C_s` and `C_h` disappear before
-fitting. A second estimator frees both radial powers and returns
+`sin²(θ/2) = sin^(5/2)(θ/2) = 0`, so both the `C_s` term and the
+`P^(-1/2) C_h` homogeneous member disappear before fitting. A second estimator
+frees both radial powers and returns
 `q = 1.24980–1.25152` and `p_next = 1.68971–1.74746`. This is a
 cross-check of the 5/4 class and the next 7/4 slot, not a verification of the
 7/4 angular profile or amplitude.
@@ -1445,11 +1513,75 @@ part of numerical analysis.
 
 ---
 
+## 21. Submission Readiness Was an Executable Checkpoint
+
+“Submission ready” did not mean that the full higher-order program was
+finished. It meant that the bounded claim graph, the exact artifacts named by
+the paper, and the journal package passed a defined circuit. The closeout had
+separate scientific, review, packaging, and editorial stages. The first four
+hashes below identify the internal research repository; the final row is the
+public companion:
+
+| State | Recorded revision | What closed |
+|---|---|---|
+| Bounded scientific close | `29b8f09` | The manuscript/ESI claim set, final figures, public-version pin, and the two conditions from Fable's archived-value audit |
+| Process and review record | `b3b38df` | A fact-sourced collaboration report and the scope of the final AI audit, including what was not rerun |
+| Soft Matter package | `92c60e2` | Three upload files, package-relative checksums, and an isolated rebuild of the source ZIP |
+| Final reference and scope pass | `bd0652c` | Rendered DOI repair, citation-scope corrections, paragraph flow, and an explicit plane-stress/plane-strain distinction |
+| Public paper-facing release | `v1.2.0` at `bba3c93` | The immutable 201-file reproducibility state used by the paper |
+
+The final private circuit passed 59/59 manuscript-relation checks, 33/33
+canonical-operator checks, 26/26 endpoint-domain checks, and 38/38
+symplectic-current checks. The 24-page manuscript and 11-page ESI rebuilt
+without undefined references, overfull or underfull boxes, or Type 3 fonts.
+The public circuit also passed all ten verification programs and the
+stored-data claims gate, and the tagged 201-file manifest verified. The
+submission archive contains 13 files, including eight figure PDFs, and rebuilt
+both documents in an isolated directory. The journal upload set contains the
+two PDFs and the source ZIP. No cover letter is included, at the author's
+request.
+
+Review scope remained attached to each verdict. Fable checked archived
+matching-circle values independently and required two release actions: define
+the 7/4 multiplier convention and pin the public version. It did not rerun the
+FEM campaign or public analytical suite. A later ChatGPT review
+read all 24 manuscript pages and 11 ESI pages, including the equations,
+figures, and numerical protocol, but explicitly did not rederive every
+coefficient or rerun the code. Codex checked and acted on those comments, then
+ran the analytical/operator suites, stored-data claims gate, document builds,
+manifest, and package checks. The FEM campaign was not rerun in this closeout.
+A complete reading, a value-by-value audit, an executable identity, and a
+solver rerun are useful probes with different failure modes. None should be
+described as the others.
+
+The reference pass supplied a less obvious artifact lesson. The DOLFINx DOI
+already existed in the BibTeX `doi` field, but the selected bibliography style
+did not print that field for an `@misc` entry. A note had to be added before
+the DOI appeared in the rendered bibliography. The same pass established that
+the ORBilu and Zenodo pages described one item, not two references. It added Li
+and Moran only for the neo-Hookean nested-field interpretation and removed
+language that could transfer a plane-strain analogy into evidence for the
+paper's plane-stress constraint. Source metadata, rendered output, and
+scientific citation scope are three separate checks.
+
+The public tag and public default branch are separate on purpose. Tag
+`v1.2.0` remains the paper-facing state. Public `main` later advanced to
+`719a1ff` to reorganize documentation into `docs/` and repair navigation. That
+documentation change does not rewrite the tagged scientific release.
+
+**Reusable lesson:** define submission readiness as an artifact-specific
+checkpoint. Record the exact claim set, reviewers' probes and omissions,
+executable gates, generated PDFs, source-only rebuild, public tag, and journal
+upload files. Research may continue after that checkpoint without making the
+checkpoint false.
+
+---
+
 # Part V — Comparing Two Method-Defining Frontiers
 
 ---
 
-## 21. Crack Tip and Wrinkle: Different Walls, the Same Standard
+## 22. Crack Tip and Wrinkle: Different Walls, the Same Standard
 
 The crack-tip and wrinkle projects did not become important because they took
 a long time or consumed many review rounds. Difficulty is evidence only when
@@ -1625,10 +1757,11 @@ The progression that matters:
       → the disk is recognized as a distinct loaded boundary-value problem
       → its stored vertex trace shows post-processed crossings and an unresolved global branch
       → quantitative FEM claims use the strip; disk size, loading, and admissibility remain testable
-      → matching-circle campaign closes the bounded 5/4 verification
+      → matching-circle campaign provides bounded verification-grade 5/4 support
       → final AI pre-submission audit conditions are resolved
-      → public companion is frozen as v1.2.0
-      → symplectic framework and bounded G/J/P/5/4/7/4 results survive
+      → paper-facing public state is tagged as v1.2.0
+      → isolated submission build and rendered-reference audit pass
+      → symplectic framework, bounded G/J/P/5/4 claims, and analytical 7/4 rung survive
 ```
 
 **When AI worked well:** the claim could be attacked from a genuinely
@@ -1680,20 +1813,23 @@ response. The manuscript reached a recorded signoff on July 19 but had not
 undergone journal peer review. The July 20 `C_s s` audit reopened that
 signoff. The later matching-circle campaign provided verification-grade
 support for the 5/4 exact-axis class and parameter-free amplitude, and the
-manuscript and ESI were rebuilt in final research commit `29b8f09`. The
+bounded manuscript/ESI claim pass closed at `29b8f09`. The Soft Matter package
+was assembled at `92c60e2`, and the final reference and plane-stress scope pass
+closed at `bd0652c`. The
 [sanitized companion repository](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip)
-is publicly frozen as
+retains its paper-facing reproducibility state as
 [version `v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0)
 at commit `bba3c93`. That release includes the mode-aware claims, public
 theory and scope notes, curated data, matching-circle code and records, figure
 generators, rendered assets, process lessons, and a 201-file hash manifest.
-Older candidates remain visible in history as provenance, not as the
-controlling claim set. Journal peer review and a DOI or other archival
-identifier remain future steps. The
+Public `main` later advanced to `719a1ff` to reorganize those notes under
+`docs/`; it does not alter the tagged paper state. Older candidates remain
+visible in history as provenance, not as the controlling claim set. Journal
+peer review and a DOI or other archival identifier remain future steps. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.3 (final matching-circle verification and public release)
+**Version:** 1.4 (submission closure, evidence map, and numerical-scope audit)
 **Last Updated:** July 24, 2026

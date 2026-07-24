@@ -40,7 +40,7 @@ rankings.
 
 | Guide | What it covers |
 |---|---|
-| [Human–AI Research in the Agent Era](guides/lessons_human_ai_research_agent_era.md) | **Current guide.** Division of authority rather than capability; human research taste; agent mathematical and computational contributions; verified discovery without a known final answer; verification versus validation; evidence-governed trust; question validity; and an agent-era operating model. |
+| [Human–AI Research in the Agent Era](guides/lessons_human_ai_research_agent_era.md) | **Current guide.** Division of authority rather than capability; human research taste; verified discovery without a known final answer; verification versus validation; nuisance-aware observable design; premise and boundary-value-problem audits; evidence-governed trust; and artifact-specific stopping and submission. |
 | [Lessons from Human-AI Collaboration](guides/lessons_human_ai_research.md) | **Historical March–April 2026 field guide.** Plan-first chat workflow, numerical and software lessons, context management, and the earlier human/AI labor model. Retained for provenance with a current-status banner. |
 | [How Debate with AI Produces Understanding](guides/lessons_from_conversation.md) | Historical conversation experiments on challenge, correction, disagreement, and review triage. |
 | [AI Risks and Mitigation](guides/lessons_ai_risks_and_mitigation.md) | Historical risk taxonomy covering plausible inapplicability, method substitution, inadequate tests, debugging spirals, and plausible quantitative errors. Read with its July qualification banner. |

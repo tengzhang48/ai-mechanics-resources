@@ -133,10 +133,14 @@ Agent autonomy adds new scientific controls:
 One important proposition remains a **working hypothesis**: as agents become
 better at executing specified tasks, more risk may move upstream into question
 formulation. A misleading question can receive a coherent and converged answer
-to the wrong problem. These projects do not yet provide a clean example, so
-the claim must remain provisional. The practical response is to audit the
-question, its hidden premises, and its validation route before a large campaign
-begins.
+to the wrong problem. The crack-tip disk now provides one observed
+boundary-value-problem example: the code solved a distinct, well-defined
+discrete problem, but its loading was not equivalent to the intended
+pure-shear comparison and its high-load global admissibility remained
+unresolved. One example does not establish the prevalence of upstream risk,
+so the broad claim remains provisional. The practical response is to audit the
+question, its hidden premises, and its validation route before a large
+campaign begins.
 
 ---
 

@@ -90,12 +90,16 @@ describes physical reality. For claims about physical reality, experiments or
 observations are indispensable, but the current record does not yet contain a
 complete human–agent experimental research case.
 
-Finally, increasingly capable execution may move some risk upstream. A
-misleading or scientifically unimportant question can receive a coherent and
-well-converged answer. This is a **working hypothesis**, not yet an observed
-failure in these projects. Question formulation should itself become a
-human–agent activity, with a separate challenge to the premise before a large
-technical campaign begins.
+Finally, increasingly capable execution may move some risk upstream. The
+crack-tip project now contains one concrete boundary-value-problem example:
+the code solved a distinct, well-defined discrete disk problem, but its loading
+was not equivalent to the pure-shear strip comparison it was meant to support,
+and high-load global admissibility remained unresolved. That is an observed
+boundary-value-problem mismatch. It does not establish how common such
+mismatches are or prove a general transfer of risk from execution to question
+choice. Question formulation should nevertheless become a human–agent
+activity, with a separate challenge to the premise before a large technical
+campaign begins.
 
 ---
 
@@ -383,6 +387,20 @@ generated `k + 3` rung
 ([crack-tip case, §5](../case_studies/symplectic_mooney_rivlin_crack_tip.md#5-where-the-defensible-scope-now-stops)
 and [§19](../case_studies/symplectic_mooney_rivlin_crack_tip.md#19-attribution-carefully)).
 
+The final `Lambda = 13/4` episode shows why a useful mathematical result need
+not be promoted to a complete physical field. Kimi's restricted source
+calculation found an exact opening-sector resonance and a nonzero projected
+defect. Its 58/58 exact and 5/5 numerical self-checks were green. A later
+repair nevertheless found one normalization/convention error, a doubled
+inherited reaction direction, and missing derivative chains because the
+recurrence test reused the same incomplete derivative map. Kimi confirmed the
+three defects, a broader audit found five same-weight source sectors, and
+Fable adjudicated the claim boundary. The release therefore retains the exact
+resonance and coefficient-qualified restricted logarithmic consequence while
+leaving the total source, coupled response, and physical net amplitude open.
+The author recorded that no further 13/4 calculation was needed for the
+paper's bounded claim graph.
+
 The leading crack-tip field is itself a reduced plane-stress asymptotic with an
 overlap regime. It is not a description of the sub-thickness three-dimensional
 tip.
@@ -457,6 +475,24 @@ the relevant action stress. Some attractive claims failed those checks and
 were removed. The surviving constructions are results of this project within
 the formal leading constrained action or stated first-material-order block;
 their literature novelty and physical excitation are separate questions.
+
+The matching-circle campaign supplied a more concrete unknown-answer example.
+Fixed-core strip fits could not separate the regular O(r) motion from the
+predicted r⁵ᐟ⁴ residual. The team therefore changed the observable. On
+the intact axis, both undetermined matching contributions vanish
+identically. Six newly built global strips supplied complete quadratic (P2)
+traces on interior circles: four formed the core/angular sequence and two
+varied the matching radius. Same-cell exact restrictions checked transfer and
+interface equilibrium. The final estimator returned `q = 1.251529` and a
+measured-to-predicted amplitude ratio of `1.012420`. The analytical amplitude
+uses the opening coefficient `P`, measured separately from the in-plane
+residual fit, as its only input; the FEM amplitude is estimated rather than
+calibrated to that prediction. A free two-power holdout fit recovered
+`q = 1.24980–1.25152` and a next slot at `1.68971–1.74746`. This supports the
+5/4 class for the tested strip; it does not select the specimen coefficients
+`C_s` or `C_h`, prove the complete 7/4 field, or validate the constitutive law
+experimentally
+([crack-tip case, §20](../case_studies/symplectic_mooney_rivlin_crack_tip.md#20-remove-nuisance-directions-before-estimating-a-singular-power)).
 
 The practical conclusion is:
 
@@ -591,6 +627,24 @@ decomposing the energy flux. The number of checks was explicitly not treated
 as a number of independent proofs
 ([crack-tip case, §15](../case_studies/symplectic_mooney_rivlin_crack_tip.md#15-the-multi-ai-review-loop)).
 
+The restricted 13/4 calculation is the clearest warning. Its 58 exact
+self-checks and five numerical checks all passed, yet the recurrence residual
+shared the incomplete derivative map it was supposed to audit. Independence
+arrived only when the physical reaction was rebuilt through a different
+source path and the same-grade source census was widened. The lesson is not
+that large test suites are useless. It is that counts describe coverage only
+after shared algebra, code, variables, and source maps are exposed.
+
+The matching-circle test shows the constructive side. The exact restriction
+is a same-cell transfer and equilibrium check, not a second independently
+resolved crack-tip solution. Its strongest new information came from the
+observable: the intact axis removes `C_s` and `C_h` before fitting. Core
+convergence came from rebuilding the global strip, while a free two-power
+holdout fit tested whether the reported 5/4 value had been inserted by the
+estimator. The separate refined local solve remained a one-way diagnostic and
+did not enter the reported exponent sequence. Independence must be assigned
+to the particular probe, not to the label “hybrid” or “local.”
+
 The wrinkle project used a similar closure rule:
 
 1. the builder named the method and its weakest points;
@@ -637,6 +691,14 @@ lets one participant test another's assumptions. It remains non-self-
 certifying: the reviewer, attribution, hash interpretation, and absence claim
 all pass through the same validation circuit as the scientific result.
 
+Signed process narratives pass through that circuit too. The crack-tip record
+preserved Kimi's signed July 24 process report and added a separate signed
+Codex report with eight factual corrections rather than silently rewriting the
+first account. The corrections covered source-census scope, defect type,
+protocol identity, branch claims, page count, release state, and the
+evidentiary status of the disk trace. A signature establishes authorship of a
+report, not the truth of every sentence in it.
+
 The final wrinkle-paper reviews supplied a particularly clear example. Several
 agents focused on the same large strong-form ratio and implicitly mapped it
 onto uncertainty in `T45`. Their agreement measured the salience of the table,
@@ -676,15 +738,22 @@ They cannot by themselves establish that the material law, dimensional
 reduction, boundary conditions, imperfections, or experimental observable
 represent reality.
 
-The crack-tip strip FEM is a strong independently discretized, within-model
-check of the asymptotic crack-tip reduction: it does not impose the crack-tip
-field, the remote loading fixes the amplitude without fitting, and a `c2 = 0`
-control removes the proposed mechanism. The disk is correctly described as a
-consistency cross-check rather than a second specimen-level check
-([crack-tip case, §3](../case_studies/symplectic_mooney_rivlin_crack_tip.md#3-from-local-theory-to-parameter-free-tests)).
-Both calculations solve the same reduced plane-stress material model. They do
-not validate the constitutive law or dimensional reduction against laboratory
-reality.
+The crack-tip strip FEM is an independently discretized, within-model check of
+the asymptotic reduction. It does not impose the crack-tip field. Remote
+loading determines the opening amplitude, and the c₂ = 0 material control
+tests the proposed Jacobian-plateau mechanism. The matching-circle campaign
+then tests the 5/4 exact-axis class using traces from that strip, while making
+clear that its exact inner restriction is a same-cell consistency solve. The
+auxiliary disk is no longer a quantitative cross-check. Its full-arc
+displacement condition defines a different boundary-value problem, and its
+stored high-load boundary-vertex trace is nonmonotone and contains sampled
+segment crossings. That does not certify contact of the continuous P2
+boundary. The code and data are preserved for a future loading, geometry,
+stability, contact, and inner-field study
+([crack-tip case, §3](../case_studies/symplectic_mooney_rivlin_crack_tip.md#3-from-local-theory-to-parameter-free-tests)
+and [§20](../case_studies/symplectic_mooney_rivlin_crack_tip.md#20-remove-nuisance-directions-before-estimating-a-singular-power)).
+None of these calculations validates the constitutive law or plane-stress
+reduction against laboratory reality.
 
 The wrinkle result is compared with a broader experimental/FEM interval and a
 separate single-grid lattice discretization. Those comparisons matter, but
@@ -753,6 +822,17 @@ This is **evidence-governed trust**. It replaces the expectation of complete
 line-by-line personal mastery with a deliberately constructed evidence system.
 It does not weaken the standard of proof.
 
+Execution context belongs in that system. An early two-dimensional crack-tip
+refinement had 42,240 triangles and 170,146 displacement degrees of freedom.
+Those were global displacement degrees of freedom before boundary conditions.
+Although 64 cores were available, the command used one MPI rank and about 1.3
+cores; repeated serial sparse-direct factorizations dominated the runtime.
+The solve reached its target load, but the exporter rejected 402 of 43,440
+requested samples, so the run produced no accepted fit. The later
+parallel-safe implementation used 16 ranks and solved the final 15,360-cell
+strip in 29.4 seconds. A hardware allocation, a live process, a converged
+nonlinear solve, and a validated scientific artifact are distinct states.
+
 An acceptable handoff for an advanced result should make the following visible
 without reconstructing a long conversation:
 
@@ -776,12 +856,21 @@ runner → numerical artifact → claims ledger → figure/manuscript → versio
 The chain allows a human to accept work beyond individual technical reach
 without accepting an unauditable conclusion.
 
+Review reports need the same treatment. The final Fable audit checked archived
+matching-circle values and identified two release conditions: define the 7/4
+multiplier convention and pin the public version. It did not rerun the FEM or
+the public analytical suite. A later ChatGPT review read the
+full 24-page manuscript and 11-page ESI but did not independently rederive
+every coefficient or execute the code. Both were useful because their scope
+was recorded. Neither was represented as journal peer review or as a solver
+rerun
+([crack-tip case, §21](../case_studies/symplectic_mooney_rivlin_crack_tip.md#21-submission-readiness-was-an-executable-checkpoint)).
+
 ---
 
 ## 11. Question validity comes before answer validity
 
-The following proposition is important but not yet established by a clean
-project example:
+The broad proposition remains a working hypothesis:
 
 > **Working hypothesis:** As agents become more reliable at solving specified
 > technical tasks, a larger share of research risk may move upstream into
@@ -789,11 +878,19 @@ project example:
 > question, or locally convenient objective may produce a coherent and
 > converged answer to the wrong problem.
 
-This remains a hypothesis because the work documented here has mostly stayed
-inside problems the human researcher already knows well. The wrinkle project
-is a near-example, not a complete demonstration: substantial effort could
-improve a threshold while the governing research question—whether it came
-from the requested analytical symplectic framework—remained unresolved.
+One narrower instance is now observed. The auxiliary crack-tip disk was a
+well-defined finite-element problem, but its full-arc displacement loading
+introduced strong crack-parallel compression and constrained the crack mouth.
+It was therefore not equivalent to the intended pure-shear strip validation.
+A clean nonlinear solve could not repair that mismatch. The disk episode
+demonstrates upstream boundary-value-problem risk; it does not establish that
+such errors are becoming more frequent or that they are unique to AI.
+
+The wrinkle project is a second near-example. Substantial effort could improve
+a threshold while the governing research question—whether it came from the
+requested analytical symplectic framework—remained unresolved. In both cases,
+auditing the question or method identity changed what the numerical answer was
+allowed to mean.
 
 A wrong or misleading question can take several forms:
 
@@ -828,8 +925,9 @@ consequences, not in claiming a monopoly on imagination.
 This hypothesis should be tested prospectively. Future project logs should
 record major question reformulations, who initiated them, why the earlier
 formulation was inadequate, and whether a premise-focused review changed the
-result. Until such evidence exists, the guide should not present upstream risk
-as an observed frequency or as a failure unique to AI.
+result. The disk may be cited as an observed example, but the guide should not
+turn one example into an observed frequency or a universal law of agent-era
+research.
 
 ---
 
@@ -917,7 +1015,50 @@ actually ship, and separately confirm that the scientific payload agrees with
 the internal source artifact. Historical raw generation records may retain
 machine-local paths when clearly labeled as nonportable metadata.
 
-### 12.5 Separate stopping from completion
+Semantic propagation includes rendered documents. In the crack-tip source,
+the DOLFINx DOI was already present in a structured BibTeX field, but the
+selected bibliography style suppressed that field for `@misc`. Only the PDF
+audit exposed the missing DOI. The same pass distinguished two repository
+pages for one Zenodo item and prevented a plane-strain analogy from being used
+as support for a plane-stress mechanism. Source metadata, rendered text, and
+scientific citation scope are different graph nodes.
+
+When a claim is challenged, record one of four dispositions:
+
+- **false:** retract it;
+- **unsupported:** demote it until adequate evidence exists;
+- **conditional:** retain it with the assumption that makes it true; or
+- **open but testable:** preserve the observation and design a discriminating
+  test.
+
+Removing a figure may be prudent publication control, but it is not a fifth
+scientific disposition. The disk and 5/4 episodes showed why a difficult
+observation should not disappear before its mechanism has been classified.
+
+### 12.5 Design the observable before increasing compute
+
+Refinement cannot identify two nearly collinear terms merely by producing more
+digits in the same short window. Before enlarging a mesh or launching more
+ranks:
+
+1. enumerate exact nullspaces, regular motions, and matching coefficients;
+2. ask whether a symmetry line, projection, compensated ratio, or material
+   control removes them;
+3. separate interface transfer, core removal, element refinement, and fit
+   window as different approximation axes; and
+4. include a target-free estimator or holdout test that could reject the
+   expected exponent.
+
+For the crack tip, the intact axis removed `C_s` and `C_h` algebraically.
+Four rebuilt global strips supplied the core/angular sequence, and two more
+varied the matching radius. The same-cell inner restriction checked transfer
+and equilibrium, while the independently refined local solve remained a
+one-way diagnostic with a 2.10% defect in the stated Euclidean
+reaction-coefficient norm, not a mesh-invariant traction error. This ordering
+prevented “local refinement” from becoming a vague claim of independent
+confirmation.
+
+### 12.6 Separate stopping from completion
 
 The crack-tip campaign distinguished three decisions:
 
@@ -931,6 +1072,12 @@ The crack-tip campaign distinguished three decisions:
 Research completion is different. A symplectic nonlinear-mechanics program may
 continue across many papers even when one bounded result is ready
 ([crack-tip case, §18](../case_studies/symplectic_mooney_rivlin_crack_tip.md#18-the-humans-critical-contributions)).
+
+Submission closure is narrower still. The crack-tip project separately
+recorded the bounded scientific close, the review scope, the isolated source
+rebuild, the three journal-upload files, the immutable public tag, and the
+later reference/scope pass. “Ready” applied to that artifact graph, not to the
+unfinished higher-order research program.
 
 ---
 
@@ -982,9 +1129,12 @@ dimensional models.
 ### Upstream question risk
 
 The proposition that stronger execution shifts risk toward question
-formulation is plausible and consequential, but not yet directly demonstrated
-here. It must remain labeled as a working hypothesis until future records
-provide examples or counterexamples.
+formulation is plausible and consequential. The disk episode directly
+demonstrates one boundary-value-problem mismatch: the code solved a distinct
+discrete problem whose loading differed from the intended strip comparison,
+while high-load admissibility remained unresolved. The broader claim about the
+prevalence or redistribution of research risk remains a working hypothesis
+until more projects provide examples or counterexamples.
 
 ---
 
@@ -996,6 +1146,8 @@ provide examples or counterexamples.
 - Why is this quantity or structure scientifically important?
 - Which premise would most change the project if it were false?
 - Does the immediate task advance the intended research program?
+- Does a convenient geometry or loading define the same boundary-value
+  problem as the phenomenon it is meant to test?
 
 ### About the model and method
 
@@ -1004,6 +1156,8 @@ provide examples or counterexamples.
 - What are the executed unknowns and assembly operations?
 - Has an oracle or diagnostic been mistaken for the claimed paper method?
 - Which exact, weak, numerical, or empirical conditions are being used?
+- Does an analogy preserve the dimensional reduction and constitutive
+  mechanism, or only one formula?
 
 ### About verification
 
@@ -1012,6 +1166,10 @@ provide examples or counterexamples.
 - Is the verifier accurate on the absolute scale of the observable?
 - Is the correct mode, symmetry sector, and branch being followed?
 - Do the independent checks actually have different failure modes?
+- Which nuisance directions enter the measured field, and can the observable
+  remove them before fitting?
+- Are the requested processors actually used by the rank count, solver
+  backend, ownership model, and output path?
 
 ### About validation
 
@@ -1031,7 +1189,11 @@ provide examples or counterexamples.
   artifacts?
 - Is reviewer identity taken from the artifact or verified metadata rather
   than inferred from the surrounding conversation?
+- Do the rendered PDF, bibliography, captions, and figures express the same
+  metadata and scope as their source files?
 - Which claims were retracted or superseded, and why?
+- Was each challenge classified as false, unsupported, conditional, or open
+  but testable?
 - Did the latest correction reopen downstream claims?
 - What remains provisional, open, or outside the paper?
 - Who accepts responsibility for release?
@@ -1057,6 +1219,13 @@ derivation, implementation, approximation spaces, branch identity, error scale,
 and provenance are controlled. Validation—ultimately including experiment—is
 what connects that verified answer to reality.
 
+The latest crack-tip record makes the operational sequence concrete: verify
+that the numerical boundary-value problem is the one the claim requires,
+remove nuisance directions from the observable before buying more compute,
+and classify a challenged result before deleting or promoting it. Release only
+after the resulting claim graph and the actual submission artifacts pass
+together.
+
 The central adaptation is therefore not “trust AI more.” It is:
 
 > Ask better questions, permit deeper technical contribution, and require
@@ -1079,18 +1248,30 @@ The principal public records used for this guide are:
 - [March–April 2026 human–AI research field
   guide](lessons_human_ai_research.md)
 - [July 2026 guide review note](GUIDES_REVIEW_NOTE_2026-07-20.md)
+- [Public crack-tip verification process and
+  lessons](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/PROCESS_AND_LESSONS.md)
+- [Public matching-circle
+  results](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md)
+  and [implementation
+  workflow](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md)
 
 At the 20 July 2026 audit, both companion scientific repositories were release
-candidates. The wrinkle companion is now public; the crack-tip companion
-remains a release candidate:
+candidates. Both are now public:
 
 - [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations)
   — public companion release
-- `nonlinear-symplectic-mooney-rivlin-crack-tip` — public visibility pending
+- [nonlinear-symplectic-mooney-rivlin-crack-tip
+  `v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0)
+  — immutable paper-facing release at `bba3c93`, with a 201-file manifest
 
-- **Version:** 1.1 (conversation and cross-review update)
-- **Last updated:** 22 July 2026
+The crack-tip repository's public default branch later advanced to `719a1ff`
+to organize the notes under `docs/` and repair navigation. That documentation
+state is newer than the release tag; it does not replace the tagged
+paper-facing code/data state.
+
+- **Version:** 1.2 (matching-circle, challenge-response, and submission audit)
+- **Last updated:** 24 July 2026
 - **Evidence window:** January–July 2026
 - **Scope:** One human–multi-agent computational-mechanics research program
 - **Research framing and responsibility:** Teng Zhang
-- **Evidence synthesis and draft:** Codex (GPT-5), 20–22 July 2026
+- **Evidence synthesis and draft:** Codex (GPT-5), 20–24 July 2026
