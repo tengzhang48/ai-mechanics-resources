@@ -4,8 +4,9 @@
 incomplete spectral scaffold, and several rounds of mutually inconsistent
 “verified” claims into a pre-submission candidate—then reopened it when a
 green gate proved blind to a leading-constraint-compatible measurement-space
-direction, rebuilt the reaction-carrying hierarchy, and found that a second
-family of green gates shared the wrong inner variable map.**
+direction, rebuilt the reaction-carrying hierarchy, found that a second
+family of green gates shared the wrong inner variable map, and closed a
+bounded release with a nuisance-free matching-circle test.**
 
 ---
 
@@ -38,8 +39,11 @@ family of green gates shared the wrong inner variable map.**
 - [18. The Human's Critical Contributions](#18-the-humans-critical-contributions)
 - [19. Attribution, Carefully](#19-attribution-carefully)
 
-**Part IV — Comparing Two Method-Defining Frontiers**
-- [20. Crack Tip and Wrinkle: Different Walls, the Same Standard](#20-crack-tip-and-wrinkle-different-walls-the-same-standard)
+**Part IV — Closing the Verification Loop**
+- [20. Remove Nuisance Directions Before Estimating a Singular Power](#20-remove-nuisance-directions-before-estimating-a-singular-power)
+
+**Part V — Comparing Two Method-Defining Frontiers**
+- [21. Crack Tip and Wrinkle: Different Walls, the Same Standard](#21-crack-tip-and-wrinkle-different-walls-the-same-standard)
 
 - [Summary](#summary)
 
@@ -86,16 +90,15 @@ solution in which matching selects `C_s = 0`. Much of the
 higher-order story also did not survive unchanged. A five-row spectral pencil
 that began as the organizing theory was ultimately scoped as a *scaffold*:
 exact on its opening block, useful for locating candidate families, but not
-the derived full reaction-carrying operator. Several higher-order amplitudes moved, acquired
-missing dimensional factors, or were demoted from free parameters to
-conditional candidates. The submission draft became stronger by claiming less,
-and its July 19 signoff was reopened when the raw-profile gate failed.
-The conservative July 20 correction then synchronized the manuscript, ESI,
-and a local public-companion candidate: it retained the G/J/P core, made the
-raw-profile claim conditional, inserted the missing dominant-balance
-derivation, and replaced the blind tangent comparison with a target-free
-profile-mode audit. External review and publication of the corrected pinned
-artifact remain release steps, not scientific results already obtained.
+the derived full reaction-carrying operator. Several higher-order amplitudes
+moved, acquired missing dimensional factors, or were demoted from free
+parameters to conditional candidates. The submission draft became more
+defensible by separating established, conditional, and open statements, and
+its July 19 signoff was reopened when the raw-profile gate failed. The July 20
+correction then synchronized the manuscript, ESI, and public-companion
+candidate. It retained the G/J/P core, made the raw-profile statement
+conditional, inserted the missing dominant-balance derivation, and replaced
+the blind tangent comparison with a target-free profile-mode audit.
 
 The July 21–22 campaign asked a harder question: how far could the candidate
 `B` and `Q_k` families be carried by the radial symplectic method before they
@@ -110,6 +113,21 @@ tail. This is a precise obstruction to the present sequential one-scale
 endpoint construction, not a proof that the nonlinear continuum crack problem
 has no solution. A two-scale
 endpoint construction is now a future-paper problem.
+
+The July 22–24 closure did not attempt to finish that second paper. A
+restricted 13/4 calculation established an opening-sector resonance and a
+nonzero restricted projection, but a later five-sector audit showed that the
+same-grade source census was incomplete. The manuscript therefore reports the
+resonance and coefficient-qualified logarithmic consequence while leaving the
+coupled response and physical net amplitude open. For the 5/4 field, the team
+changed the numerical observable instead of abandoning the result. On the
+intact axis, the two undetermined matching contributions vanish identically.
+A matching-circle campaign then obtained `q = 1.251529` and a parameter-free
+amplitude ratio of `1.012420`, with a free two-power fit recovering the next
+radial slot near 7/4. The public companion was frozen as `v1.2.0` on 24 July.
+A final AI pre-submission review passed the bounded physics/data chain after
+two release conditions were closed. This is internal verification, not
+journal peer review.
 
 The scientific repository began in June 2026, with manuscript revisions
 recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
@@ -274,24 +292,50 @@ An auxiliary boundary-driven disk was initially presented as a second
 cross-check. A later boundary-condition and geometry audit showed that its
 prescribed outer map imposed a different loading path, including strong
 crack-parallel compression, and constrained parts of the crack mouth. At the
-larger loads its stationary finite-element branch also developed a same-face
-self-intersection. The disk calculations were therefore quarantined as a
-reproducible failed auxiliary boundary-value problem, not retained as evidence
-for pure-shear crack-tip physics.
+larger loads its stored upper-face vertex trace also crossed itself away from
+the tip. The disk was removed from the current quantitative validation because
+it is not a pure-shear surrogate and its global branch is unresolved. The
+calculation itself was preserved as a second boundary-value problem whose
+loading, disk-to-crack size, continuous boundary, stability, and inner field
+can be tested separately.
 
-The strip-only production audit uses one physical offset shared across five
-rays, checks per-ray sensitivity, and fits the face exponent freely over nested
-windows. The raw face slopes remain close to the leading opening exponent
-across the sampled loads. The detrended residual estimates support a
-finite-window residual interpretation but do not establish a universal
-asymptotic 5/4 law. The former raw 2/5 tip-shape claim is withdrawn: its legacy
-estimator omitted the leading-constraint-compatible `C_s s` term rather than
-testing its coefficient. It was not an independent specimen-scale validation.
+The first strip-only production audit used one physical offset shared across
+five rays, checked per-ray sensitivity, and fitted the residual exponent over
+nested windows. It exposed the allowed `C_s s` background, but the available
+fixed-core windows did not independently resolve the r⁵ᐟ⁴ residual. The former
+raw 2/5 tip-shape claim was therefore withdrawn: its legacy estimator omitted
+the leading-constraint-compatible term rather than testing its coefficient.
 
-This division mattered. The strip FEM does not impose the crack-tip field and
-can falsify the opening exponent, amplitude relation, and angular structure.
-A positive detrended-exponent claim needs a noncircular free-exponent or
-holdout gate; a fixed-r⁵ᐟ⁴ subtraction is only a consistency test.
+The final test changed the observable. On the intact axis,
+`C_s r sin²(θ/2)` and the homogeneous
+`C_h r^(5/4) sin^(5/2)(θ/2)` both vanish exactly. The same global pure-shear
+strip supplied a P2 displacement trace on a matching circle, and a
+tip-refined local submodel received that trace. The campaign varied matching
+radius, inner-core size, and angular resolution. Its finest exact-axis fit
+gave
+
+```text
+q = 1.251529,
+A_axis/A_axis,pred = 1.012420.
+```
+
+A separate free two-power fit returned leading powers 1.24980–1.25152 and
+next powers 1.68971–1.74746 without fixing either exponent. The latter
+interval approaches the predicted 7/4 in-plane slot. The full-angle fit gave
+`q = 1.25349` after subtraction of the regular background and agreed with the
+angular ODE family when its homogeneous member was admitted. It did not
+select `C_h = 0`.
+
+This division mattered. The global FEM did not impose the crack-tip field,
+and the local solve tested the transferred global solution rather than
+prescribing the asymptotic displacement. The exact-axis channel removed the
+two matching coefficients algebraically before fitting, while the free
+two-power and holdout tests checked that the result was not created by fixing
+the target exponent. The one-way submodel supports the asymptotic class and
+its parameter-free exact-axis amplitude for the tested strip. It does not
+determine specimen-selected `C_s` or `C_h`, and it is not a two-way
+global–local coupling.
+
 The c₂ = 0 control is especially valuable because it shares enough of the
 leading opening behavior to rule out a generic mesh or fitting explanation for
 the Mooney–Rivlin Jacobian plateau.
@@ -463,10 +507,13 @@ and composite PK1/FEM matching belong to a future paper.
   Laurent-coefficient audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂,
   g, g′, and the normalized r⁵ᴟ⁴ amplitude used in that audit. This is not a
   completed retained-`C_s`, finite-compliance equilibrium branch.
-- The strip G/P/J validation and the finite-window diagnostic of the omitted
-  s-like background; the evidence does not validate a universal raw profile or
-  independently validate a residual 2/5 exponent. The auxiliary disk is
-  quarantined and supplies no physical validation claim.
+- The strip G/P/J validation, the finite-window diagnosis of the omitted
+  s-like background, and matching-circle support for the exact-axis r⁵ᐟ⁴
+  class and its parameter-free amplitude. The full-angle field is consistent
+  with the ODE family when `C_h` is retained, but the evidence does not select
+  that coefficient or validate a universal raw profile. The auxiliary disk is
+  outside the current quantitative validation while its global branch and
+  inner field are assessed separately.
 - The exact opening-block pairing and its 3/2 − Λ duality.
 - At the opening-block pencil label `Lambda = 13/4`, corresponding to opening
   power r⁵ᐟ², the resonance and its compatibility condition are exact. On the
@@ -812,8 +859,12 @@ ultimate matched `r → 0` coefficient. The production raw face slopes were
 the stored finite-window fields, not a proof that the asymptotic exponent is
 exactly 5/4.
 No new FEM solve was needed to withdraw the universal raw-profile claim: the
-stored fields already contained the missing mode. New calculations would be
-needed to promote a stronger global-matching or universal-profile theorem.
+stored fields already contained the missing mode. Those fields were
+insufficient for a positive 5/4 verification. The later matching-circle
+campaign supplied the needed new near-tip calculation and a nuisance-free
+axis channel. It supports the 5/4 class and exact-axis amplitude for the
+tested strip, but it still does not select the global matching coefficients
+or establish a universal raw profile.
 
 **Lesson:** asymptotic order depends on the observable. A regular mode can be
 subleading relative to the singular opening gradient and leading energy
@@ -836,13 +887,19 @@ conditions did not represent the pure-shear experiment used to motivate the
 comparison. Boundary conditions are part of the physics, not merely a
 numerical container around the tip.
 
-At higher loading, the stored deformation also became globally non-injective:
-one crack face intersected itself away from the tip. This was not contact
-between opposing faces, and the model contained no contact, global-injectivity,
-bending, or stability mechanism that could assign such a branch physical
-meaning. A smooth-looking inner fitting window cannot rescue evidence taken
-from a post-onset global branch. Local residual quality and global
-admissibility must be audited separately, and both must pass.
+At higher loading, the exported upper-face vertex trace crossed itself away
+from the tip. This was not contact between opposing faces. It also did not
+certify the continuous quadratic boundary because the exporter interpolated
+the quadratic solution onto linear vertices. The model contained no contact,
+global-injectivity, bending, or stability mechanism that could select a
+physical post-onset branch.
+
+The resulting questions must be separated. Newton convergence addresses
+stationarity of a discrete branch. Continuous-boundary and tangent checks
+address global injectivity and stability. Nested mesh, core, and fitting-window
+studies address convergence of the inner field. A globally inadmissible branch
+would limit the physical interpretation of its inner field, but that does not
+make inner convergence and global admissibility the same test.
 
 The comparison also clarified what load variation can test. The normalized
 local similarity exponents and angular shapes belong to the local asymptotic
@@ -858,6 +915,16 @@ self-intersection geometrically before calling it contact, and separate
 load-independent local exponents from load-dependent amplitudes and matching.
 An estimator must include every lower-order term allowed in the measured
 observable.
+
+The size question also became precise. The membrane model has no intrinsic
+in-plane length, so uniformly scaling the disk, slit, numerical core, and
+sampling window cannot change its dimensionless solution. Every stored
+tip-centered disk has `R_disk/a = 1`, because the slit runs from the center to
+the rim. A genuine size study must hold crack length fixed and vary
+`R_disk/a`, for example over 1, 2, and 4. Comparing the existing
+`diag(1/lambda,lambda)` boundary map with `diag(1,lambda)` then separates
+disk geometry from the strong crack-parallel compression of the original
+loading.
 
 ### A green family can share one wrong derivation root
 
@@ -1138,6 +1205,16 @@ commit.
 the claim it “verifies.” Until the dependency is examined, a passing gate may
 certify transcription rather than truth.
 
+**It became defensive when a result was challenged.** Removing a disputed
+figure, narrowing a claim, or labeling a calculation “quarantined” reduced
+immediate publication risk. In the disk episode, that response began to
+replace the harder work of asking whether the fold came from loading,
+dimensionless geometry, branch selection, missing contact or bending, or a
+numerical defect. The same tendency could have erased the analytical
+r⁵ᐟ⁴ residual merely because the available finite window could not yet
+separate it from an allowed O(r) motion. Claim control is necessary, but it
+is not mechanism discovery.
+
 **The workflow had no intrinsic stopping condition.** The Qₖ campaign could
 always generate one more rung. The stopping decision required scientific
 judgment about what the paper needed, what numerics could safely take over, and
@@ -1179,12 +1256,24 @@ parity/tail defect was identified, this set a principled stopping boundary.
 The present work must state the obstruction and protect its claim ledger; it
 need not hide a second research paper inside the current submission.
 
+**“Do not solve trouble by removing it.”** When the disk branch and the
+two-term face field became difficult to interpret, Teng rejected the emerging
+defensive strategy. The revised instruction was to retain the physical
+observation, enumerate mechanisms, and define discriminating numerical tests.
+For the disk, this means separating discrete stationarity, global
+admissibility, and inner-field convergence, then varying the
+outer-radius-to-crack-length ratio and remote loading. For the face field, it
+means fitting the regular O(r) motion and r⁵ᐟ⁴ residual together. This
+intervention changed a manuscript-protection exercise back into a research
+program.
+
 **“Pause and submit.”** The theory–verification loop had no natural terminal
 rung. Teng first wrote a stopping line — analysis for endpoint solvability and
 conservation, numerics for a well-posed spectrum. At that stage, none of the
 recognized unfinished higher-order blocks fed the printed G/J/P core, so Teng
 paused the tower extension and designated external review as the next
-instrument. The later `C_s s` audit showed that the broader raw-shape claim
+instrument. In this record that meant another independent AI review, not
+journal peer review. The later `C_s s` audit showed that the broader raw-shape claim
 still depended on an unclosed matching coefficient, and the signoff was
 reopened.
 
@@ -1233,8 +1322,16 @@ early rounds, including an independent route to P⁻³ᐟ² and the P2 element
 correction. In the July 21–22 campaign Kimi also performed a hostile Gate-3
 review, rebuilt early Gate-4 rungs, and independently confirmed both the
 `Lambda = 17/4` formal outer obstruction and the later `Pi1'(0) = -5/2`
-one-scale connection defect. DeepSeek/OpenCode performed the late end-to-end
-audits. Its third
+one-scale connection defect. Kimi's named 13/4 branch then supplied the
+restricted resonance tranche. Codex's repair and a broader source audit found
+the defects and scope gap described above, and Kimi independently confirmed
+the three algebra/implementation errors. Kimi later added the asymptotic map
+and closed 7/4 rung to the manuscript, ran the first bounded FEM pilot, and
+reviewed the final matching-circle figure. Codex implemented the
+verification-grade matching-circle campaign and integrated the review. Fable
+performed the final line-by-line and pre-submission audits.
+
+DeepSeek/OpenCode performed the late end-to-end audits. Its third
 pass reviewed the then-current theory/manuscript tree at `74edb13` and reported
 “Ready for submission.” That verdict predates the July 19 mesh-provenance,
 data, figure, and scope corrections and is not a review of public-companion
@@ -1249,12 +1346,16 @@ blind gate against the stored fields and code. These were AI review results
 before journal peer review, not proof statements or external signoff.
 
 Line-level authorship cannot be reconstructed reliably from a shared working
-tree, and this case study does not assign it. Some source records were drafted
-by the same agents they assess, so their evaluative claims were checked against
-the round-by-round record before being used here. The defensible attribution
-is layered: human scientific ownership and termination, AI-assisted
-derivation and integration, independent model-specific checks, and final
-human responsibility.
+tree, and this case study does not assign it. All research-repository Git
+commits use Teng Zhang's author identity. Agent attribution comes instead
+from signed note headers, named branch handoffs, commit subjects, and
+self-reports checked against executables and later reviews. The record does
+not preserve complete raw conversations, exact task timing, or reliable model
+build identifiers. Some source records were drafted by the same agents they
+assess, so their evaluative claims were checked against the round-by-round
+record before being used here. The defensible attribution is layered: human
+scientific ownership and termination, AI-assisted derivation and integration,
+independent calculation-specific checks, and final human responsibility.
 
 Two statements coexist. No individual AI verdict was trustworthy without an
 artifact capable of falsifying it. The calculations emerged through documented
@@ -1264,11 +1365,91 @@ allowed both statements to be true.
 
 ---
 
-# Part IV — Comparing Two Method-Defining Frontiers
+# Part IV — Closing the Verification Loop
 
 ---
 
-## 20. Crack Tip and Wrinkle: Different Walls, the Same Standard
+## 20. Remove Nuisance Directions Before Estimating a Singular Power
+
+The fixed-core strip data did something scientifically useful even when they
+could not resolve 5/4. They showed why the old estimator was ill posed. The
+regular `C_s r sin²(θ/2)` field and the r⁵ᐟ⁴ residual are strongly correlated
+over a short radial window, and a fixed-r⁵ᐟ⁴ detrending basis cannot
+independently rediscover the exponent it assumes.
+
+The human intervention was not “trust the analytical result anyway.” It was
+to ask for a numerical problem in which the global specimen selects the
+boundary data while the local observable removes the unresolved amplitudes.
+That led to a one-way matching-circle submodel:
+
+```text
+global pure-shear strip
+    → complete live-P2 displacement trace on an interior circle
+    → exact-cell local restriction or independently refined inner mesh
+    → near-tip sampling and asymptotic estimators
+```
+
+This is not a disk loaded by an analytical tip field. The outer solution is
+the nonlinear strip solution. The exact-restriction local problem receives
+the complete P2 trace, uses that field as its initial state, and solves again
+at the final load. The independently refined local submodel is retained as a
+diagnostic, but it is not used in the reported exponent sequence and it does
+not feed its reaction change back into the global strip.
+
+The implementation checks the interface before interpreting the exponent.
+For the final case, the manufactured P2 transfer error is
+`1.69×10⁻¹⁵`, the imposed trace error is zero to stored precision, all
+28,960 polar samples are valid, and the exact-restriction reaction-coefficient
+defect is `4.21×10⁻⁹`. The production calculation used 16 MPI ranks, 15,360
+global strip triangles, and 10,320 triangles in the exact local restriction.
+
+The campaign then separates three kinds of convergence:
+
+- `R-`, `1`, and `R+` vary the matching radius from `0.005h` to `0.02h`;
+- cases `1`, `2`, and `3` reduce the inner core from `10⁻⁵h` to
+  `2.5×10⁻⁶h`; and
+- case `4` holds the smallest core and doubles the angular resolution from
+  60 to 120 sectors.
+
+The three radial windows are overlapping post-processing intervals on each
+field, not distinct “inner,” “middle,” and “outer” simulated annuli. The
+largest matching-radius change in the fitted exponent is
+`5.50×10⁻⁴`. The final exact-axis result is
+
+```text
+q = 1.251529,
+A_axis/A_axis,pred = 1.012420.
+```
+
+The critical design choice is the exact axis. There,
+`sin²(θ/2) = sin^(5/2)(θ/2) = 0`, so both `C_s` and `C_h` disappear before
+fitting. A second estimator frees both radial powers and returns
+`q = 1.24980–1.25152` and `p_next = 1.68971–1.74746`. This is a
+cross-check of the 5/4 class and the next 7/4 slot, not a verification of the
+7/4 angular profile or amplitude.
+
+The episode changed the role of FEM. It did not “prove” the analytical
+algebra. It tested whether the reduced continuum model, global strip solution,
+interface transfer, and local asymptotic observable formed one consistent
+chain. The result supports the 5/4 exact-axis class and its parameter-free
+amplitude for the tested `c₁=c₂=1`, `λ=1.6` strip. Global selection of `C_s`
+and `C_h`, two-way displacement–traction coupling, and the complete 7/4 field
+remain open.
+
+**Reusable lesson:** when an asymptotic coefficient is confounded by a
+matching nullspace, more mesh alone may not identify it. First search for a
+symmetry line, projection, ratio, or compensated quantity that removes the
+nuisance direction exactly. Then refine the numerical problem and vary the
+interface, core, angular resolution, and fitting window. Observable design is
+part of numerical analysis.
+
+---
+
+# Part V — Comparing Two Method-Defining Frontiers
+
+---
+
+## 21. Crack Tip and Wrinkle: Different Walls, the Same Standard
 
 The crack-tip and wrinkle projects did not become important because they took
 a long time or consumed many review rounds. Difficulty is evidence only when
@@ -1399,6 +1580,10 @@ The progression that matters:
       → r^(1/2) opening and a formal r^(5/4) residual on a chosen C_s = 0 representative
       → 2/5 only after C_s s detrending, or if matching selects C_s = 0
       → G = (π/2)c₁P² and parameter-free strip test
+      → fixed-core strip windows expose but cannot separate the nuisance motion
+      → exact-axis observable removes C_s and C_h identically
+      → matching-circle campaign returns q=1.251529 and amplitude ratio 1.012420
+      → free two-power fit recovers 5/4 and a next slot near 7/4
 
   Useful five-row spectral pencil
       → initially promoted as the full symplectic operator
@@ -1437,10 +1622,13 @@ The progression that matters:
       → independent routes, controls, and component decompositions
       → a green Figure 8 gate is blind to a constraint-compatible candidate
       → audit withdraws raw shape claim; corrected artifacts are regenerated
-      → a stationary disk branch fails the intended-BC and global-injectivity audits
-      → disk evidence is quarantined; physical FEM claims become strip-only
-      → external review and an immutable public release remain
-      → G/J/P core survives
+      → the disk is recognized as a distinct loaded boundary-value problem
+      → its stored vertex trace shows post-processed crossings and an unresolved global branch
+      → quantitative FEM claims use the strip; disk size, loading, and admissibility remain testable
+      → matching-circle campaign closes the bounded 5/4 verification
+      → final AI pre-submission audit conditions are resolved
+      → public companion is frozen as v1.2.0
+      → symplectic framework and bounded G/J/P/5/4/7/4 results survive
 ```
 
 **When AI worked well:** the claim could be attacked from a genuinely
@@ -1488,23 +1676,24 @@ one-scale cascade records, exact homogeneous-connection and analytic-
 background audits, and the publication-scope decision memo. The July 23
 bounded `Lambda = 13/4` review added the restricted resonance result and the
 shared-derivative-map postmortem without promoting the unfinished coupled
-response. The festschrift manuscript reached a recorded signoff on July 19
-but had not undergone journal peer review. The July 20 `C_s s` audit reopened
-that signoff; the manuscript and ESI have since received the conservative
-correction and were rebuilt. The
+response. The manuscript reached a recorded signoff on July 19 but had not
+undergone journal peer review. The July 20 `C_s s` audit reopened that
+signoff. The later matching-circle campaign provided verification-grade
+support for the 5/4 exact-axis class and parameter-free amplitude, and the
+manuscript and ESI were rebuilt in final research commit `29b8f09`. The
 [sanitized companion repository](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip)
-is now publicly reachable. Its corrected evidence branch is pinned at
-[commit `d6a954e`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/commit/d6a954e0ec58ed59e669ee2722ede0edef95b241);
-that commit includes the mode-aware claims, public theory and scope notes,
-curated data, figure generators, rendered assets, and a 169-file hash
-manifest. The older July 19 candidate remains visible in history as
-provenance, not as the controlling claim set. A release tag,
-journal/external peer review, and a DOI or other immutable archive identifier
-remain future steps. The
+is publicly frozen as
+[version `v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0)
+at commit `bba3c93`. That release includes the mode-aware claims, public
+theory and scope notes, curated data, matching-circle code and records, figure
+generators, rendered assets, process lessons, and a 201-file hash manifest.
+Older candidates remain visible in history as provenance, not as the
+controlling claim set. Journal peer review and a DOI or other archival
+identifier remain future steps. The
 symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 1.14.0; the FEM environment records FEniCSx/dolfinx 0.10. Exact AI model build
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.1 (bounded resonance and verification-lessons update)
-**Last Updated:** July 23, 2026
+**Version:** 1.3 (final matching-circle verification and public release)
+**Last Updated:** July 24, 2026
