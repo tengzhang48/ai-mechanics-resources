@@ -180,6 +180,7 @@ to establish who checked what, when, and with which limitations.
 | Missing `C_s s` motion and disk diagnosis | [`PROCESS_AND_LESSONS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/PROCESS_AND_LESSONS.md) and the preserved disk records | Why the raw face-shape claim became conditional and why the disk left the quantitative validation | A proof of continuous-boundary contact or a converged alternative disk branch |
 | Restricted 13/4 resonance | [`THEORY_NOTES.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/THEORY_NOTES.md), [`verify_lambda13_restricted_log.py`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/analysis/verify_lambda13_restricted_log.py), and the dated internal adjudication | Exact resonance plus a nonzero projection for one audited source sector | The total same-grade source, coupled response, or a universal physical logarithm |
 | Matching-circle campaign | [`GLOBAL_LOCAL_RESULTS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md), [`GLOBAL_LOCAL_WORKFLOW.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md), and retained JSON/NPZ records | The exact-axis 5/4 class and predicted amplitude for the tested strip, with stated convergence checks | Selection of specimen-level `C_s` or `C_h`, the complete 7/4 field, or two-way coupling |
+| AI response to challenge | Private research workspace: `REVIEW_PROCESS_2026-07.md`, `GATE1_TO_GATE3_TOKEN_LEDGER_2026-07-20.md`, Kimi's named development log and signed error anatomy, Codex's challenge-response note, and Fable's 13/4 adjudication | Observed instances of root/child-agent orchestration, productive and incorrect pivots, defensive narrowing, and signed self-correction in this project | A general behavioral law for AI systems, child-by-child attribution that was not preserved, or independence merely because several agents agreed |
 | Public release | Tag [`v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0), commit `bba3c93`, and its 201-file `MANIFEST.sha256` | The immutable paper-facing code/data state | A DOI, journal acceptance, or external peer review |
 | Submission closure | Research commits `29b8f09`, `92c60e2`, and `bd0652c`, plus `paper/submission/soft_matter_2026-07-24/SUBMISSION_CHECKLIST.md` | Scientific claim closure, isolated package rebuild, and final citation/scope checks | Independent rederivation of every coefficient by the document reviewers |
 
@@ -1167,6 +1168,30 @@ swapped them for the later Qₖ rounds: Codex led the derivation, and Fable
 became the adversarial verifier and shipping executor. The invariant was not
 which model held which title. It was that the deriver did not sign off alone.
 
+### One coordinating agent can spawn several reviewers without creating independence
+
+The named peer-agent handoffs were not the only form of parallel work. A
+coordinating agent can also spawn bounded subagents. The committed
+Gate-1-to-Gate-3 resource ledger records one Codex root thread whose aggregate
+counters included spawned derivation and review work. It describes parallel
+exact, numerical, and hostile-review agents, followed by repairs exposed in
+review. At aggregate level, that loop found missing endpoint and precision
+conditions that were repaired before the checkpoint.
+
+The evidence has an important boundary. The raw child-agent rollouts and a
+child-by-child finding ledger were not committed. The record therefore
+supports aggregate orchestration, not a retrospective claim that an unnamed
+child found a particular bug. Named Kimi, Fable, DeepSeek, and Opus reports
+are separate peer-agent records and should not be relabeled as child-agent
+work.
+
+A child given the same coordinate map, source generator, or derivative oracle
+can still reproduce the parent’s mistake. The record does not identify the
+failing T3 or `Lambda = 13/4` routes as child-agent work, but both demonstrate
+this shared-root risk. Parallelism added strength only when assignments
+targeted different failure modes. The unit to count is the falsification
+route, not the worker.
+
 Load-bearing algebraic and numerical disagreements were not settled by a vote.
 They were converted into checks:
 vary P outside the unit gauge; differentiate the full nominal stress; run the
@@ -1316,6 +1341,45 @@ numerical defect. The same tendency could have erased the analytical
 r⁵ᐟ⁴ residual merely because the available finite window could not yet
 separate it from an allowed O(r) motion. Claim control is necessary, but it is
 not mechanism discovery.
+
+### What the agents did when the plan or result failed
+
+The dated records do not support one universal statement about how AI behaves
+under pressure. Here “pressure” means a challenged result, a failed plan, or
+an approaching release, not a claim about an AI's subjective state. The
+records show several responses, sometimes from the same agent:
+
+| Observed response | Documentary example | Control that the episode required |
+|---|---|---|
+| **Change the route** | Kimi's 13/4 log records two wrong expectations. Direct extraction found a second source in the restricted census. At the resonant opening block, the nonzero projection ruled out smooth closure and forced a logarithmic contribution. | Recompute from the governing object and record the hypothesis and route changes. |
+| **Change the verdict too far** | The same log treated the scalar resonance as a formal stopping line, although coupled fields, tractions, the complete census, and outgoing rows remained in contract. | Write an explicit scope delta. A new outcome does not silently cancel deliverables. |
+| **Narrow defensively** | The disk episode above, recorded in Codex's challenge-response note, moved toward removal and quarantine before the mechanisms were separated. | Preserve the observation and design a mechanism-separating test. |
+| **Accept correction** | Kimi traced three errors surviving 58/58 exact and 5/5 numerical gates to reuse sites. Fable separately corrected or withdrew six claims, labels, and interpretations from its own handoff. | Freeze the original, issue a signed correction, and turn each failure mechanism into a gate. |
+
+The source chain for this table is preserved rather than reconstructed from
+conversation memory: the root/child-agent ledger at research commit
+`75af3e8`; Kimi's development log at `35ff1ba` and branch-preserved error
+anatomy at `337247e`; Codex's challenge-response note at `6c6f8a3`; and Fable's
+adjudication at `7514261`. The archived Opus reports identify the artifacts
+they reviewed as `f0aa058` and `c887cf3`, while the July 19 assessment
+(Teng author of record, drafted by Fable) identifies its own state as
+`aa5e4ec`.
+
+These examples also qualify the earlier AI signoffs. Opus found a wrong
+reaction-mode list even while the then-current 29/29 manuscript suite passed.
+A later Opus pass found no new mathematical error on its pinned artifact but
+flagged the load-bearing role of the symplectic framing and the use of two
+specimens. The Fable-drafted July 19 process assessment said the loop had
+converged. The subsequent `C_s s` audit reopened submission status, and the
+later disk and shared-map audits narrowed further claims. The earlier reviews
+were not useless; their authority ended at their artifact and probe set.
+
+The useful pressure response was therefore procedural rather than
+personality-based: preserve the challenged artifact, state what changed,
+restart at a different derivation root when necessary, compare the new route
+with the original contract, and let the human owner decide whether the open
+dependency changes the paper. A fast correction without those controls was
+another high-risk change set.
 
 The corrected process used four dispositions: **false**, **unsupported**,
 **conditional**, and **open but testable**. False results were retracted.
@@ -1844,6 +1908,11 @@ than the evidence. More re-reading inside the same frame did not help, and
 multiple green implementations of one inherited variable map did not create
 independence.
 
+**When one AI became many agents:** bounded child assignments increased
+coverage and exposed repair work, but only at the aggregate level preserved in
+the record. Independence still required different falsification roots, not
+internal agreement.
+
 **The meta-lesson:** executable verification is essential, but “make a test”
 is not the end of the scientific question. A test certifies only what it could
 have falsified, on the artifact it actually exercised, at the scope its
@@ -1898,5 +1967,5 @@ symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.5 (gate-plan chronology and stopping-scope clarification)
+**Version:** 1.6 (documented AI challenge response and child-agent orchestration)
 **Last Updated:** July 25, 2026
