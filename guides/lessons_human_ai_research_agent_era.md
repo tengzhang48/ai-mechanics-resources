@@ -19,6 +19,12 @@ mechanics program. It distinguishes four kinds of statement:
   projects; and
 - **proposed practices** inferred from the evidence.
 
+**Participants.** Teng Zhang is the human scientific owner. Fable (Claude),
+Codex (GPT), Kimi, DeepSeek, GLM (Z.ai), and Opus (Claude) contributed as
+agents or reviewers at documented stages. ChatGPT supplied a later external
+manuscript review. Shortened names below refer to these participants; the
+labels identify recorded work, not model versions or capability rankings.
+
 Model names are historical coordinates, not permanent capability rankings.
 The evidence is what each participant actually contributed to a particular
 artifact and what survived verification.
@@ -46,6 +52,21 @@ artifact and what survived verification.
 ---
 
 ## 1. Technical summary
+
+**Wrinkle primer.** A stiff film bonded to a soft substrate wrinkles under
+compression. With further compression, its pattern may double its period and
+then double again into a period-four, or quadrupled, state. The project asked
+whether those secondary instabilities could be computed with an
+analytical-depth symplectic method rather than only with a depth-discretized
+numerical model
+([wrinkle case](../case_studies/symplectic_wrinkle_period_doubling.md)).
+
+**Crack-tip primer.** The second project studied the deformation near a crack
+in a thin Mooney–Rivlin sheet under plane stress. It used a radial symplectic
+formulation to organize a constitutively induced near-tip constraint, its
+leading opening field, and selected higher-order corrections, then tested
+bounded predictions with strip finite elements
+([crack-tip case](../case_studies/symplectic_mooney_rivlin_crack_tip.md)).
 
 The old division—human thinks, AI codes, human checks—is no longer an adequate
 description of this work. In the nonlinear wrinkle and crack-tip projects,
@@ -78,8 +99,8 @@ solutions, branch identities, independently checked derivatives, and exposed
 refinement of each approximation axis material to the stated claim. When the
 chain is controlled and its remaining sensitivities are reported, a framework
 can generate a credible answer that no participant knew beforehand. The
-period-four wrinkle calculation and the higher-order crack-tip construction
-are examples at their explicitly stated evidence levels.
+period-four (quadrupling) wrinkle calculation and the higher-order crack-tip
+construction are examples at their explicitly stated evidence levels.
 
 Convergence alone is not enough. A calculation can converge to the wrong
 model, a substituted method, an incomplete basis, or the wrong bifurcation
@@ -95,7 +116,9 @@ crack-tip project now contains one concrete boundary-value-problem example:
 the code solved a distinct, well-defined discrete disk problem, but its loading
 was not equivalent to the pure-shear strip comparison it was meant to support,
 and high-load global admissibility remained unresolved. That is an observed
-boundary-value-problem mismatch. It does not establish how common such
+boundary-value-problem mismatch, examined further in
+[§11](#11-question-validity-comes-before-answer-validity). It does not
+establish how common such
 mismatches are or prove a general transfer of risk from execution to question
 choice. Question formulation should nevertheless become a human–agent
 activity, with a separate challenge to the premise before a large technical
@@ -127,11 +150,11 @@ research program and question
 ```
 
 This is not merely faster code generation. The role assignments in the
-crack-tip project rotated: Fable initially served as revision executor and
-infrastructure builder, while Codex served as structural reviewer; later,
-Codex led several derivation rounds and Fable became the adversarial verifier
-and shipping executor. The invariant was not the model assigned to each role.
-It was that the deriver did not sign off alone
+crack-tip project rotated: Fable (Claude) initially served as revision
+executor and infrastructure builder, while Codex (GPT) served as structural
+reviewer. Later, Codex led several derivation rounds and Fable became the
+adversarial verifier and shipping executor. The invariant was not the model
+assigned to each role. It was that the deriver did not sign off alone
 ([crack-tip case, §15](../case_studies/symplectic_mooney_rivlin_crack_tip.md#15-the-multi-ai-review-loop)).
 
 The wrinkle project went further operationally. Agents ran calculations,
@@ -172,10 +195,14 @@ subsequently converted into an auditable artifact. This is an observed benefit
 of the interface in this program, not evidence that every long conversation
 improves research.
 
-The wrinkle residual discussion gives a precise example. The selected finite
-state is a stationary point of the unexpanded energy **against the retained
-Ritz test space**. That is the equilibrium equation the method actually
-solves. It is not a claim that the corresponding first Piola stress has zero
+#### Example: a conversational objection changed a residual claim
+
+The following method-specific example belongs here because a short objection
+about what a residual meant was converted into a precise evidence boundary.
+The selected finite state is a stationary point of the unexpanded energy
+**against the retained Ritz test space**. That is the equilibrium equation the
+method actually solves. It is not a claim that the corresponding first Piola
+stress has zero
 pointwise divergence or that every boundary traction is already exact. Stress,
 `Div P`, and traction fields are derived from the retained displacement field
 and remain valuable strong-form diagnostics. After implementation, convention,
@@ -234,7 +261,7 @@ A more durable allocation is:
 | Select a mathematical formulation | Human or agents | Derivation, applicability, method contract, and discriminating checks |
 | Derive mathematics | Human or agents | Independent algebraic, structural, dimensional, and numerical evidence |
 | Implement and execute | Human or agents | Scoped authorization, live-state checks, tests, and reproducible artifacts |
-| Challenge and verify | Human or agents | A route capable of falsifying the claim without sharing its decisive failure mode |
+| Challenge and verify | Human or agents | A route capable of falsifying the claim without sharing its decisive failure mode ([§8](#8-independent-evidence-is-not-a-model-vote)) |
 | Select manuscript claims | Human with agent analysis | A closed evidence path and explicit treatment of open dependencies |
 | Release or submit | Agents may prepare the package | Human author accepts responsibility |
 
@@ -250,7 +277,13 @@ routes the statuses
 paper method | referee | diagnostic | oracle | superseded
 ```
 
-These labels described authority, not quality. A strong depth-FE oracle could
+These labels described authority, not quality. A **paper method** directly
+supports the method-specific paper claim. A **referee** can adjudicate a
+narrow question through a route with a different failure mode. A
+**diagnostic** can expose behavior or failure without deciding the claim. An
+**oracle** supplies a strong reference answer through a method that may be
+ineligible for the paper's method-specific claim. **Superseded** means the
+route no longer governs current claims. Thus a strong depth-FE oracle could
 answer a numerical question and still be ineligible to support a manuscript
 claim about a no-depth-node analytical method. Conversely, the selected paper
 method needed that oracle because its errors differed
@@ -283,7 +316,7 @@ problem. In agent-era work it has a broader meaning:
 - interpreting why the result matters physically.
 
 The wrinkle project provides the clearest example. A Fourier × depth-FE route
-could estimate the period-doubling strain. Teng's larger objective was to
+could estimate the period-doubling strain. Teng Zhang's larger objective was to
 extend a 2017 Hamiltonian–Stroh onset theory into a finite-amplitude nonlinear
 framework and use period doubling as the first secondary bifurcation. A
 numerically useful threshold did not complete that objective if it came from a
@@ -312,8 +345,8 @@ new constitutive, boundary, symmetry, branch, and validation obligations.
 Human research taste appeared similarly in the crack-tip project through the
 distinction between **program and result**. The general constrained symplectic
 operator remained an important program, but the manuscript could establish a
-smaller leading result without claiming the unfinished operator. Teng chose
-the stopping line and preferred a weaker supported statement to a more
+smaller leading result without claiming the unfinished operator. Teng Zhang
+chose the stopping line and preferred a weaker supported statement to a more
 impressive unsupported one
 ([crack-tip case, §18](../case_studies/symplectic_mooney_rivlin_crack_tip.md#18-the-humans-critical-contributions)).
 
@@ -376,30 +409,36 @@ in-plane momentum omitted reaction content. The opening block remained exact,
 while the other rows were demoted to a useful spectral scaffold
 ([crack-tip case, §4](../case_studies/symplectic_mooney_rivlin_crack_tip.md#4-the-symplectic-promise-and-the-missing-operator)).
 
-After Teng reassigned roles, Codex led several higher-order `Q_k` derivation
-rounds and Fable served as adversarial verifier and shipping executor. The
-surviving work includes specifically scoped constrained-action reactions,
-canonical momenta, slaved openings, first-material-order blocks, and later
-companions. It does **not** establish a closed infinite tower, the full
-finite-compliance operator, normalized higher-parameter extraction integrals,
-the finite-compliance axis-layer match, higher material orders, or the
-generated `k + 3` rung
+After Teng Zhang reassigned roles, Codex led several rounds for `Q_k`, the
+project's notation for a family of forced higher-order responses, while Fable
+served as adversarial verifier and shipping executor. Within their declared
+reductions, the surviving calculations cover selected constrained-action
+reactions, canonical momenta, slaved opening corrections, the first material
+correction, and later companion responses. They do **not** produce a complete
+physical hierarchy. The fully coupled finite-compliance operator and
+axis-layer match, normalized higher-parameter extraction integrals, higher
+material orders, and the next generated response remain open
 ([crack-tip case, §5](../case_studies/symplectic_mooney_rivlin_crack_tip.md#5-where-the-defensible-scope-now-stops)
 and [§19](../case_studies/symplectic_mooney_rivlin_crack_tip.md#19-attribution-carefully)).
 
-The final `Lambda = 13/4` episode shows why a useful mathematical result need
-not be promoted to a complete physical field. Kimi's restricted source
-calculation found an exact opening-sector resonance and a nonzero projected
-defect. Its 58/58 exact and 5/5 numerical self-checks were green. A later
-repair nevertheless found one normalization/convention error, a doubled
-inherited reaction direction, and missing derivative chains because the
-recurrence test reused the same incomplete derivative map. Kimi confirmed the
-three defects, a broader audit found five same-weight source sectors, and
-Fable adjudicated the claim boundary. The release therefore retains the exact
-resonance and coefficient-qualified restricted logarithmic consequence while
-leaving the total source, coupled response, and physical net amplitude open.
-The author recorded that no further 13/4 calculation was needed for the
-paper's bounded claim graph.
+Here `Lambda` (Λ) is a radial-scaling label in the opening-block spectral
+pencil, not the physical power itself. The specific label `Lambda = 13/4`
+corresponds to an opening response proportional to r⁵ᐟ². That episode shows
+why a useful
+mathematical result need not be promoted to a complete physical field. Kimi
+evaluated one declared sector of the forcing and found an exact opening-sector
+resonance with a nonzero projected defect. Its 58/58 exact and 5/5 numerical
+self-checks were green. A later repair nevertheless found one
+normalization/convention error, a doubled inherited reaction direction, and
+missing derivative chains because the recurrence test reused the same
+incomplete derivative map. Kimi confirmed the three defects, a broader audit
+found five source sectors at the same radial order, and Fable adjudicated the
+claim boundary. The release therefore retains the exact resonance and the
+formal logarithmic term required for that restricted coefficient. The total
+source, coupled response, and physical net amplitude remain open. Teng Zhang
+recorded that no further 13/4 calculation was needed for the paper's bounded
+claim graph
+([crack-tip case, §14](../case_studies/symplectic_mooney_rivlin_crack_tip.md#14-fix-passes-stale-state-and-blind-gates-are-new-error-surfaces)).
 
 The leading crack-tip field is itself a reduced plane-stress asymptotic with an
 overlap regime. It is not a description of the sub-thickness three-dimensional
@@ -479,19 +518,21 @@ their literature novelty and physical excitation are separate questions.
 The matching-circle campaign supplied a more concrete unknown-answer example.
 Fixed-core strip fits could not separate the regular O(r) motion from the
 predicted r⁵ᐟ⁴ residual. The team therefore changed the observable. On
-the intact axis, both undetermined matching contributions vanish
-identically. Six newly built global strips supplied complete quadratic (P2)
-traces on interior circles: four formed the core/angular sequence and two
-varied the matching radius. Same-cell exact restrictions checked transfer and
-interface equilibrium. The final estimator returned `q = 1.251529` and a
+the intact axis, both undetermined matching contributions vanish identically.
+Their coefficients are `C_s`, multiplying the specimen-selected regular O(r)
+contour motion, and `C_h`, multiplying a homogeneous r⁵ᐟ⁴ angular member. Six
+newly built global strips supplied complete quadratic (P2) traces on interior
+circles: four formed the core/angular sequence and two varied the matching
+radius. Same-cell exact restrictions checked transfer and interface
+equilibrium. The final estimator returned `q = 1.251529` and a
 measured-to-predicted amplitude ratio of `1.012420`. The analytical amplitude
 uses the opening coefficient `P`, measured separately from the in-plane
 residual fit, as its only input; the FEM amplitude is estimated rather than
 calibrated to that prediction. A free two-power holdout fit recovered
 `q = 1.24980–1.25152` and a next slot at `1.68971–1.74746`. This supports the
-5/4 class for the tested strip; it does not select the specimen coefficients
-`C_s` or `C_h`, prove the complete 7/4 field, or validate the constitutive law
-experimentally
+5/4 class for the tested strip; it does not select `C_s` or `C_h`, verify the
+complete 7/4 angular FEM profile and amplitude, or validate the constitutive
+law experimentally
 ([crack-tip case, §20](../case_studies/symplectic_mooney_rivlin_crack_tip.md#20-remove-nuisance-directions-before-estimating-a-singular-power)).
 
 The practical conclusion is:
@@ -627,6 +668,18 @@ decomposing the energy flux. The number of checks was explicitly not treated
 as a number of independent proofs
 ([crack-tip case, §15](../case_studies/symplectic_mooney_rivlin_crack_tip.md#15-the-multi-ai-review-loop)).
 
+One coordinating AI could also spawn bounded child agents. The committed
+Gate-1-to-Gate-3 ledger records a Codex root thread whose aggregate counters
+included parallel derivation and review work. The raw child rollouts and a
+child-by-child finding ledger were not preserved, so the evidence supports
+aggregate orchestration but not attribution of a particular bug to an unnamed
+child. The signed Kimi, Fable, DeepSeek, and Opus reports are separate
+peer-agent records; they should not be relabeled as spawned-child work. A
+larger internal team likewise does not create independence by head count. If
+parent and children reuse one coordinate map, source generator, or derivative
+oracle, they can reproduce the same defect
+([crack-tip case, “One coordinating agent…”](../case_studies/symplectic_mooney_rivlin_crack_tip.md#one-coordinating-agent-can-spawn-several-reviewers-without-creating-independence)).
+
 The restricted 13/4 calculation is the clearest warning. Its 58 exact
 self-checks and five numerical checks all passed, yet the recurrence residual
 shared the incomplete derivative map it was supposed to audit. Independence
@@ -652,7 +705,7 @@ The wrinkle project used a similar closure rule:
 3. an executor changed the code and produced a new artifact;
 4. the finding closed only when implementation, artifact, and physical
    interpretation agreed; and
-5. Teng decided whether the result could enter the paper.
+5. Teng Zhang decided whether the result could enter the paper.
 
 No reviewer was self-authenticating. Codex corrected an initial overbroad
 criticism after tracing the real-valued production basis, while several
@@ -662,16 +715,19 @@ confident “ready” assessments preceded genuine source-level findings
 Late cross-review added the converse warning: a critical review finding is
 also provisional until its evidence path is checked. A reported byte-hash
 mismatch may prove only that an internal raw artifact and a sanitized release
-artifact occupy different package roles. Sanitizing provenance-only fields can
-legitimately change the hash without changing the configuration or numerical
-payload. The research ledger and the public package's own claims
-ledger should each hash the file they actually govern, the release
-transformation should be documented, and semantic fields should be compared
-explicitly. Paper-facing public ledgers should use repository-relative source
-paths. Historical raw generation records may retain machine-local paths when
-they are labeled as nonportable metadata rather than presented as public entry
-points. A hash certifies byte identity inside a named package; it does not
-certify scientific equivalence across a documented transformation.
+artifact occupy different package roles. Apply four rules:
+
+- The research ledger and the public package's claims ledger each hash the
+  file that the ledger actually governs.
+- If sanitizing provenance-only fields changes a hash, document the release
+  transformation and compare the configuration and numerical payload
+  semantically.
+- Paper-facing public ledgers use repository-relative source paths.
+- Historical raw generation records may retain machine-local paths only when
+  they are labeled as nonportable metadata rather than public entry points.
+
+A hash certifies byte identity inside a named package. It does not certify
+scientific equivalence across a documented transformation.
 
 Claims that evidence is absent require the same care. In the wrinkle
 cross-review, intermediate strong-residual ratios described as unstored were
@@ -680,7 +736,8 @@ already present in tracked JSON under
 `gradient_l2` components also reproduced every `relative_l2` ratio exactly.
 Before an absence claim changes a paper or starts a costly rerun, search the
 schema and candidate paths, inspect neighboring fields, and recompute the
-claimed quantity from stored components when possible.
+claimed quantity from stored components when possible
+([wrinkle case, §13](../case_studies/symplectic_wrinkle_period_doubling.md#13-agent-autonomy-made-provenance-and-communication-scientific-requirements)).
 
 Reviewer identity is provenance too. Record the model or person named in the
 artifact header or verified execution metadata; do not infer authorship from
@@ -691,22 +748,29 @@ lets one participant test another's assumptions. It remains non-self-
 certifying: the reviewer, attribution, hash interpretation, and absence claim
 all pass through the same validation circuit as the scientific result.
 
-Signed process narratives pass through that circuit too. The crack-tip record
-preserved Kimi's signed July 24 process report and added a separate signed
-Codex report with eight factual corrections rather than silently rewriting the
-first account. The corrections covered source-census scope, defect type,
-protocol identity, branch claims, page count, release state, and the
-evidentiary status of the disk trace. A signature establishes authorship of a
+Signed process narratives pass through that circuit too. Three **private
+research-workspace records, not public companion files**, preserve the
+exchange: Kimi's
+`PROCESS_MULTIAGENT_HUMAN_COLLABORATION_2026-07-24.md` and Codex's
+`REPORT_MULTIAGENT_HUMAN_COLLABORATION_CODEX_2026-07-24.md`. Codex recorded
+eight factual corrections in a separate signed report rather than silently
+rewriting Kimi's account. The corrections covered source-census scope, defect
+type, protocol identity, branch claims, page count, release state, and the
+evidentiary status of the disk trace. Kimi then checked those corrections
+against Git history in the private
+`ERRATA_KIMI_PROCESS_NOTE_2026-07-24.md`, accepting the substantive changes
+and correcting one cited commit hash. A signature establishes authorship of a
 report, not the truth of every sentence in it.
 
-The final wrinkle-paper reviews supplied a particularly clear example. Several
-agents focused on the same large strong-form ratio and implicitly mapped it
-onto uncertainty in `T45`. Their agreement measured the salience of the table,
-not several independent validations: they read the same diagnostic and shared
-the same unstated premise. Artifact review preserved the valid conclusion
-that continuum adequacy remained open, but separated it from the physical
-observable. The retained `T45` is the compression at which the lowest
-quarter-wavenumber Hessian eigenvalue of the doubled parent vanishes. The
+The final wrinkle-paper reviews supplied a particularly clear example. Here
+`T45` denotes the retained-space period-two-to-period-four (quadrupling)
+neutral compression: the point at which the lowest quarter-wavenumber Hessian
+eigenvalue of the doubled parent vanishes. Several agents focused on the same
+large strong-form ratio and implicitly mapped it onto uncertainty in `T45`.
+Their agreement measured the salience of the table, not several independent
+validations: they read the same diagnostic and shared the same unstated
+premise. Artifact review preserved the valid conclusion that continuum
+adequacy remained open, but separated it from the physical observable. The
 strong ratio is an `L2`-normalized measure of the derived stress-divergence
 imbalance over the represented domain. The review campaign therefore produced
 a disposition by claim, premise, evidence path and action. Findings that share
@@ -831,7 +895,8 @@ The solve reached its target load, but the exporter rejected 402 of 43,440
 requested samples, so the run produced no accepted fit. The later
 parallel-safe implementation used 16 ranks and solved the final 15,360-cell
 strip in 29.4 seconds. A hardware allocation, a live process, a converged
-nonlinear solve, and a validated scientific artifact are distinct states.
+nonlinear solve, and a validated scientific artifact are distinct states
+([crack-tip case, §17](../case_studies/symplectic_mooney_rivlin_crack_tip.md#17-where-ai-failed-specifically)).
 
 An acceptable handoff for an advanced result should make the following visible
 without reconstructing a long conversation:
@@ -856,10 +921,11 @@ runner → numerical artifact → claims ledger → figure/manuscript → versio
 The chain allows a human to accept work beyond individual technical reach
 without accepting an unauditable conclusion.
 
-Review reports need the same treatment. The final Fable audit checked archived
-matching-circle values and identified two release conditions: define the 7/4
-multiplier convention and pin the public version. It did not rerun the FEM or
-the public analytical suite. A later ChatGPT review read the
+Review reports need the same treatment. The final Fable audit, a private
+research-workspace review rather than a public companion file, checked
+archived matching-circle values and identified two release conditions: define
+the 7/4 multiplier convention and pin the public version. It did not rerun the
+FEM or the public analytical suite. A later ChatGPT review read the
 full 24-page manuscript and 11-page ESI but did not independently rederive
 every coefficient or execute the code. Both were useful because their scope
 was recorded. Neither was represented as journal peer review or as a solver
@@ -1241,10 +1307,12 @@ responsibility.
 
 The principal public records used for this guide are:
 
-- [Symplectic wrinkle period-doubling and quadrupling case
-  study](../case_studies/symplectic_wrinkle_period_doubling.md)
-- [Symplectic Mooney–Rivlin crack-tip case
-  study](../case_studies/symplectic_mooney_rivlin_crack_tip.md)
+- [Case Study: When the Method Had to Match the Claim — Analytical-Depth
+  Symplectic Wrinkle
+  Bifurcations](../case_studies/symplectic_wrinkle_period_doubling.md)
+- [Case Study: When Verification Rewrites the Theory — A Symplectic
+  Mooney–Rivlin Crack
+  Tip](../case_studies/symplectic_mooney_rivlin_crack_tip.md)
 - [March–April 2026 human–AI research field
   guide](lessons_human_ai_research.md)
 - [July 2026 guide review note](../docs/guide_review_2026-07-20.md)
@@ -1254,6 +1322,19 @@ The principal public records used for this guide are:
   results](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md)
   and [implementation
   workflow](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md)
+
+The process discussion also used the following private research-workspace
+records. They are named for provenance but are not part of this public
+repository:
+
+- `PROCESS_MULTIAGENT_HUMAN_COLLABORATION_2026-07-24.md` — signed Kimi
+  process account;
+- `REPORT_MULTIAGENT_HUMAN_COLLABORATION_CODEX_2026-07-24.md` — signed
+  Codex process audit and separate factual corrections;
+- `ERRATA_KIMI_PROCESS_NOTE_2026-07-24.md` — Kimi's Git-checked response to
+  those corrections; and
+- `REVIEW_FINAL_PRESUBMISSION_FABLE_2026-07-24.md` — Fable's bounded final
+  audit.
 
 At the 20 July 2026 audit, both companion scientific repositories were release
 candidates. Both are now public:
@@ -1269,9 +1350,9 @@ to organize the notes under `docs/` and repair navigation. That documentation
 state is newer than the release tag; it does not replace the tagged
 paper-facing code/data state.
 
-- **Version:** 1.2 (matching-circle, challenge-response, and submission audit)
-- **Last updated:** 24 July 2026
+- **Version:** 1.3 (clarity and aggregate child-agent attribution boundary)
+- **Last updated:** 25 July 2026
 - **Evidence window:** January–July 2026
 - **Scope:** One human–multi-agent computational-mechanics research program
 - **Research framing and responsibility:** Teng Zhang
-- **Evidence synthesis and draft:** Codex (GPT-5), 20–24 July 2026
+- **Evidence synthesis and draft:** Codex (GPT), 20–25 July 2026

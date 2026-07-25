@@ -5,6 +5,13 @@ the method promised by the paper, and how Fable's sustained analytical-depth
 rebuild, independent audits, and repeated self-corrections produced defensible
 retained-space calculations of wrinkle period doubling and quadrupling.**
 
+**Participants and naming.** Teng Zhang was the human scientific and editorial
+owner. Fable (Claude) built the main analytical-depth route, while Codex (GPT)
+audited the code and physics and later integrated targeted repairs. Kimi,
+DeepSeek, and GLM (Z.ai) supplied bounded reviews or repairs. Opus (Claude) and
+Qwen identify late review artifacts only where the saved note or verified
+metadata supports those labels.
+
 ---
 
 ## 📖 Table of Contents
@@ -61,15 +68,26 @@ energy. Stability is assessed through a reflection-resolved signed Floquet
 Hessian.
 
 For the main modulus-ratio benchmark, the final retained-space calculation
-gives a period-doubling estimate of 0.179. A separately discretized lattice
-calculation crosses at 0.176; both sit near the lower edge of the broader
-0.18–0.20 experimental and finite-element comparison range. Applied about the
-doubled branch, the same analytical framework gives a retained-space
-period-four neutral point at 0.244, close to a separately discretized
+gives `T24=0.179`, where `T24` denotes the wrinkle-to-doubled boundary. A
+separately discretized lattice calculation crosses at 0.176. The two values
+lie at or just below the lower edge of the broader 0.18–0.20 experimental and
+finite-element comparison range reported by
+[Brau et al. (2011)](https://doi.org/10.1038/nphys1806) and
+[Cao and Hutchinson (2012a)](https://doi.org/10.1115/1.4005960).
+Applied about the doubled branch, the same analytical framework gives
+`T45=0.244`, the retained-space doubled-to-quadrupled neutral point, close to a
 single-grid lattice crossing at 0.243. The Ritz values are retained-space
-numerical estimates, while the lattice values are single-grid crossings;
-neither is a rigorous continuum bound. The manuscript reports their refinement
-behavior and the remaining strong-form limitations.
+numerical estimates, while the lattice values are single-grid crossings.
+Neither is a rigorous continuum bound. The manuscript reports their
+refinement behavior and the remaining strong-form limitations.
+
+The lattice route is a separate fixed-grid, real-space discretization derived
+from bilinear finite elements. Its cell springs and mean-dilatation terms
+represent the same constitutive energy, but its unknowns are nodal values
+rather than global analytical-depth coefficients
+([Zhang, 2019](https://doi.org/10.1016/j.eml.2018.11.007)). It supplies a
+comparison with different approximation errors. It is not the
+analytical-depth method under test.
 
 The collaboration history explains how the final values acquired their
 present scope. A depth-resolved Fourier–finite-element calculation had earlier
@@ -80,18 +98,23 @@ that calculation too broadly as symplectic or mesh-free even though its
 assembled unknowns were nodal through depth. Teng insisted that the numerical
 oracle and the claimed analytical method be separated. Fable then built a
 coefficient-only analytical-depth method. That effort involved conditioning
-and mode-identification failures, withdrawn thresholds, an ambitious but
-incomplete precise-integration-method (PIM) strip referee, and repeated
-revisions of the convergence argument. Later agents audited the work and
-repaired or extended specific retained-space tasks.
+and mode-identification failures, withdrawn thresholds, and an ambitious but
+incomplete precise-integration-method (PIM) strip. The strip was intended as a
+referee, meaning an independent route that could adjudicate the main result.
+Its final status was narrower: an experimental diagnostic for selected
+propagation conventions and structural identities. Later agents audited the
+work and repaired or extended specific retained-space tasks.
 
-The depth-FE family also retained convergence and provenance limitations, so
-its status as an oracle did not make it a publication-grade endpoint. The
-central methodological problem was that its approximation space and label no
-longer agreed. The analytical-depth rebuild, rather than recovery of a
-preferred decimal, is the main subject of this case study. The Evidence Record
-at the end distinguishes historical checkpoints from the sources governing
-the final method and values.
+In this case study, an *oracle* is an exploratory comparison route with a
+deliberately different error structure, not the selected paper method. A
+*diagnostic* tests only named properties and cannot by itself certify the
+headline threshold. The depth-FE family retained convergence and provenance
+limitations, so its oracle status did not make it a publication-grade
+endpoint. The central methodological problem was that its approximation space
+and label no longer agreed. The analytical-depth rebuild, rather than recovery
+of a preferred decimal, is the main subject of this case study. The Evidence
+Record at the end distinguishes historical checkpoints from the sources
+governing the final method and values.
 
 ---
 
@@ -101,8 +124,9 @@ the final method and values.
 
 ## 1. The Problem: Stability About a Finite-Amplitude Wrinkle
 
-The project grew from Teng's 2017 linear symplectic framework for layered
-wrinkling. In that formulation the depth coordinate plays the role of
+The project grew from Teng Zhang's
+[2017 linear symplectic framework](https://doi.org/10.1115/1.4036613) for
+layered wrinkling. In that formulation the depth coordinate plays the role of
 pseudo-time, displacement and traction form a dual state, and each Fourier
 carrier satisfies a Hamiltonian first-order system. This gives exact
 homogeneous depth modes and a stable way to impose decay in a semi-infinite
@@ -131,9 +155,9 @@ sector. A defensible calculation must satisfy four requirements at once:
 The benchmark is numerically delicate. In a diagnostic at compression
 `delta=0.18`, the neutral curvature was the small residual of positive and
 negative contributions of order 0.19. A change of only a few parts in a
-thousand in either contribution can move the zero crossing by the amount under
-debate. This fact eventually determined which verification instruments were
-credible.
+thousand in either contribution can move the zero crossing by roughly the
+`0.001` scale at issue in the threshold comparisons. This fact eventually
+determined which verification instruments were credible.
 
 The scientific target was not merely a number near an experimental or finite
 element range. The project sought an extension of the symplectic structure
@@ -157,11 +181,13 @@ gave the wrong scale, the first response was often to adjust the solver. The
 productive order was the reverse—derive the coefficient, prove the expected
 cancellation symbolically, test it on a limiting case, and only then run the
 full pipeline. A later JAX/finite-difference comparison found a roughly three
-percent discrepancy in the primary-amplitude coefficient; the automatic-
+percent discrepancy in the primary-amplitude coefficient. The automatic-
 differentiation value was retained because its derivative path could be
-checked more cleanly. Re-deriving the earlier PIM series also found a
-denominator typo in a published coefficient. The same verification discipline
-was applied to AI output, project legacy code, and the literature.
+checked more cleanly. Re-deriving the PIM series in
+[Zhang (2017)](https://doi.org/10.1115/1.4036613) also found that the published
+fourth-order coefficient used a denominator of 3 where the recurrence requires
+4. The same verification discipline was applied to AI output, project legacy
+code, and the literature.
 
 Several early values were sometimes narrated as successive corrections to
 one calculation. They came from different states and stability spaces.
@@ -191,9 +217,10 @@ such a separation was mathematically possible, but it did not derive the
 energy landscape of the elasticity problem. The other explanation was
 representation bias: fixed weak-amplitude depth shapes could make the local
 stability operator too stiff. The project kept both hypotheses open. The
-depth-resolved calculations supplied evidence for the second, and later
-nonlinear kick and reflection-sector tests supported a local instability in
-the lower range.
+depth-resolved calculations supplied evidence for the second. Later nonlinear
+*kick* tests—finite perturbations used to seed and relax a candidate daughter
+state—and reflection-sector tests supported a local instability in the lower
+range.
 This was a useful example of using computation to discriminate mechanisms
 rather than fitting the expected transition.
 
@@ -255,8 +282,9 @@ Teng repeatedly returned the project to four constraints:
   unknowns hidden behind a favorable label;
 - finite amplitude had to follow from nonlinear equilibrium, not from an
   onset solvability condition extrapolated beyond its range;
-- the separate moving-manifold method under development elsewhere should not
-  be duplicated or quietly merged into this track; and
+- a separate moving-manifold method in a private parallel project, outside the
+  scope of this case study, should not be duplicated or quietly merged into
+  this track; and
 - improving the last decimal was secondary to establishing what method had
   actually produced the figure and threshold.
 
@@ -362,10 +390,11 @@ could not adjudicate the disagreement.
 The decisive referee was the flat state, where the harmonics decouple and a
 dense one-dimensional calculation is available. In that regime, the refined
 depth-FE result moved toward the analytical value, and the remaining absolute
-depth-FE error was still much larger than the dressed neutral curvature. This
-did not prove the full analytical result, but it established which instrument
-could resolve the cancellation scale and why internal mesh stability alone
-was inadequate.
+depth-FE error was still much larger than the *dressed* neutral curvature—the
+stability curvature evaluated about the finite-amplitude wrinkle rather than
+the flat state. This did not prove the full analytical result, but it
+established which instrument could resolve the cancellation scale and why
+internal mesh stability alone was inadequate.
 
 Fable's method retrospective later grouped these episodes as three instrument
 failures: mode identification, conditioning, and validation tests that could
@@ -499,13 +528,16 @@ artifact provenance.
 The later retained-space integration kept Fable's architecture. Carrier-
 correct spaces for `T45`, the period-two-to-period-four neutral boundary, were
 compared as nested numerical unions rather than unrelated replacements.
-The period-doubled state and its stability space were lifted into the
-period-four cell by the exact carrier identity `(2m)Q = mq`. A physical
-quarter-harmonic amplitude constraint located the daughter branch, after
-which the constraint was released and full energy stationarity was checked.
-State and quarter-comb refinements were closed at a joint deep corner. These
-steps produced the current retained-space estimate of 0.244 and the analytical
-period-four configuration.
+Let `q` be the fundamental wavenumber in the doubled cell and `Q=q/2` the
+fundamental wavenumber in the period-four cell. A doubled-cell harmonic with
+integer index `m` therefore has the same physical carrier as period-four index
+`2m`: `(2m)Q=mq`. This identity lifted the period-doubled state and its
+stability space exactly into the larger cell. A physical quarter-harmonic
+amplitude constraint located the daughter branch, after which the constraint
+was released and full energy stationarity was checked. State and quarter-comb
+refinements were closed at a joint deep corner. These steps produced the
+current retained-space estimate of 0.244 and the analytical period-four
+configuration.
 
 The final scientific picture contains more than the two thresholds. The
 period-doubled daughter's squared half-harmonic amplitude is nearly linear in
@@ -526,10 +558,11 @@ stress-gradient contributions in quadrature. It measures incomplete
 pointwise cancellation in the derived stress field. It is not a 22–49.5%
 error estimate for the energy, retained Hessian, `T24`, or `T45`. A finite-
 element phase diagram for a related incompressible model has been read near
-0.26. That reading is approximate and the material model differs, so the
-offset is an open comparison rather than a failed validation. These
-qualifications prevent the quadrupled daughter from being presented as a
-pointwise-converged continuum solution.
+0.26 ([Zhao et al., 2015](https://doi.org/10.1016/j.eml.2015.04.006)).
+That reading is approximate and the material model differs, so the offset is
+an open comparison rather than a failed validation. These qualifications
+prevent the quadrupled daughter from being presented as a pointwise-converged
+continuum solution.
 
 The final method statement is intentionally limited:
 
@@ -757,11 +790,11 @@ content and showed where the finite basis needed enrichment. They do **not**
 directly measure percentage error in the stationary energy, retained Hessian,
 or bifurcation thresholds. Conversely, convergence of those retained-space
 quantities does not make a large strong residual irrelevant: it limits the
-continuum claim that can be attached to them. This is why `T24` and `T45` can
-be reported as retained-space Ritz estimates with nested state/comb
-sensitivity, while `T45`, whose doubled parents have much larger strong
-residuals and fewer independently closed refinement axes, carries the more
-serious continuum-adequacy qualification.
+continuum claim that can be attached to them. Both `T24` and `T45` can
+therefore be reported as retained-space Ritz estimates with nested state/comb
+sensitivity. The continuum-adequacy qualification is more serious for `T45`
+because its doubled parents have much larger strong residuals and fewer
+independently closed refinement axes.
 
 Teng repeatedly corrected attempts to turn the strong residual into the
 method's Newton equation. The eventual protocol used nested energy changes,
@@ -848,7 +881,7 @@ generating code path.
 
 ### Agent-to-agent notes did not replace user communication
 
-Fable wrote unusually detailed handoffs to GPT and GLM, including blockers,
+Fable wrote unusually detailed handoffs to Codex and GLM, including blockers,
 invariants, review dispositions, and offers of reusable states. Yet Teng did
 not receive an equally concise early statement distinguishing the
 analytical-depth Ritz route, the element-like strip, and the remaining
@@ -913,17 +946,19 @@ Their package hashes therefore had to differ. A byte hash answers “are these
 exactly the same bytes within this package?” It does not answer “do these two
 package roles carry the same numerical result?”
 
-The correct release test has two layers. Each package-local record should
-identify the bytes it actually governs: the research ledger identifies the
-raw internal artifact, whereas the public claims ledger identifies the
-sanitized public artifact. The transformation between them must be stated;
-each ledger/source pair must be internally hash-consistent; and the numerical
-payloads, configurations, and source identities must be compared semantically
-across the transformation. Publication sanitization may
-legitimately change provenance-only fields, but paper-facing public ledgers
-should use repository-relative source paths. Raw generation records may retain
-historical machine-local paths when they are labeled as nonportable metadata
-rather than presented as public entry points. An internal hash must not be
+The correct release test has two layers. First, each package-local record
+should identify the bytes it actually governs. The research ledger identifies
+the raw internal artifact, whereas the public claims ledger identifies the
+sanitized public artifact. Each ledger/source pair must be internally
+hash-consistent.
+
+Second, the transformation between those packages must be stated. The
+numerical payloads, configurations, and source identities must then be
+compared semantically across that transformation. Publication sanitization may
+legitimately change provenance-only fields. Paper-facing public ledgers should
+use repository-relative source paths, while raw generation records may retain
+historical machine-local paths when those paths are labeled as nonportable
+metadata rather than public entry points. An internal hash must not be
 presented as the hash of a deliberately transformed release file.
 
 Another review note said that the intermediate `T45` strong-residual ratios
@@ -975,8 +1010,11 @@ enrichment, pointwise strong and traction diagnostics, agreement with a
 separate fixed-grid lattice discretization, and continuum or experimental
 validation. It retained the supported finite-space neutral point and its open
 continuum limitation. It rejected extrapolated error bars and a proposed
-compressibility explanation based on treating the `0.228` and `0.167`
-results of two different asymptotic formulations as one parameter sweep.
+compressibility explanation based on treating the `0.228` result of
+[Fu and Cai (2015)](https://doi.org/10.1137/15M1027103) and the `0.167`
+result of
+[Cai and Fu (2019)](https://doi.org/10.1016/j.ijnonlinmec.2019.05.001)
+as one parameter sweep. They came from two different asymptotic formulations.
 
 The overbroad diagnoses were still useful. They exposed four places where the
 physics could be clearer: the historical comparison, the origin
@@ -1060,23 +1098,29 @@ the following contribution ledger:
 | Contributor | Documented role |
 |---|---|
 | **Teng Zhang** | Scientific and editorial owner: defined the problem, supplied the earlier symplectic framework and mechanics judgment, imposed and later refined the method contract, selected manuscript claims, and retained final responsibility. |
-| **Fable / Claude Fable 5** | Primary architect and principal contributor to the analytical-depth computational method: global analytical-depth state evaluated with the unexpanded energy, analytical stability dictionaries, doubled-cell representation, reflection sectors, branch-capture practices, coupled ladders, and much of the convergence and error-budget logic. |
+| **Fable (Claude)** | Primary architect and principal contributor to the analytical-depth computational method: global analytical-depth state evaluated with the unexpanded energy, analytical stability dictionaries, doubled-cell representation, reflection sectors, branch-capture practices, coupled ladders, and much of the convergence and error-budget logic. |
 | **GLM** | Found four defects in the experimental PIM strip and rebuilt its critical propagation step on the validated mixed-energy convention. The repaired strip remained diagnostic rather than production. |
-| **Codex / GPT** | Performed the principal source and physics audit, including correction of its own initial overbroad signed-harmonic criticism; later contributed carrier-correct `T45` closure, exact period-four lifting and continuation, diagnostic hardening, and paper-facing asset integration on Fable's framework. |
+| **Codex (GPT)** | Performed the principal source and physics audit, including correction of its own initial overbroad signed-harmonic criticism; later contributed carrier-correct `T45` closure, exact period-four lifting and continuation, diagnostic hardening, and paper-facing asset integration on Fable's framework. |
 | **Kimi and DeepSeek** | Supplied manuscript, convention, hierarchy, bound-transcription, provenance, and presentation checks with their scopes recorded in project notes. |
-| **Late AI pre-submission review set: Claude/Opus, a Z.ai/GLM-labeled review, and a Qwen-labeled review artifact** | Separately reviewed the near-final manuscript. Their overlapping concern about strong-form residuals exposed a real continuum-scope and writing problem; artifact review separated that limitation from the retained Hessian zero and adopted four clarifications. The PDF metadata identifies Z.ai, while GLM is preserved from user/project attribution. The Qwen identification is preserved from the filename and user attribution because the note body contains no independent model metadata. |
+| **Late AI pre-submission review set: Opus (Claude), a GLM (Z.ai)-labeled review, and a Qwen-labeled review artifact** | Separately reviewed the near-final manuscript. Their overlapping concern about strong-form residuals exposed a real continuum-scope and writing problem. Artifact review separated that limitation from the retained Hessian zero and led to four manuscript clarifications. |
+
+The late-review labels require care. PDF metadata identifies Z.ai, while GLM
+is preserved from the user and project attribution. The Qwen label comes from
+the filename and user attribution because the note body contains no
+independent model metadata.
 
 Fable's retractions belong in this ledger. Fable withdrew premature values,
 accepted findings that reopened the calculation, preserved failed hypotheses,
 and wrote handoffs detailed enough for other agents to reconstruct the work
 after session loss. Those acts made the eventual audit possible.
 
-The earlier `FastNodal/FullNodal` depth-FE route is not assigned to Fable as an
-original implementation because the surviving record does not establish its
-authorship. The evidence supports a narrower statement: inherited depth-nodal
-assets remained in the Fable-era pipeline under an overbroad label; Fable
-later acknowledged the mismatch and did the substantial work of building the
-replacement analytical-depth framework. Authorship of the historical
+The earlier `FastNodal` and `FullNodal` implementations—two inherited versions
+of the depth-nodal solver—are not assigned to Fable as original work because
+the surviving record does not establish their authorship. The evidence
+supports a narrower statement: inherited depth-nodal assets remained in the
+Fable-era pipeline under an overbroad label; Fable later acknowledged the
+mismatch and did the substantial work of building the replacement
+analytical-depth framework. Authorship of the historical
 `rev27_full_enrichment.py` asset is likewise not established by the available
 records. A shared, sometimes uncommitted worktree does not support reliable
 line-level attribution.
@@ -1188,16 +1232,17 @@ This case study was checked against the following internal project records:
 | `analytic_depth_method/CODEX_SOURCE_AUDIT_OF_FABLE_2026-07-11.md` | Independent call-path, physics, method-classification, and provenance audit, including reviewer self-correction |
 | `analytic_depth_method/ANALYTICAL_DEPTH_TURNAROUND_RETROSPECTIVE_2026-07-12.md` | Dated Codex attribution ledger and technical chronology |
 | `analytic_depth_method/PAPER_METHOD_DATA_FIGURE_UPDATE_REPORT_2026-07-12.md` | Governing method integration and final credit record, subject to its dated addenda |
-| `analytic_depth_method` manuscript review dated 17 July 2026 | Snapshot audit of manuscript commit `18c964a`, covering physics, equations, data, figures, code paths, and retained-space limitations |
+| `analytic_depth_method/CODEX_JMPS_MANUSCRIPT_REVIEW_2026-07-17.md` | Snapshot audit of manuscript commit `18c964a`, covering physics, equations, data, figures, code paths, and retained-space limitations |
 | `analytic_depth_method/GPT_REVIEW_PUBLIC_REPO_AND_CASE_STUDY_2026-07-19.md` | Snapshot audit of public HEAD `6584809` and case-study v0.9, including independent recomputation of both lattice crossings |
 | `analytic_depth_method/VARIATIONAL_SCOPE_AND_STRESS_DIAGNOSTICS_2026-07-20.md` | Equation-level record of the finite Ritz problem, derived-stress diagnostics, and the limits of residual interpretation |
 | `analytic_depth_method/REBUTTAL_TO_EXTERNAL_WRINKLE_REVIEW_2026-07-20.md` | Point-by-point evidence response distinguishing retained-space convergence, continuum closure, and optional strengthening |
 | `analytic_depth_method/REVIEW_NOTE_2026-07-20.md` | Final editorial audit documenting the physics-centered restructuring, separation of evidence layers, raw-data rounding check, rendered-PDF verification, and remaining release gates |
 | `analytic_depth_method/FABLE_REVIEW_OF_REBUTTAL_AND_REVISION_2026-07-20.md` | Fable's late review; its intermediate-residual absence claim was subsequently checked against the stored JSON schema and components |
 | `analytic_depth_method/CODEX_VALIDATION_OF_LATE_CROSS_REVIEWS_2026-07-20.md` | Package-scope hash audit and direct schema/component check of the allegedly absent intermediate strong ratios |
-| `analytic_depth_method` late-review validation dated 21 July 2026 | Artifact-level disposition of the final review set, including the retained-Hessian zero, strong-form diagnostic scope, historical-comparison audit, and four manuscript clarifications |
+| `analytic_depth_method/CODEX_VALIDATION_OF_LATE_JMPS_REVIEWS_2026-07-21.md` | Artifact-level disposition of the final review set, including the retained-Hessian zero, strong-form diagnostic scope, historical-comparison audit, and four manuscript clarifications |
+| `docs/Symplectic_linear_theory.md` | Re-derivation of the PIM recurrence, including the documented fourth-order denominator correction to Zhang (2017) |
 | `analytic_depth_method/LESSONS.md` | Failure-to-rule ledger, including method identity, coupled ladders, handoffs, provenance, and test-scope lessons |
-| Current manuscript source and `pd-analysis/results/paper_numerical_claims.json` | Governing final method wording and numerical values |
+| `pd-analysis/paper/JMPS_manuscript.tex` and `pd-analysis/results/paper_numerical_claims.json` | Governing final method wording and numerical values |
 
 ### Source hierarchy and limits
 
@@ -1231,8 +1276,8 @@ is being prepared for journal submission. The public companion repository is
 [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations/tree/v1.0.1)
 (release v1.0.1).*
 
-**Version:** 1.1 (late-review and physics-narrative update)
+**Version:** 1.2 (newcomer clarity, terminology, and evidence-record update)
 
-**Last Updated:** 22 July 2026
+**Last Updated:** 25 July 2026
 
-**Evidence review and rewrite:** Codex (GPT-5), 19–22 July 2026
+**Evidence review and rewrite:** Codex (GPT), 19–25 July 2026

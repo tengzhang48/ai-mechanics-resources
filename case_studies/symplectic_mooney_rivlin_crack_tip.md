@@ -1,13 +1,20 @@
 # Case Study: When Verification Rewrites the Theory — A Symplectic Mooney–Rivlin Crack Tip
 
-**How a human–AI team turned a new nonlinear crack-tip field, a useful but
-incomplete spectral scaffold, and several rounds of mutually inconsistent
-“verified” claims into a pre-submission candidate—then reopened it when a
-green gate proved blind to a leading-constraint-compatible measurement-space
-direction, rebuilt the reaction-carrying hierarchy, found that a second
-family of green gates shared the wrong inner variable map, and closed a
-bounded release with a nuisance-free exact-axis channel in a matching-circle
-campaign.**
+**A human–AI team studied how the second strain invariant changes a crack tip
+in a highly stretched plane-stress sheet. The team derived an emergent
+kinematic constraint, the leading crack-tip field, and its energy relation,
+then tested them in strip simulations. Repeated audits found an omitted
+regular motion and shared errors in parts of the higher-order spectral and
+endpoint calculations. The paper-facing result is therefore a reproducible
+leading theory with bounded numerical support and explicitly named open
+matching and higher-order problems.**
+
+**Participants.** Teng Zhang was the human scientific owner and author of
+record. Fable (Claude) was the principal revision executor, while Codex (GPT)
+began as a structural reviewer and later led several derivations. Kimi and
+DeepSeek supplied independent checks at recorded stages. GLM (Z.ai), Opus
+(Claude), and ChatGPT supplied additional referee-style or late external AI
+reviews; none was journal peer review.
 
 ---
 
@@ -33,11 +40,17 @@ campaign.**
 - [12. Find the Carrier by Decomposing the Flux](#12-find-the-carrier-by-decomposing-the-flux)
 - [13. A Closed Rung Is Not a Closed Tower](#13-a-closed-rung-is-not-a-closed-tower)
 - [14. Fix Passes, Stale State, and Blind Gates Are New Error Surfaces](#14-fix-passes-stale-state-and-blind-gates-are-new-error-surfaces)
+  - [A residual-field gate failed the raw observable](#a-residual-field-gate-failed-the-raw-observable)
+  - [Boundary conditions and global injectivity are part of validation](#boundary-conditions-and-global-injectivity-are-part-of-validation)
+  - [A green family can share one wrong derivation root](#a-green-family-can-share-one-wrong-derivation-root)
+  - [A passing recurrence can share the derivative map it should audit](#a-passing-recurrence-can-share-the-derivative-map-it-should-audit)
 
 **Part III — Collaboration Patterns**
 - [15. The Multi-AI Review Loop](#15-the-multi-ai-review-loop)
+  - [One coordinating agent can spawn several reviewers without creating independence](#one-coordinating-agent-can-spawn-several-reviewers-without-creating-independence)
 - [16. Different Review Styles Saw Different Failure Classes](#16-different-review-styles-saw-different-failure-classes)
 - [17. Where AI Failed, Specifically](#17-where-ai-failed-specifically)
+  - [What the agents did when the plan or result failed](#what-the-agents-did-when-the-plan-or-result-failed)
 - [18. The Human's Critical Contributions](#18-the-humans-critical-contributions)
 - [19. Attribution, Carefully](#19-attribution-carefully)
 
@@ -103,64 +116,55 @@ candidate. It retained the G/J/P core, made the raw-profile statement
 conditional, inserted the missing dominant-balance derivation, and replaced
 the blind tangent comparison with a target-free profile-mode audit.
 
-The July 21–22 campaign asked a harder question: how far could the candidate
-`B` and `Q_k` families be carried by the radial symplectic method before they
-were merely a catalog? Gates 1–3 rebuilt the reaction-carrying Hessian system,
-its boundary current, and the first sourced `B` handoff from the constrained
-action. Gate 4 extended several formal outer rungs, while Gate 5A froze the
-isolated opening projectors. The dependency order then changed. Mixed Gate-5
-duals required the physical endpoint form, so Gate 6 was split into an early
-Gate-6A endpoint/domain problem and a later Gate-6B global-matching problem.
-Gate 6A was pulled forward, but it did not close. Its restart from
-fixed-Cartesian physical PK1 invalidated the archived axis-layer target, found
-a different cusp operator, and produced an exact incompatibility between
-smooth-axis parity and the prescribed one-scale outer tail. This is an
-obstruction checkpoint inside Gate 6A, not completion of Gate 6 and not a
-proof that the nonlinear continuum crack problem has no solution. Preliminary
-switchback and `zeta`-deck calculations established further exact local
-checkpoints without closing the two-scale endpoint problem. Gate 6B remains
-future work.
+The July 21–22 campaign asked whether two candidate higher-order families came
+from the constrained action or only from the old mode catalog. Here `B` is the
+amplitude of the independent `r^(3/2) sin(3θ/2)` opening harmonic, while
+`Q_k` multiplies a characteristic-contour shear `s^k` for an integer `k ≥ 2`.
+The first three gates rebuilt the reaction-carrying operator, its boundary
+current, and the first sourced `B` response. Later gates advanced selected
+outer rungs and isolated opening projectors, but they also showed that the
+mixed extraction problem depends on an endpoint construction that had not
+been completed. Section 5 gives the gate sequence and its changing stopping
+line.
 
-The execution target changed twice. First, physical Gate 6 became non-blocking,
-Gate 5D was defined as an optional displacement-only strip diagnostic, and
-total Gate 4 remained the active formal endpoint. In parallel with the Gate-6A
-and Gate-5A work, Kimi had already begun a bounded material-degree-one
-`Lambda = 13/4` tranche. The later decision adopted that running tranche as the
-final higher-order checkpoint and removed total Gate 4 from the active target.
-The complete six-gate route remained a stronger possible program. The bounded
-tranche then stopped without either of its planned terminal verdicts: a
-face-closed generalized response or a certified obstruction for the complete
-retained source.
+A restart from the physical fixed-Cartesian nominal stress invalidated the
+archived axis-layer target. It found a different cusp operator and an exact
+incompatibility between smooth-axis parity and the prescribed one-scale outer
+tail. This is a checkpoint inside the endpoint problem, not completion of
+Gate 6 and not a proof that the nonlinear continuum crack problem has no
+solution. Preliminary switchback and second-scale calculations advanced the
+local analysis without closing the required two-scale match.
 
-The July 22–24 scope closeout retained what the evidence did establish. The
-opening sector is exactly resonant and one restricted source projection is
-nonzero, but a later five-sector audit showed that the same-grade source census
-was incomplete. `C13p`, the formal homogeneous reaction coefficient selected
-locally by total row-one face traction rather than by specimen matching, was
-not certified. The manuscript therefore reports the resonance and
-coefficient-qualified logarithmic consequence while leaving the coupled
-response and physical net amplitude open. For the 5/4
-field, the team changed the numerical observable instead of abandoning the
-result. On the intact axis, the two undetermined matching contributions vanish
-identically. A matching-circle campaign then obtained `q = 1.251529` and a
-parameter-free amplitude ratio of `1.012420`, with a free two-power fit
-recovering the next radial slot near 7/4. This campaign did not close Gate 5D
-or canonical Gate 5. The paper-facing public state was frozen as `v1.2.0` on
-24 July. A final AI pre-submission review passed the bounded physics/data chain
-after two release conditions were closed. A later full-document reading,
-submission-package build, and reference/scope audit added further checks
-without changing the central equations or numerical values. These are
-documented internal verification steps, not journal peer review.
+The final higher-order target was narrowed to the already-running calculation
+at first order in the material ratio `c₂/c₁`, at the opening-block pencil
+label `Λ = 13/4`. In this weighted label convention, an opening component
+varies as `r^(Λ-3/4)`, so this label corresponds to `r^(5/2)`. Exact resonance
+and one restricted nonzero source projection survived review. The forcing from
+all sources at that same radial order, the coupled response, the locally
+selected reaction coefficient `C13p`, and the physical net logarithmic
+amplitude did not close.
+
+For the 5/4 field, the team changed the numerical observable rather than
+abandoning the result. On the intact axis, the two undetermined matching
+contributions vanish identically. The matching-circle campaign described in
+Section 20 obtained `q = 1.251529` and a parameter-free amplitude ratio of
+`1.012420`. A free two-power fit also located the next radial slot near 7/4.
+The analytic 7/4 material rung is closed at its stated scope, but this fit does
+not verify its complete angular FEM profile or amplitude. The campaign did not
+close either the optional displacement extractor or canonical Gate 5.
+
+The paper-facing public state was frozen as `v1.2.0` on 24 July. A final AI
+pre-submission review passed the bounded physics/data chain after two release
+conditions were closed. A later full-document reading, submission-package
+build, and reference/scope audit added further checks without changing the
+central equations or numerical values. These are documented internal
+verification steps, not journal peer review.
 
 The scientific repository began in June 2026, with manuscript revisions
 recorded from 3 July. The initial multi-AI review campaign ran from 5–19 July,
-with an especially intensive 17–19 July cycle. It used
-Claude/Fable as the principal revision executor,
-GPT/Codex as a structural reviewer and later derivation lead, Kimi as an early
-independent verifier, DeepSeek/OpenCode as a late end-to-end auditor of the
-then-current theory tree, and earlier GLM and Opus reports. Teng Zhang, the
-human author, acted as the meta-reviewer and made the scope and stopping
-decisions. The central lesson is not that multiple AIs vote their way to
+with an especially intensive 17–19 July cycle. The participants are introduced
+above; their artifact-specific contributions and limitations are recorded in
+Section 19. The central lesson is not that multiple AIs vote their way to
 correctness. They do not. The useful unit was a disagreement converted into
 an artifact that could falsify one side.
 
@@ -179,7 +183,7 @@ to establish who checked what, when, and with which limitations.
 | Leading constraint, opening, Jacobian, and energy relation | [`principal_claims.json`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/data/claims/principal_claims.json), the [`run_verification.py`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/tests/run_verification.py) analytical runner, and the stored strip controls | The bounded plane-stress claim set and its executable checks | Experimental validation of the constitutive model |
 | Missing `C_s s` motion and disk diagnosis | [`PROCESS_AND_LESSONS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/PROCESS_AND_LESSONS.md) and the preserved disk records | Why the raw face-shape claim became conditional and why the disk left the quantitative validation | A proof of continuous-boundary contact or a converged alternative disk branch |
 | Restricted 13/4 resonance | [`THEORY_NOTES.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/THEORY_NOTES.md), [`verify_lambda13_restricted_log.py`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/analysis/verify_lambda13_restricted_log.py), and the dated internal adjudication | Exact resonance plus a nonzero projection for one audited source sector | The total same-grade source, coupled response, or a universal physical logarithm |
-| Matching-circle campaign | [`GLOBAL_LOCAL_RESULTS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md), [`GLOBAL_LOCAL_WORKFLOW.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md), and retained JSON/NPZ records | The exact-axis 5/4 class and predicted amplitude for the tested strip, with stated convergence checks | Selection of specimen-level `C_s` or `C_h`, the complete 7/4 field, or two-way coupling |
+| Matching-circle campaign | [`GLOBAL_LOCAL_RESULTS.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_RESULTS.md), [`GLOBAL_LOCAL_WORKFLOW.md`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/blob/v1.2.0/fem/GLOBAL_LOCAL_WORKFLOW.md), and retained JSON/NPZ records | The exact-axis 5/4 class and predicted amplitude for the tested strip, with stated convergence checks | Selection of specimen-level `C_s` or `C_h`, where `C_h` multiplies the homogeneous r⁵ᐟ⁴ angular member; the complete 7/4 angular FEM profile and amplitude; or two-way coupling |
 | AI response to challenge | Private research workspace: `REVIEW_PROCESS_2026-07.md`, `GATE1_TO_GATE3_TOKEN_LEDGER_2026-07-20.md`, Kimi's named development log and signed error anatomy, Codex's challenge-response note, and Fable's 13/4 adjudication | Observed instances of root/child-agent orchestration, productive and incorrect pivots, defensive narrowing, and signed self-correction in this project | A general behavioral law for AI systems, child-by-child attribution that was not preserved, or independence merely because several agents agreed |
 | Public release | Tag [`v1.2.0`](https://github.com/tengzhang48/nonlinear-symplectic-mooney-rivlin-crack-tip/tree/v1.2.0), commit `bba3c93`, and its 201-file `MANIFEST.sha256` | The immutable paper-facing code/data state | A DOI, journal acceptance, or external peer review |
 | Submission closure | Research commits `29b8f09`, `92c60e2`, and `bd0652c`, plus `paper/submission/soft_matter_2026-07-24/SUBMISSION_CHECKLIST.md` | Scientific claim closure, isolated package rebuild, and final citation/scope checks | Independent rederivation of every coefficient by the document reviewers |
@@ -248,6 +252,11 @@ exactly unchanged. More generally, `y₁ → y₁ + F(y₂)` is the exact null
 transformation. The mode is regular across the intact ligament and changes a
 physical coordinate; calling it a gauge does not make it invisible to a
 camera.
+
+Here and below, **row one** means the in-plane (`y₁`) equilibrium equation and
+**row two** means the opening (`y₂`) equilibrium equation in the constrained
+outer system. A reference to “row four” names the fourth equation of the
+historical five-row scaffold, not another physical equilibrium component.
 
 The corrected manuscript and ESI now derive this decisive equilibrium
 reduction from both reduced-Piola equilibrium rows. They state the dominant
@@ -412,14 +421,19 @@ of the printed five rows with its full operator was not derived.
 The July 20 correction did not discard the scaffold. It named it accurately.
 At that checkpoint the manuscript established the conserved pairing and the
 3/2 − Λ duality exactly on the opening block and retained the other rows as a
-classified spectral scaffold. At the scaffold/eigenvector-audit level, a
-characteristic shear sᵏ pairs with the singular auxiliary s¹⁻ᵏ,
-corresponding to labels k and 1 − k. This is not by itself a full-operator
-shear-channel conservation theorem. Applying the opening reflection globally
-had been another category error. The later Gate-1/2 work derives a
-reaction-carrying constrained *outer* operator and current; it does not
-retroactively turn the old five rows into that operator or supply the physical
-finite-compliance endpoint domain.
+classified spectral scaffold. The symbol Λ is the pencil's weighted radial
+label. An opening field at label Λ scales as `r^(Λ-3/4)`, so, for example,
+`Λ = 13/4` corresponds to an `r^(5/2)` opening. The reflection
+`Λ′ = 3/2 − Λ` belongs to this opening block.
+
+The separate shear-label statement uses a different convention. At the
+scaffold/eigenvector-audit level, a characteristic shear `s^k` pairs with the
+singular auxiliary `s^(1-k)`, giving labels `k` and `1-k`. This is not by
+itself a full-operator shear-channel conservation theorem. Applying the
+opening reflection globally had been another category error. The later
+Gate-1/2 work derives a reaction-carrying constrained *outer* operator and
+current; it does not retroactively turn the old five rows into that operator
+or supply the physical finite-compliance endpoint domain.
 
 ## 5. Where the Defensible Scope Now Stops
 
@@ -485,13 +499,15 @@ diagnostic rather than canonical Gate-5 closure. The matching-circle campaign
 tested a nuisance-free 5/4 observable. It did not extract the complete
 higher-mode library.
 
-That dependency pulled Gate 6A forward. An extensive archived T3 calculation
-had solved a scalar axis-layer ODE accurately, but the ODE itself had not been
-derived from physical PK1. The deformed components `y_1,y_2` are fixed
-Cartesian scalars; only the reference columns of their gradients are resolved
-in the polar frame. T3 had inserted the `-B,+A` connections appropriate to
-spatial components expressed in a rotating polar basis. It had also failed to
-carry the fixed-physical-angle radial derivative of
+That dependency pulled Gate 6A forward. Here **T3** is the internal task label
+for an archived finite-compliance axis-layer route. It is unrelated to the
+numbering of the FEM tests. T3 had solved a scalar axis-layer ODE accurately,
+but the ODE itself had not been derived from physical PK1. The deformed
+components `y_1,y_2` are fixed Cartesian scalars; only the reference columns
+of their gradients are resolved in the polar frame. The archived route had
+inserted the `-B,+A` connections appropriate to spatial components expressed
+in a rotating polar basis. It had also failed to carry the
+fixed-physical-angle radial derivative of
 `eta = theta/delta(r)`, for which
 
 ```text
@@ -500,7 +516,7 @@ r partial_r [r^alpha U(eta)]
 ```
 
 Returning to the exact reduced energy and direct fixed-Cartesian PK1 gave the
-physical `h=3` cusp equation
+physical degree-three cusp equation (homogeneity index 3)
 
 ```text
 (1+4eta^2)Z''-14eta Z'+18Z=0,
@@ -537,18 +553,30 @@ differential row and its outer tail can therefore both be correct while the
 proposed one-scale half-line boundary-value problem is incompatible as posed.
 Any later
 `Lambda = 17/4` cascade built on that tail is conditional connection data, not
-a closed smooth-axis solution. The final bounded one-scale audits closed two
-important loopholes. The complete homogeneous connection fixes the odd
-parity-repair coefficient to `5/2`; after optimally removing its faster
-`eta^2` component, the exact `(10sqrt(2)/3)eta^(3/2)` overlap remains. A
-separate `t = sqrt(delta)` grade audit proves that regular analytic
-finite-compliance backgrounds cannot alter the obstructed `t^1` Green moment;
-direct PK1 puts their local mixing and the `c1` tangent at `t^5`. A
-nonanalytic same-grade sector, retained-`C_s` reordering, or a two-scale match
-can still alter the balance and was not solved. Nor does the mismatch predict
-a physical divergent axis field: the outer obstruction enters inside the shrinking
-finite-compliance region where the smooth inner solution must supersede the
-outer expansion. It is matching data that forces a reorganization.
+a closed smooth-axis solution.
+
+The final bounded one-scale audits tested two possible loopholes. First, the
+complete homogeneous connection fixes the odd parity-repair coefficient to
+`5/2`. That repair cancels the axis derivative but grows toward the outer
+region. Even after its faster `eta^2` part is removed optimally, a slower
+far-field overlap
+`(10sqrt(2)/3)eta^(3/2)` remains. The same one-scale homogeneous solution
+therefore cannot satisfy both endpoint requirements.
+
+Second, a grade audit asked whether an ordinary analytic
+finite-compliance background could change the compatibility projection at the
+obstructed order. It introduced `t = sqrt(delta)` only as a bookkeeping
+parameter for powers of the narrow layer width. The obstruction enters at
+order `t^1`, while direct PK1 places the first local mixing from those regular
+backgrounds and the `c1` tangent at `t^5`. Such backgrounds therefore cannot
+remove this Green-identity defect. A nonanalytic same-grade sector,
+retained-`C_s` reordering, or a two-scale match can still alter the balance and
+was not solved.
+
+Nor does the mismatch predict a physical divergent axis field. The outer
+obstruction enters inside the shrinking finite-compliance region where the
+smooth inner solution must supersede the outer expansion. It is matching data
+that forces a reorganization.
 
 The follow-up did advance beyond that diagnosis. A candidate switchback
 bridge, a `zeta`-deck displacement preflight, and twelve exact local
@@ -580,6 +608,12 @@ and composite PK1/FEM matching belong to a future paper.
 - The formal leading opening, r⁵ᐟ⁴ constraint-active residual, and first forced
   correction on the chosen `C_s = 0` analytic outer representative, together
   with the parameter-free energy and stress relations.
+- The first material rung, conventionally labeled `Λ = 7/4`, is analytically
+  closed about that representative, including its opening, in-plane, reaction,
+  and total-traction equations. Its opening correction scales as r¹ and its
+  in-plane correction as r⁷ᐟ⁴. A separate free two-power fit to the same
+  matching-circle fields locates the next in-plane slot near 7/4, but it does
+  not verify the rung's complete angular FEM profile or amplitude.
 - The leading energy flux on the superposed truncated map: an exact
   Laurent-coefficient audit gives `G = (π/2)c₁P²`, independent of `C_s`, c₂,
   g, g′, and the normalized r⁵ᐟ⁴ amplitude used in that audit. This is not a
@@ -592,12 +626,13 @@ and composite PK1/FEM matching belong to a future paper.
   outside the current quantitative validation while its global branch and
   inner field are assessed separately.
 - The exact opening-block pairing and its 3/2 − Λ duality.
-- At the opening-block pencil label `Lambda = 13/4`, corresponding to opening
-  power r⁵ᐟ², the resonance and its compatibility condition are exact. On the
-  chosen `C_s = 0` representative, the restricted `rho*stationary` scalar
-  source has a numerically converged nonzero compatibility projection, so that
-  formal coefficient requires a generalized r⁵ᐟ² log(r/r₀) opening
-  contribution.
+- At the opening-block pencil label `Λ = 13/4`, corresponding to opening power
+  r⁵ᐟ², the resonance and its compatibility condition are exact. Here
+  `rho = c₂/c₁`, and `rho*stationary` names the source formed by coupling one
+  material-ratio factor to the previously derived stationary-background
+  field. On the chosen `C_s = 0` representative, this restricted scalar source
+  has a numerically converged nonzero compatibility projection, so that formal
+  coefficient requires a generalized r⁵ᐟ² log(r/r₀) opening contribution.
   This is a coefficient- and sector-qualified result, not a completed coupled
   field or a universal physical logarithm.
 - The Gate-1 reaction-carrying constrained Hessian DAE and Gate-2 off-shell
@@ -713,7 +748,7 @@ One revision corrected the hierarchy but introduced a new dimensional error:
 the level-one in-plane correction lost P⁻³ᐟ². The derivation archive mostly
 used P = 1, so the missing factor was invisible there.
 
-GPT/Codex varied P in the complete stress and recovered the exponent
+Codex (GPT) varied P in the complete stress and recovered the exponent
 numerically. Kimi independently restored the dimensions from the relative
 correction scaling. The two routes agreed. Provenance review then showed that
 the error was not inherited from the original derivation; it had been created
@@ -788,9 +823,9 @@ Several apparently numerical errors were endpoint-selection errors. The base
 multiplier's regular branch was first integrated from a limiting algebraic
 value at the symmetry axis and gave ψ_reg(π) ≈ 9.849. A closed-form substitution
 showed that the exact value is ψ_reg(π) = 10. The traction-free total multiplier
-is ψ₀ = ψ_reg − 10f³ᐟ² and therefore ψ₀(π) = 0. The axis is degenerate: a small
-initialization defect excites a θ³ᐟ² homogeneous component and becomes O(1)
-at the face.
+is ψ₀ = ψ_reg − 10f³ᐟ², where `f(θ) = sin(θ/2)` is the leading opening
+profile. Therefore ψ₀(π) = 0. The axis is degenerate: a small initialization
+defect excites a θ³ᐟ² homogeneous component and becomes O(1) at the face.
 
 The later Qₖ companion exposed two further issues. First, uniqueness of an
 endpoint boundary-value problem does not imply that an outward initial-value
@@ -915,9 +950,9 @@ y₁ = c₀ + C_s r + A r^(5/4)
 gave face-proxy coefficients `b = -1.6339` for the λ = 2 disk and
 `b = -3.2402` for the λ = 1.6 strip. Across angle, the fitted linear
 coefficient followed `b(θ) ≈ C_s sin²(θ/2)`, consistent with a stable
-nonzero s-like background over those finite-core annuli. It does not establish
-the ultimate matched `r → 0` coefficient. The raw face slopes were about 0.510
-and 0.501. After subtracting the fitted linear term, fixed-r⁵ᐟ⁴ consistency
+nonzero s-like background over those finite-core annuli. The raw face slopes
+were about 0.510 and 0.501. After subtracting the fitted linear term,
+fixed-r⁵ᐟ⁴ consistency
 slopes were about 0.391 and 0.374; because the detrending basis imposed the
 5/4 power, these are not independent exponent measurements. The evidence
 family conflated two pipelines: Figure 5 deliberately removed the background
@@ -1475,12 +1510,12 @@ set the problem, supplied the mechanics judgment and research context, routed
 the reviews, demanded provenance, chose the stopping line, and accepts
 responsibility for the paper.
 
-Fable/Claude was the principal revision executor and infrastructure builder
+Fable (Claude) was the principal revision executor and infrastructure builder
 through most of the campaign. It integrated symbolic checks, FEM evidence,
 review dispositions, and manuscript revisions. Several important errors
 introduced during its fix passes were caught in subsequent rounds.
 
-Codex/GPT began as the structural falsifier and later, by explicit human
+Codex (GPT) began as the structural falsifier and later, by explicit human
 decision, led the Qₖ and six-gate derivation rounds. It contributed the
 action/scaffold distinction, dimensional and full-stress attacks, exact
 endpoint and flux checks, the reaction-carrying Gate-1/2 construction, and the
@@ -1503,7 +1538,8 @@ reviewed the final matching-circle figure. Codex implemented the
 verification-grade matching-circle campaign and integrated the review. Fable
 performed the final line-by-line and pre-submission audits.
 
-DeepSeek/OpenCode performed the late end-to-end audits. Its third
+DeepSeek, working through the OpenCode environment, performed the late
+end-to-end audits. Its third
 pass reviewed the then-current theory/manuscript tree at `74edb13` and reported
 “Ready for submission.” That verdict predates the July 19 mesh-provenance,
 data, figure, and scope corrections and is not a review of public-companion
@@ -1552,6 +1588,10 @@ transferable result is the protocol that allowed both statements to coexist.
 ---
 
 ## 20. Remove Nuisance Directions Before Estimating a Singular Power
+
+Section 3 reports the physical outcome of the matching-circle campaign. This
+section records why its estimator worked and which nearby calculations did
+not provide the same evidence.
 
 The fixed-core strip data did something scientifically useful even when they
 could not resolve 5/4. They showed why the old estimator was ill posed. The
@@ -1620,8 +1660,8 @@ algebra. It tested whether the reduced continuum model, global strip solution,
 interface transfer, and local asymptotic observable formed one consistent
 chain. The result supports the 5/4 exact-axis class and its parameter-free
 amplitude for the tested `c₁=c₂=1`, `λ=1.6` strip. Global selection of `C_s`
-and `C_h`, two-way displacement–traction coupling, and the complete 7/4 field
-remain open.
+and `C_h`, two-way displacement–traction coupling, and verification of the
+complete 7/4 angular FEM profile and amplitude remain open.
 
 **Reusable lesson:** when an asymptotic coefficient is confounded by a
 matching nullspace, more mesh alone may not identify it. First search for a
@@ -1702,12 +1742,14 @@ checkpoint false.
 
 ## 22. Crack Tip and Wrinkle: Different Walls, the Same Standard
 
-The crack-tip and wrinkle projects did not become important because they took
-a long time or consumed many review rounds. Difficulty is evidence only when
-it identifies which assumption, representation, or asymptotic scale controls
-the result. A prolonged calculation inside a shared wrong frame is not deeper
-than a short correct derivation. Conversely, a quick leading solution is not
-shallow when its scope is stated honestly.
+The crack-tip project and the
+[symplectic wrinkle period-doubling case study](./symplectic_wrinkle_period_doubling.md)
+did not become important because they took a long time or consumed many review
+rounds. Difficulty is evidence only when it identifies which assumption,
+representation, or asymptotic scale controls the result. A prolonged
+calculation inside a shared wrong frame is not deeper than a short correct
+derivation. Conversely, a quick leading solution is not shallow when its
+scope is stated honestly.
 
 What makes these projects comparable is that each reached a point where the
 method's name became an executable scientific claim.
@@ -1967,5 +2009,5 @@ symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.6 (documented AI challenge response and child-agent orchestration)
+**Version:** 1.7 (newcomer clarity, terminology, and evidence-scope update)
 **Last Updated:** July 25, 2026
