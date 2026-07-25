@@ -108,26 +108,44 @@ The July 21–22 campaign asked a harder question: how far could the candidate
 were merely a catalog? Gates 1–3 rebuilt the reaction-carrying Hessian system,
 its boundary current, and the first sourced `B` handoff from the constrained
 action. Gate 4 extended several formal outer rungs, while Gate 5A froze the
-isolated opening projectors. Gate 6 then invalidated the archived axis-layer
-target itself. A derivation restarted from fixed-Cartesian physical PK1 found
-a different cusp operator, and the next one-scale reaction problem produced
-an exact incompatibility between smooth-axis parity and its prescribed outer
-tail. This is a precise obstruction to the present sequential one-scale
-endpoint construction, not a proof that the nonlinear continuum crack problem
-has no solution. A two-scale endpoint construction is now a future-paper
-problem.
+isolated opening projectors. The dependency order then changed. Mixed Gate-5
+duals required the physical endpoint form, so Gate 6 was split into an early
+Gate-6A endpoint/domain problem and a later Gate-6B global-matching problem.
+Gate 6A was pulled forward, but it did not close. Its restart from
+fixed-Cartesian physical PK1 invalidated the archived axis-layer target, found
+a different cusp operator, and produced an exact incompatibility between
+smooth-axis parity and the prescribed one-scale outer tail. This is an
+obstruction checkpoint inside Gate 6A, not completion of Gate 6 and not a
+proof that the nonlinear continuum crack problem has no solution. Preliminary
+switchback and `zeta`-deck calculations established further exact local
+checkpoints without closing the two-scale endpoint problem. Gate 6B remains
+future work.
 
-The July 22–24 closure did not attempt to finish that second paper. A
-restricted 13/4 calculation established an opening-sector resonance and a
-nonzero restricted projection, but a later five-sector audit showed that the
-same-grade source census was incomplete. The manuscript therefore reports the
-resonance and coefficient-qualified logarithmic consequence while leaving the
-coupled response and physical net amplitude open. For the 5/4 field, the team
-changed the numerical observable instead of abandoning the result. On the
-intact axis, the two undetermined matching contributions vanish identically.
-A matching-circle campaign then obtained `q = 1.251529` and a parameter-free
-amplitude ratio of `1.012420`, with a free two-power fit recovering the next
-radial slot near 7/4. The paper-facing public state was frozen as `v1.2.0` on
+The execution target changed twice. First, physical Gate 6 became non-blocking,
+Gate 5D was defined as an optional displacement-only strip diagnostic, and
+total Gate 4 remained the active formal endpoint. In parallel with the Gate-6A
+and Gate-5A work, Kimi had already begun a bounded material-degree-one
+`Lambda = 13/4` tranche. The later decision adopted that running tranche as the
+final higher-order checkpoint and removed total Gate 4 from the active target.
+The complete six-gate route remained a stronger possible program. The bounded
+tranche then stopped without either of its planned terminal verdicts: a
+face-closed generalized response or a certified obstruction for the complete
+retained source.
+
+The July 22–24 scope closeout retained what the evidence did establish. The
+opening sector is exactly resonant and one restricted source projection is
+nonzero, but a later five-sector audit showed that the same-grade source census
+was incomplete. `C13p`, the formal homogeneous reaction coefficient selected
+locally by total row-one face traction rather than by specimen matching, was
+not certified. The manuscript therefore reports the resonance and
+coefficient-qualified logarithmic consequence while leaving the coupled
+response and physical net amplitude open. For the 5/4
+field, the team changed the numerical observable instead of abandoning the
+result. On the intact axis, the two undetermined matching contributions vanish
+identically. A matching-circle campaign then obtained `q = 1.251529` and a
+parameter-free amplitude ratio of `1.012420`, with a free two-power fit
+recovering the next radial slot near 7/4. This campaign did not close Gate 5D
+or canonical Gate 5. The paper-facing public state was frozen as `v1.2.0` on
 24 July. A final AI pre-submission review passed the bounded physics/data chain
 after two release conditions were closed. A later full-document reading,
 submission-package build, and reference/scope audit added further checks
@@ -429,6 +447,21 @@ Gate 5   normalized dual extraction from finite-radius fields
 Gate 6   finite-compliance endpoint matching and physical selection
 ```
 
+This list became a reference program rather than a linear checklist. Its
+execution target then evolved through the following states:
+
+| Plan state | What changed |
+|---|---|
+| Original six-gate route | Total Gate 4, canonical Gate 5, and physical Gate 6 were treated as a route to a matched reduced model. |
+| Dependency revision | Mixed Gate-5 duals required the physical endpoint form. Gate 6 was split into Gate 6A for the endpoint/domain construction and Gate 6B for later composite and global matching. Gate 6A moved alongside Gate 4, while the bounded 13/4 tranche began as a parallel Gate-4 task. |
+| Interim target | Physical Gate 6 became non-blocking and Gate 5D, a displacement-only strip fit, became optional. Total Gate 4 remained the active formal endpoint. |
+| Bounded paper target | The already-running material-degree-one `Lambda = 13/4` tranche was adopted as the final higher-order checkpoint, superseding total Gate 4 as the active target. Canonical Gate 5 and Gate 6 remained future work. |
+| Final scope | The 13/4 tranche stopped before a complete generalized response or certified obstruction. Exact resonance and one restricted nonzero projection survived review. The sourced coupled response, `C13p`, and physical net logarithmic amplitude did not close. |
+
+The change did not invalidate the stronger program. It separated a possible
+future method-development project from the evidence required by the current
+paper.
+
 Gates 1 and 2 replaced the inferred scaffold dynamics with a non-autonomous
 Hessian DAE derived from the constrained action, including the reaction in the
 canonical momentum, total endpoint tractions, and an off-shell Green identity.
@@ -445,9 +478,13 @@ leaves the regular finite-action endpoint class. This is a verified handoff,
 not total Gate-4 closure. Gate 5 was not skipped: Gate 5A independently froze
 the normalized projectors for the isolated opening harmonics and their source/
 face ledger. Mixed reaction-carrying extraction must wait for the physical
-endpoint form.
+endpoint form. The later Gate-5D option was defined to use ordinary
+displacement fields on the pure-shear strip, but it remained a practical
+diagnostic rather than canonical Gate-5 closure. The matching-circle campaign
+tested a nuisance-free 5/4 observable. It did not extract the complete
+higher-mode library.
 
-That dependency pulled Gate 6 forward. An extensive archived T3 calculation
+That dependency pulled Gate 6A forward. An extensive archived T3 calculation
 had solved a scalar axis-layer ODE accurately, but the ODE itself had not been
 derived from physical PK1. The deformed components `y_1,y_2` are fixed
 Cartesian scalars; only the reference columns of their gradients are resolved
@@ -512,6 +549,12 @@ a physical divergent axis field: the outer obstruction enters inside the shrinki
 finite-compliance region where the smooth inner solution must supersede the
 outer expansion. It is matching data that forces a reorganization.
 
+The follow-up did advance beyond that diagnosis. A candidate switchback
+bridge, a `zeta`-deck displacement preflight, and twelve exact local
+certificates fixed common fields and several next-order coefficients. They did
+not close the full-PK1 deck, total traction with retained `C_s`, a uniform
+composite, or Gate 6A.
+
 This checkpoint separates three meanings of completion that earlier notes had
 blurred:
 
@@ -561,7 +604,8 @@ and composite PK1/FEM matching belong to a future paper.
 - The Gate-3 selected `B` seed and first source-resolved handoff, including
   its polyhomogeneous endpoint current and formal Fredholm data.
 - For the stated one-scale `Pi1` connection equation, the exact tail/parity
-  defect `Pi1'(0) = -5/2`. This is an obstruction result, not Gate-6 closure.
+  defect `Pi1'(0) = -5/2`. This freezes an obstruction checkpoint inside Gate
+  6A. It closes neither Gate 6A nor full Gate 6.
 - The Gate-5A normalized isolated-opening projectors and source/face ledger;
   these are extraction infrastructure, not a mixed physical extractor.
 - The normalized outer base multiplier of the *formal leading constrained
@@ -584,17 +628,19 @@ and composite PK1/FEM matching belong to a future paper.
 - Total Gate 4: the all-source background/material/`B`/`Q_k` recursion and its
   assembled Fredholm conditions.
 - At `Lambda = 13/4`, the total same-grade multi-sector defect, sourced
-  coupled response, total-traction selection, and physically selected net
-  logarithmic amplitude. The restricted scalar result does not close any of
-  these objects.
+  coupled response, total-traction selection of `C13p`, and physically selected
+  net logarithmic amplitude. The restricted scalar result does not close any
+  of these objects.
 - Higher material orders of the k + 1/2 block.
 - The generic row-two family generated at k + 3 and its later tower. The
   representative k = 2 rung closes formally, but does not establish the
   all-`k`, all-source recursion.
-- The *physical finite-compliance* endpoint domain and its inner symplectic
-  boundary form. The formal outer operator/current does not supply this datum.
-- Mixed reaction-carrying extraction integrals and controlled finite-radius
-  error laws for the higher parameters.
+- Gate 6A's *physical finite-compliance* endpoint domain and inner symplectic
+  boundary form, followed by Gate 6B overlap, composite, and global matching.
+  The formal outer operator/current does not supply these data.
+- Optional Gate-5D displacement fitting, mixed reaction-carrying Gate-5
+  extraction integrals, and controlled finite-radius error laws for the higher
+  parameters. The matching-circle check does not close these tasks.
 - Whether a specimen actually excites the candidate amplitudes B and Qₖ.
 - The full k = 1 characteristic-shear completion and whether global matching
   selects `C_s = 0`; without that selection the raw deformed face has exponent
@@ -962,8 +1008,9 @@ loading.
 
 ### A green family can share one wrong derivation root
 
-The Gate-6 reset exposed a failure that test-count summaries conceal. The T3
-scripts agreed with one another because they inherited the same insertion map:
+The Gate-6A physical reset exposed a failure concealed by test-count
+summaries. The T3 scripts agreed with one another because they inherited the
+same insertion map:
 the same polar-vector connections, the same treatment of radial differentiation,
 and the same scalar target. High-precision ODE solutions, coefficient
 regressions, and matching-power checks could certify that implementation while
@@ -1023,10 +1070,16 @@ and data-availability language together.
 
 ### A passing recurrence can share the derivative map it should audit
 
-A later `Lambda = 13/4` tranche made the shared-oracle problem unusually
-concrete. Its imported implementation reported 58/58 exact self-gates and 5/5
-numerical self-gates. Those counts were accurate for the implemented objects,
-but three quantities were reused in ways the gates did not challenge.
+The parallel `Lambda = 13/4` tranche, later adopted as the bounded endpoint in
+place of total Gate 4, made the shared-oracle problem unusually concrete. Its
+contract included the complete retained source, coupled logarithmic and
+non-logarithmic Jordan response, both total face tractions, selection of
+`C13p`, and separate outgoing rows. Those objects were inside the assignment;
+they were not deferred because they belonged to Gate 5 or Gate 6.
+
+The imported implementation reported 58/58 exact self-gates and 5/5 numerical
+self-gates. Those counts were accurate for the implemented objects, but three
+quantities were reused in ways the gates did not challenge.
 First, a derivative-free Fredholm defect and its raw projection were treated
 as the same normalization operand even though they differ by the opening
 exponent. Second, a stored reaction field already contained an inherited
@@ -1073,7 +1126,9 @@ mathematics explicitly open.
 
 The human scientific owner chose to stop this calculation because none of the
 manuscript's leading-field, flux, Jacobian, or exact opening-pairing claims
-depends on uncertified `Lambda = 13/4` completion. This was an evidence and
+depends on uncertified `Lambda = 13/4` completion. The bounded tranche therefore
+stopped without either of its original terminal verdicts, and the narrower
+resonance result became the publication boundary. This was an evidence and
 scope decision, not a claim that the missing coefficient is physically
 unobservable or that the higher hierarchy cannot be completed.
 
@@ -1365,7 +1420,7 @@ Codex/GPT began as the structural falsifier and later, by explicit human
 decision, led the Qₖ and six-gate derivation rounds. It contributed the
 action/scaffold distinction, dimensional and full-stress attacks, exact
 endpoint and flux checks, the reaction-carrying Gate-1/2 construction, and the
-fixed-Cartesian Gate-6 reset. In the subsequent release work, it also helped
+fixed-Cartesian Gate-6A reset. In the subsequent release work, it also helped
 formalize the multi-gate circuit. Fable reviewed promoted results at the scope
 recorded in each handoff; the later k + 3/2 construction received a dedicated
 PASS before manuscript integration.
@@ -1663,15 +1718,15 @@ physical variational statement
 
 ### Why the symplectic framework remains the point
 
-The Gate-6 obstruction is not evidence that symplectic mechanics caused the
-crack difficulty. The noncommuting radial, angular, and compliance limits; the
-constraint-null family; endpoint logs; resonances; and global selection of
-local amplitudes are already properties of the crack problem. The symplectic
-formulation converts them into auditable interfaces: action to canonical
-operator, operator to Green current, current to endpoint defect, and endpoint
-defect to a Fredholm or matching condition. In this case the Green identity
-turned a vague failure to satisfy two boundary conditions into the exact
-number `-5/2`.
+The Gate-6A one-scale obstruction is not evidence that symplectic mechanics
+caused the crack difficulty. The noncommuting radial, angular, and compliance
+limits; the constraint-null family; endpoint logs; resonances; and global
+selection of local amplitudes are already properties of the crack problem.
+The symplectic formulation converts them into auditable interfaces: action to
+canonical operator, operator to Green current, current to endpoint defect, and
+endpoint defect to a Fredholm or matching condition. In this case the Green
+identity turned a vague failure to satisfy two boundary conditions into the
+exact number `-5/2`.
 
 That is also why the framework fits AI-assisted nonlinear mechanics. Agents
 can work on bounded symbolic rungs, numerical connections, and hostile
@@ -1695,7 +1750,8 @@ incompatibility rather than from an unexplained solver failure.
 Submission, six-gate reduced-model closure, and full mathematical closure are
 not synonyms. The manuscript can be ready when its bounded claim graph is
 correct, reproducible, and independent of the unresolved connection. The
-six-gate program can continue as a stronger method-development objective.
+six-gate program is preserved as a stronger possible method-development
+objective, not the active completion target for this paper.
 Existence and convergence for the unreduced nonlinear crack PDE remain beyond
 both. Stating these levels is not retreat; it is what makes the framework and
 the AI research record reusable by others.
@@ -1729,24 +1785,35 @@ The progression that matters:
       → k+3/2 companions on the constrained branch
       → generated k+3 rung remains open
 
-  Six-gate method push
+  Six-gate method push and plan revision
       → Gates 1–2 derive the reaction-carrying Hessian DAE and Green current
       → Gate 3 closes the selected B seed and first sourced handoff
-      → Gate 4 advances formal outer ladders; Gate 5A freezes isolated projectors
+      → Gate 4 advances formal outer ladders
+      → Gate 5A freezes isolated projectors
+      → mixed Gate-5 duals require a physical endpoint form
+      → Gate 6 splits into early endpoint Gate 6A and later global Gate 6B
+      → Gate 6A returns to fixed-Cartesian physical PK1
+      → archived T3 inner target is quarantined
+      → exact Pi1'(0) = -5/2 contradicts smooth one-scale parity
+      → homogeneous repair leaves exact eta^(3/2) overlap
+      → regular analytic backgrounds cannot alter that Green grade
+      → the obstruction checkpoint freezes
+      → Gate 6A and Gate 6B remain open
+      → later outer connection data are conditional
+      → a switchback bridge, zeta-deck preflight, and twelve local certificates
+        advance the two-scale route without closing its boundary/traction form
+      → the six-gate route is preserved, but ceases to be the active target
+      → physical Gate 6 becomes non-blocking and Gate 5D becomes optional
+      → total Gate 4 remains briefly as the active formal endpoint
+      → the parallel material-degree-one Lambda=13/4 tranche is adopted instead
       → Lambda=13/4 opening resonance and compatibility are exact
       → restricted rho*stationary scalar projection is numerically converged and nonzero
       → that formal coefficient requires an r^(5/2) log r contribution
       → a shared-map audit finds a normalization mismatch, a doubled
         inherited direction, and an incomplete derivative chain
-      → total coupled response and physical net log amplitude remain open
+      → C13p, the total coupled response, and physical net log amplitude remain open
       → the bounded calculation stops because manuscript claims do not depend on it
-      → Gate 6 returns to fixed-Cartesian physical PK1
-      → archived T3 inner target is quarantined
-      → exact Pi1'(0) = -5/2 contradicts smooth one-scale parity
-      → homogeneous repair leaves exact eta^(3/2) overlap
-      → regular analytic backgrounds cannot alter that Green grade
-      → later outer connection data are conditional
-      → two-scale endpoint construction becomes a future paper
+      → canonical Gate 5 and physical Gate 6 remain future
 
   Manuscript review
       → local checks pass while cross-claims conflict
@@ -1804,8 +1871,8 @@ reusable result is the exact boundary it reveals.
 *This case study documents the Mooney–Rivlin plane-stress crack-tip project
 and its intensive June–July 2026 verification campaign. The July 21–22
 extension was checked against the six-gate closure plan, Gate-3 hostile review,
-Gate-4 handoffs, direct-PK1 and penalty-bridge executables, the Gate-6 pivot and
-one-scale cascade records, exact homogeneous-connection and analytic-
+Gate-4 handoffs, direct-PK1 and penalty-bridge executables, the Gate-6A pivot
+and one-scale cascade records, exact homogeneous-connection and analytic-
 background audits, and the publication-scope decision memo. The July 23
 bounded `Lambda = 13/4` review added the restricted resonance result and the
 shared-derivative-map postmortem without promoting the unfinished coupled
@@ -1831,5 +1898,5 @@ symbolic environment is pinned there to NumPy 2.5.0, SciPy 1.18.0, and SymPy
 identifiers were not preserved consistently, so this account reports the
 system names and roles recorded at the time rather than inventing versions.*
 
-**Version:** 1.4 (submission closure, evidence map, and numerical-scope audit)
-**Last Updated:** July 24, 2026
+**Version:** 1.5 (gate-plan chronology and stopping-scope clarification)
+**Last Updated:** July 25, 2026
