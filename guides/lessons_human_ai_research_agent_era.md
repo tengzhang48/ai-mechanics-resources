@@ -1145,6 +1145,74 @@ rebuild, the three journal-upload files, the immutable public tag, and the
 later reference/scope pass. “Ready” applied to that artifact graph, not to the
 unfinished higher-order research program.
 
+### 12.7 Validate transformations, semantic siblings, and exit contracts
+
+Generated scientific software makes an especially long transformation chain
+explicit:
+
+```text
+declaration
+  → emitted source
+  → compiled artifact
+  → solver input
+  → completed run
+  → raw output
+  → extracted data
+  → figure or table
+  → manuscript claim
+  → versioned release
+```
+
+Passing one node does not validate the next edge. In `abaqus_ufl`, a
+phase-field flux with the wrong sign passed complex-step versus finite
+difference, compiled, and ran in 120-element `feacheap` jobs because every
+check inherited the same equation. A later corrosion run was numerically sound
+while its visualization bridge left 12,180 records missing or all zero,
+shifted the surviving block onto incorrect element labels, and reversed two
+integration-point slots. Two mixed-order bilayer decks completed, but a
+topology conversion had omitted midside nodes from a boundary set. These were
+different failures at different transformations
+([`abaqus_ufl` case, §5](../case_studies/abaqus_ufl.md#5-the-second-phase-validation-became-the-larger-project)).
+
+For every promoted artifact, record:
+
+- the exact source revision and submitted or compiled source;
+- the state, regime, and solver procedure exercised;
+- the oracle, observable, tolerance, and negative control;
+- which representation the check shares with the implementation;
+- whether the output and extraction path was audited; and
+- whether the same workflow passes from the files that actually ship.
+
+Generated-code maintenance also requires **semantic-family audits**. A
+cross-cutting procedure-dispatch and invalid-state repair was applied to two
+UEL generators but missed a structurally different local-pressure generator.
+One early return also skipped initialization of `RHS(:,2)` when `NRHS >= 2`.
+Text search found implementations that already resembled the first one; it did
+not find every component with the same responsibility. The follow-up repair
+extended the contract to the local-pressure path and added tests for dispatch
+and RHS-column initialization.
+
+Use the following sequence for a cross-cutting change:
+
+1. enumerate behavioral siblings by what they do—for example, every component
+   that emits `SUBROUTINE UEL`—not only by a familiar code pattern;
+2. write a small contract matrix for outputs, trial/committed state, rollback,
+   cutback, cleanup, and every supported argument shape;
+3. audit each normal and early-exit path against that matrix;
+4. test every sibling over the widest relevant argument surface; and
+5. regenerate and inspect the committed downstream artifacts.
+
+An early exit retains every contract-required output-initialization and
+state-preservation obligation, even though it intentionally skips the normal
+computation. A cross-cutting fix is incomplete until every semantic sibling
+and every exit contract has been checked.
+
+Finally, do not let a curated public subset become an accidental definition of
+the full research program. Project capability, manuscript evidence, and
+release contents are distinct scopes governed by different artifacts.
+The release should state what it contains; it should not imply that omitted or
+later examples do not exist.
+
 ---
 
 ## 13. What remains uncertain
@@ -1313,6 +1381,8 @@ The principal public records used for this guide are:
 - [Case Study: When Verification Rewrites the Theory — A Symplectic
   Mooney–Rivlin Crack
   Tip](../case_studies/symplectic_mooney_rivlin_crack_tip.md)
+- [Case Study: From Code Generation to Scientific Evidence —
+  `abaqus_ufl`](../case_studies/abaqus_ufl.md)
 - [March–April 2026 human–AI research field
   guide](lessons_human_ai_research.md)
 - [July 2026 guide review note](../docs/guide_review_2026-07-20.md)
@@ -1350,9 +1420,10 @@ to organize the notes under `docs/` and repair navigation. That documentation
 state is newer than the release tag; it does not replace the tagged
 paper-facing code/data state.
 
-- **Version:** 1.3 (clarity and aggregate child-agent attribution boundary)
-- **Last updated:** 25 July 2026
+- **Version:** 1.4 (generated-artifact and semantic-family verification)
+- **Last updated:** 28 July 2026
 - **Evidence window:** January–July 2026
 - **Scope:** One human–multi-agent computational-mechanics research program
 - **Research framing and responsibility:** Teng Zhang
-- **Evidence synthesis and draft:** Codex (GPT), 20–25 July 2026
+- **Evidence synthesis and draft:** Codex (GPT), 20–28 July 2026
+- **Generated-artifact addition review:** Fable (Claude), 28 July 2026

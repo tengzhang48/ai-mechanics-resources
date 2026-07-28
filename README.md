@@ -40,7 +40,7 @@ rankings.
 
 | Guide | What it covers |
 |---|---|
-| [Human–AI Research in the Agent Era](guides/lessons_human_ai_research_agent_era.md) | **Current guide.** Division of authority rather than capability; human research taste; verified discovery without a known final answer; verification versus validation; nuisance-aware observable design; premise and boundary-value-problem audits; evidence-governed trust; and artifact-specific stopping and submission. |
+| [Human–AI Research in the Agent Era](guides/lessons_human_ai_research_agent_era.md) | **Current guide.** Division of authority rather than capability; human research taste; verified discovery without a known final answer; verification versus validation; nuisance-aware observable design; premise and boundary-value-problem audits; generated-artifact verification; evidence-governed trust; and artifact-specific stopping and submission. |
 | [Lessons from Human-AI Collaboration](guides/lessons_human_ai_research.md) | **Historical March–April 2026 field guide.** Plan-first chat workflow, numerical and software lessons, context management, and the earlier human/AI labor model. Retained for provenance with a current-status banner. |
 | [How Debate with AI Produces Understanding](guides/lessons_from_conversation.md) | Historical conversation experiments on challenge, correction, disagreement, and review triage. |
 | [AI Risks and Mitigation](guides/lessons_ai_risks_and_mitigation.md) | Historical risk taxonomy covering plausible inapplicability, method substitution, inadequate tests, debugging spirals, and plausible quantitative errors. Read with its July qualification banner. |
@@ -52,6 +52,7 @@ Real project experiences — what happened, what worked, what didn't. Released a
 
 | Case Study | What it shows |
 |---|---|
+| [`abaqus_ufl`: From Code Generation to Scientific Evidence](case_studies/abaqus_ufl.md) | How a declaration-to-Fortran prototype became a validation and release program: compiled-element tests, common-mode errors, output bridges, mixed-order topology, local condensation, example porting, intellectual lineage, and authorial control of review. |
 | [Symplectic Wrinkle Period Doubling and Quadrupling](case_studies/symplectic_wrinkle_period_doubling.md) | Method substitution and recovery, analytical-depth construction, coupled convergence, review findings treated as hypotheses, physics-first evidence layers, provenance, and human/agent contributions. |
 | [Symplectic Mooney–Rivlin Crack Tip](case_studies/symplectic_mooney_rivlin_crack_tip.md) | Unknown nonlinear fields made auditable through asymptotics, constrained action, FEM controls, multi-agent falsification, claim graphs, and an explicit program/result boundary. |
 | [LBM-IBM for Thin Shells in Fluid](case_studies/lbm_ibm_thin_shell.md) | Extending from solid mechanics into CFD with AI assistance. Five paradigm shifts, practitioner blind spots, multi-AI debugging. |
@@ -84,6 +85,7 @@ ai-mechanics-resources/
 │   ├── lessons_ai_risks_and_mitigation.md
 │   └── information_to_knowledge.md
 └── case_studies/
+    ├── abaqus_ufl.md
     ├── symplectic_wrinkle_period_doubling.md
     ├── symplectic_mooney_rivlin_crack_tip.md
     ├── lbm_ibm_thin_shell.md
@@ -110,6 +112,11 @@ problem.
 
 **Want to understand verified discovery?** Read the two symplectic case studies. For a case where rapid iteration could not overcome the numerical formulation, read the contact study.
 
+**Building a scientific code generator?** Read the
+[`abaqus_ufl` case study](case_studies/abaqus_ufl.md) for an
+artifact-by-artifact account of validation, example porting, reference-code
+credit, and release boundaries.
+
 **Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md). Observations
 must come from real, tested experience; reflections and hypotheses must be
 labeled clearly.
@@ -120,6 +127,8 @@ labeled clearly.
 
 - [CoupMPM](https://github.com/tengzhang48/CoupMPM) — Material Point Method package for LAMMPS
 - [CoupLB](https://github.com/tengzhang48/CoupLB) — Lattice Boltzmann + Immersed Boundary Method for LAMMPS
+- [`abaqus_ufl`](https://github.com/tengzhang48/abaqus_ufl) — UFL-inspired
+  generation and verification of Abaqus UMAT and UEL source
 - [taichi_lbm_ibm](https://github.com/tengzhang48) — LBM+IBM solver for thin-shell aerodynamics
 - [nonlinear-symplectic-wrinkle-bifurcations](https://github.com/tengzhang48/nonlinear-symplectic-wrinkle-bifurcations)
   — Public companion release for the analytical-depth wrinkle bifurcation

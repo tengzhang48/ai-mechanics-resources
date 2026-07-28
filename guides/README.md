@@ -12,7 +12,10 @@ autonomous research agents. The 24 July 2026 update adds the matching-circle
 observable-design example, the distinction between same-cell restriction and
 independent local refinement, an observed wrong-boundary-value-problem case,
 challenge dispositions, parallel-execution provenance, and artifact-specific
-submission closure.
+submission closure. The 28 July update adds transformation-by-transformation
+verification for generated scientific software, semantic-family audits, and
+early-return contract checks, grounded in the
+[`abaqus_ufl` case study](../case_studies/abaqus_ufl.md).
 
 ## Historical March–April 2026 guides
 
