@@ -390,13 +390,13 @@ code-to-code benchmark. Under the recorded comparison setup, the original and
 generated UEL runs reached 903 s with final pit depths of
 `46.6408208 µm` and `46.6408216 µm`, respectively. Over the matched history,
 the audit reports a mean absolute error of `0.1302 µm`, a maximum absolute
-error of `0.6302 µm`, and a normalized \(L_2\) error of about `0.64%`. The
+error of `0.6302 µm`, and a normalized $L_2$ error of about `0.64%`. The
 nearly identical endpoint should therefore be read with the full-history
 errors, not as pointwise identity.
 
 The two paths were also not identical in every condition. The retained
 Supplement records different bottom-corner pins, one-increment lagging of
-\(\mathcal L_n\) in the generated implementation, and different treatment of
+$\mathcal L_n$ in the generated implementation, and different treatment of
 the repassivation clock during the initial setup steps. These differences are
 part of the benchmark scope rather than details to hide behind the endpoint.
 
@@ -428,7 +428,7 @@ Porting a bilayer from a lower-order mesh to a mixed-order Quad8 UEL exercised
 node-dependent DOF maps and boundary-set conversion. Two Abaqus jobs completed
 but were rejected because the right-edge set omitted midside nodes. The
 corrected job completed 2,160 increments to 21,600 s and reduced the final
-edge-straightness residual to \(2.27\times10^{-9}\) m.
+edge-straightness residual to $2.27\times10^{-9}$ m.
 
 The scientific lesson is not the job count. It is that a topology conversion
 changes the boundary-value problem. A solver can complete a different,
@@ -444,16 +444,16 @@ interpolation, and material compressibility had changed.
 ### 5.6 Local pressure: the eliminated variable had to be re-solved inside the test
 
 The element-local-pressure gel formulation was the project's most distinctive
-untested tangent path. Local pressure \(p^\ast(\mathbf{x})\) is found from
-\(R_p(\mathbf{x},p)=0\), then eliminated through a Schur complement. Checking
+untested tangent path. Local pressure $p^\ast(\mathbf{x})$ is found from
+$R_p(\mathbf{x},p)=0$, then eliminated through a Schur complement. Checking
 the four uncondensed blocks separately does not prove the derivative of the
 complete condensed residual:
 
-\[
+$$
 \frac{d\overline{\mathbf R}_x}{d\mathbf x}
 =
 \frac{d\mathbf R_x(\mathbf x,p^\ast(\mathbf x))}{d\mathbf x}.
-\]
+$$
 
 The final black-box test compiled the committed UEL, perturbed every global
 element DOF, called the same entry point from the same committed state, and
@@ -461,9 +461,9 @@ thereby forced the local pressure solve to run again for every perturbation.
 Per-DOF perturbation scales were needed because displacement and chemical
 potential differed by several orders of magnitude.
 
-The Quad4 and Hex8 relative errors were \(5.4\times10^{-10}\) and
-\(6.5\times10^{-10}\). More importantly, the test measured the
-discriminator: \(\max |dp^\ast/dx|\) was nonzero and large enough to show that
+The Quad4 and Hex8 relative errors were $5.4\times10^{-10}$ and
+$6.5\times10^{-10}$. More importantly, the test measured the
+discriminator: $\max |dp^\ast/dx|$ was nonzero and large enough to show that
 the Schur contribution was active. A deliberately frozen-pressure tangent
 failed with an error of `0.76`.
 
@@ -494,14 +494,15 @@ publishing the private lab history. That choice was driven by scientific,
 privacy, and licensing boundaries:
 
 - the full lab contains unpublished research examples and internal notes;
-- some published reference implementations carry their own licenses or no
-  explicit redistribution terms;
+- the corrosion comparison deck retained a mesh derived from the Cui reference
+  distribution and therefore required an explicit redistribution review;
 - the internal `feacheap` fork did not have a sufficiently complete upstream
   revision and license record for the first public release; and
 - a public example must be tested without hidden imports from the lab.
 
-A positive allowlist reduced accidental leakage but did not itself settle
-lineage and licensing. The later credit audit clarified two different cases.
+A positive allowlist reduced accidental leakage but did not itself settle the
+provenance of artifacts built from external files. The later credit audit
+clarified two different cases.
 The accepted bilayer deck is our build output for the swell-induced bending
 problem of Chester, Di Leo, and Anand; its mesh discretization follows their
 supplemental example with attribution, and their original files are not
@@ -575,8 +576,9 @@ A useful new-example policy emerged:
    evidence;
 5. preserve the exact submitted source and run inputs if results will be
    published; and
-6. port the example into a clean release only after its lineage and license
-   are recorded.
+6. port the example into a clean release only after its lineage is recorded
+   and, if it contains or derives from third-party artifacts, redistribution
+   terms are resolved.
 
 Under this policy, porting is not clerical work. A post-generation patch, a
 special-case deck edit, or a copied helper is evidence that the declaration
@@ -625,7 +627,7 @@ globally inconsistent.
 
 ### 7.4 Condensation must be verified after elimination
 
-Separate checks of \(K_{xx}\), \(K_{xp}\), \(K_{px}\), and \(K_{pp}\) are
+Separate checks of $K_{xx}$, $K_{xp}$, $K_{px}$, and $K_{pp}$ are
 useful but insufficient. The complete condensed residual must be perturbed
 while the eliminated variable is re-solved. The test must also show that the
 eliminated variable actually changes; otherwise a passing result may be
@@ -688,13 +690,20 @@ the project has already run a validated case, start from that deck and log.
 When one misconception appears in code, search the manuscript and other decks
 for the same belief.
 
-### 7.10 Scientific lineage and licensing are part of reproducibility
+### 7.10 Scientific lineage and artifact licensing are different obligations
 
-A benchmark cannot be reconstructed responsibly if the reference source,
-version, modifications, and license are unknown. Credit is not a ceremonial
-paragraph added after the technical work. It records where interface
-conventions, formulations, deck topology, comparison data, or tangent oracles
-came from, and it determines what may enter the public package.
+Scientific lineage matters whether a project uses published equations,
+studies a reference implementation, or incorporates an external artifact.
+Those relationships are not interchangeable. When prior work is used only as
+a publication or reference implementation, record the citation and that
+limited role. A separate license and redistribution review is needed when
+third-party artifacts or derivatives are incorporated into, modified for, or
+distributed with project artifacts.
+
+Credit is not a ceremonial paragraph added after the technical work. It
+records where interface conventions, formulations, deck topology, comparison
+data, or tangent oracles came from. Artifact provenance additionally identifies
+which exact third-party materials, if any, entered a benchmark or release.
 
 ---
 
@@ -808,19 +817,23 @@ to the reviewer.
 ## 10. Scientific lineage and credit
 
 The following ledger records the principal external sources that materially
-shaped the architecture or validation discussed here. It is not an exhaustive
-bibliography of every private example.
+shaped the architecture or validation discussed here. Studying or citing an
+implementation does not mean that its source was copied into `abaqus_ufl`.
+The final column states the actual artifact relationship. For this
+public-release ledger, detailed redistribution records are relevant when
+third-party material or a derivative is included in the public repository.
+This is not an exhaustive bibliography of every private example.
 
-| Source or contributor | Recorded role in the project | Public-package boundary |
+| Source or contributor | How it informed this project | Relationship to `abaqus_ufl` artifacts |
 |---|---|---|
-| FEniCS/UFL and its authors | Inspiration for a declarative problem interface and generated low-level kernels | `abaqus_ufl` is UFL-inspired, not UFL-compatible, and contains no UFL dependency |
-| Shawn A. Chester; Claudio V. Di Leo; Lallit Anand | Coupled gel theory, supplemental gel UEL/decks, local-variable and finite-element reference patterns | The original UEL source has no explicit license in the retained copy and is not redistributed. The accepted bilayer deck is our build output for their published swell-induced bending problem; its mesh discretization follows their supplemental example with attribution |
-| Shawn A. Chester | Historical UMAT reference for Abaqus state, initialization, and time-stepping conventions | Credited as a reference; the historical shared UMAT is not presented as public-package code |
-| Bibekananda Datta; Thao D. Nguyen | Modular hydrogel UEL reference and total-Lagrangian implementation used in architectural comparison | Their code is separately available under BSD 3-Clause terms, with documentation under CC BY-NC-SA 4.0; it is not bundled as `abaqus_ufl` code |
-| Allan F. Bower, Brown University | EN234_FEA teaching code underlying the internal `feacheap` execution host; course and shared code informed solver development | `feacheap` was excluded from the initial public subset while upstream revision and redistribution terms remained incomplete |
-| Chuanjie Cui; Rujin Ma; Emilio Martínez-Pañeda | Published phase-field stress-corrosion formulation and BSD-stated reference UEL/deck used for code-to-code comparison | The public paper package records source hashes and attribution but does not redistribute the original UEL; the precise BSD notice and derived-mesh status should accompany an archival release |
-| Guglielmo Scovazzi; Rubén Zorrilla; Riccardo Rossi | Published stabilized tetrahedral formulation and block-compression comparison | Publication/formulation attribution, not a claim of source-code reuse |
-| Ye Tao and coauthors | Pressure-based morphing formulation reparameterized in the generated gel model, together with the grooved-sheet geometry and solvent-exposure setting | The implemented pressure formulation follows this route and is explicitly distinct from the original Chester–Di Leo–Anand local-volume-fraction UEL |
+| FEniCS/UFL and its authors | Inspired the declarative interface and code-generation model | No UFL dependency or UFL source code; `abaqus_ufl` is UFL-inspired but not UFL-compatible |
+| Shawn A. Chester; Claudio V. Di Leo; Lallit Anand | Gel theory and supplemental UEL/decks studied as scientific and finite-element references, including the local volume-fraction solve, volumetric treatment, and Abaqus output patterns | Their original UEL and decks are not included. The bilayer uses a project-written deck and generated UEL; its mesh discretization follows their supplemental example, with attribution |
+| Shawn A. Chester | Historical UMAT studied for Abaqus state-variable, initialization, and time-step-control conventions | The original UMAT file is not included |
+| Bibekananda Datta; Thao D. Nguyen | Published modular hydrogel UEL studied when comparing total-Lagrangian assembly based on second Piola–Kirchhoff (PK2) versus first Piola–Kirchhoff (PK1) stress, centroid F-bar treatment, local volume-fraction solvers, and modular code organization | The `abaqus_ufl` generator and generated Fortran were written separately; no Datta–Nguyen source code, input deck, or documentation is included |
+| Allan F. Bower, Brown University | EN234_FEA was extended internally into the `feacheap` execution host used to test Abaqus-compatible subroutines outside Abaqus | Neither `feacheap` nor EN234_FEA is included in the public repository |
+| Chuanjie Cui; Rujin Ma; Emilio Martínez-Pañeda | Published formulation, reference UEL, and deck used for the code-to-code corrosion comparison | Contains the project's generated UEL, reduced comparison results, and a comparison deck whose mesh derives from the reference distribution; the original UEL and deck are not included |
+| Guglielmo Scovazzi; Rubén Zorrilla; Riccardo Rossi | Published stabilized formulation and block-compression benchmark reimplemented by the project | Contains project-written declarations, deck-generation tools, generated UEL, and results; no source files from the authors |
+| Ye Tao, Teng Zhang, and coauthors | Prior coauthored pressure-based gel formulation, grooved-sheet geometry, and solvent-exposure setting used for the morphing example | The declaration and generated UEL are project work, and the Abaqus deck is this group's own prior work; no external implementation is included |
 
 The relevant stable publications and repositories include:
 
@@ -841,10 +854,11 @@ his computational solid and structural mechanics course and shared
 of California, Berkeley. The project also builds on Teng's earlier gel and
 morphing research with Lining Yao's Morphing Matter Lab.
 
-Attribution should travel with the artifact. If a future public example uses a
-new reference implementation, its README should record the exact source,
-version or hash, license, role, and whether any code, deck, data, or only the
-published formulation was used.
+Attribution should state how prior work informed the project. If a future
+public example copies, modifies, or distributes a third-party artifact, its
+README should also record the exact source, version or hash, license, and
+modifications. When only a published formulation or an implementation idea was
+studied, state that plainly without implying source-code reuse.
 
 ---
 

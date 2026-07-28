@@ -1336,16 +1336,21 @@ until more projects provide examples or counterexamples.
 
 ## 15. Conclusion
 
-The agent era does not eliminate the human role in research. It makes the old
-defense of that role—humans think while AI codes—untenable.
+Agentic tools do not define a single future for research. Researchers may work
+without AI, use it for bounded tasks, or integrate it more deeply; appropriate
+practice will vary across people, fields, institutions, and problems. The
+projects documented here show one new possibility: agents can participate
+beyond coding, so “humans think while AI codes” is not the only workable
+collaboration model.
 
-Agents can contribute mathematics, architectures, code, execution, criticism,
-and even broader synthesis. Humans need not remain the strongest local
-mathematician or programmer. Their highest-leverage work increasingly lies in
-choosing worthwhile questions, constructing and sustaining research programs,
-governing assumptions and method boundaries, building a credible path to
-warranted belief, interpreting results physically, and accepting responsibility
-for what enters the scientific record.
+In deeply agent-assisted workflows, agents can contribute mathematics,
+architectures, code, execution, criticism, and broader synthesis. These
+contributions can redistribute who performs particular technical tasks. In
+the cases studied here, the human researcher's highest-leverage work often lay
+in choosing worthwhile questions, constructing and sustaining research
+programs, governing assumptions and method boundaries, building a credible
+path to warranted belief, interpreting results physically, and accepting
+responsibility for what enters the scientific record.
 
 Verification is what allows this partnership to move beyond answers known in
 advance. A verified framework can become a discovery engine when its
@@ -1360,7 +1365,8 @@ and classify a challenged result before deleting or promoting it. Release only
 after the resulting claim graph and the actual submission artifacts pass
 together.
 
-The central adaptation is therefore not “trust AI more.” It is:
+For the collaborations documented here, the central adaptation is therefore
+not “trust AI more.” It is:
 
 > Ask better questions, permit deeper technical contribution, and require
 > stronger evidence than either participant's confidence.
